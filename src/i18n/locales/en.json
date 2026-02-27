@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "download": "Download"
+  },
+  "hero": {
+    "headline": "Track your subscriptions\ndown!",
+    "subtitle": "A subscription manager that respects your privacy. All data stays on your device. Available on iOS.",
+    "appStore": "App Store"
+  },
+  "features": {
+    "title": "Everything you need",
+    "subtitle": "Powerful features that put you in control",
+    "addAny": {
+      "title": "Any Subscription",
+      "description": "Add any subscription manually, from a receipt, or a screenshot. Streaming, cloud, gym, insurance — if it recurs, it belongs here."
+    },
+    "calendar": {
+      "title": "Calendar & List View",
+      "description": "See every upcoming and past transaction at a glance. Switch between a clear list and a visual calendar to plan ahead."
+    },
+    "library": {
+      "title": "Your Library",
+      "description": "Services, categories, payment methods — all editable. Start with 80+ built-in presets or create your own. Everything adapts to how you organize things."
+    },
+    "cycles": {
+      "title": "Any Billing Cycle",
+      "description": "Monthly, annual, weekly, or a custom period. Set trial end dates so you never forget to cancel before you're charged."
+    },
+    "spending": {
+      "title": "Spending at a Glance",
+      "description": "See your total monthly and annual cost instantly. Breakdown by category shows where the money goes."
+    },
+    "reminders": {
+      "title": "Renewal Alerts",
+      "description": "Get notified before you're charged. Choose when — a day, a week, or a custom window. Never pay for something you meant to cancel."
+    }
+  },
+  "privacy": {
+    "title": "Your data stays on your device",
+    "subtitle": "Uha doesn't have accounts, servers, or analytics. There is nothing to leak because we never collect anything.",
+    "cards": {
+      "noAccounts": {
+        "title": "No Accounts or Sign-Ups",
+        "description": "Open the app and start using it. No email, no password, no registration wall. Your identity is not our business."
+      },
+      "noTracking": {
+        "title": "No Analytics or Tracking",
+        "description": "Zero telemetry, zero crash reporters, zero third-party SDKs that phone home. We don't know how you use the app — and we like it that way."
+      },
+      "faceId": {
+        "title": "Face ID & Passcode Lock",
+        "description": "Protect your financial data with biometric authentication. Even if someone picks up your phone, your subscriptions stay hidden."
+      },
+      "rates": {
+        "title": "Exchange Rates — the Only Request",
+        "description": "The sole network call Uha makes is to fetch currency exchange rates. No personal data is sent — just a date. Your subscriptions never leave the device."
+      },
+      "icloud": {
+        "title": "Optional iCloud Backup",
+        "description": "You can back up your data to your personal iCloud — encrypted by Apple, controlled by you. It's opt-in, and we never see it."
+      },
+      "export": {
+        "title": "Your Data, Your Format",
+        "description": "Export everything as CSV or SQL at any time. Full access to your own data, no lock-in, no hoops to jump through."
+      }
+    },
+    "statement": "We built Uha for people who believe privacy isn't a feature — it's a right."
+  },
+  "aiFeature": {
+    "title": "Works with Apple Intelligence",
+    "subtitle": "On supported devices, Uha uses on-device machine learning to save you time on the boring stuff.",
+    "cards": {
+      "scanFill": {
+        "title": "Scan a Receipt or Screenshot",
+        "description": "Point your camera at a receipt or share a screenshot. On-device text recognition extracts the service name, price, and renewal date so you don't type it in manually."
+      },
+      "naturalInput": {
+        "title": "Just Type It",
+        "description": "Write \"netflix 799 monthly\" in one field and Uha parses it into a name, price, and billing cycle. No need to fill out three separate fields."
+      },
+      "smartReminders": {
+        "title": "Smarter Reminder Timing",
+        "description": "Instead of a fixed \"3 days before\", the app picks a better moment to notify you — based on the subscription type and how much time you'd need to act."
+      },
+      "autoCategorize": {
+        "title": "Auto-Categorize",
+        "description": "When you add a subscription, Uha recognizes the service and suggests a category, icon, and typical pricing. Less manual setup, fewer mistakes."
+      },
+      "duplicates": {
+        "title": "Overlap Detection",
+        "description": "\"You already have Apple One, which includes Apple Music.\" Uha flags duplicate and bundled services so you don't pay twice for the same thing."
+      },
+      "spendingSummary": {
+        "title": "Spending Summary",
+        "description": "A single sentence like \"This month you'll spend 12% more because of the annual Figma renewal.\" Generated from your data, nothing more."
+      }
+    },
+    "premium": "Premium feature · Requires iPhone 15 Pro or later",
+    "onDeviceNote": "Powered by on-device frameworks. Capabilities depend on device model and iOS version."
+  },
+  "customization": {
+    "title": "Make it yours",
+    "subtitle": "Every detail adapts to how you use it",
+    "iconLabel": "App Icon",
+    "themeLabel": "Theme",
+    "accentLabel": "Accent Color",
+    "currencyLabel": "Base Currency",
+    "appIcon": {
+      "title": "Express Yourself",
+      "description": "Choose from classic, dark, and pride icons. Your home screen, your identity."
+    },
+    "icons": {
+      "classic": "Classic",
+      "dark": "Dark",
+      "trans": "Trans",
+      "enby": "Non-binary",
+      "lesbi": "Lesbian",
+      "pan": "Pan"
+    },
+    "themes": {
+      "title": "Light, Dark & OLED",
+      "description": "Three distinct themes that follow your system preference or can be set independently. OLED mode with true blacks for displays that support it."
+    },
+    "accentColor": {
+      "title": "Your Accent, Your Mood",
+      "description": "Pick an accent color that sets the tone for the entire interface — buttons, highlights, charts. One tap to make the app feel like it was made just for you."
+    },
+    "baseCurrency": {
+      "title": "See Everything in Your Currency",
+      "description": "Set your home currency and Uha converts every subscription to it automatically. Track in dollars, pay in euros, see totals in yen — all at once with live exchange rates."
+    }
+  },
+  "pricing": {
+    "title": "Simple pricing",
+    "subtitle": "Start for free, upgrade when you need more",
+    "free": {
+      "title": "Free",
+      "subscriptions": "Up to 5 subscriptions",
+      "currencies": "3 currencies (USD, EUR & your region)",
+      "horizon": "3-year forecast",
+      "ai": "AI form suggestions",
+      "export": "CSV & SQL export"
+    },
+    "unlimited": {
+      "title": "Unlimited",
+      "includes": "Everything in Free, plus:",
+      "subscriptions": "Unlimited subscriptions",
+      "currencies": "All 100+ currencies",
+      "horizon": "10-year forecast",
+      "ai": "AI insights & smart alerts",
+      "icloud": "iCloud sync across devices",
+      "plans": "Monthly \u00b7 Annual \u00b7 Lifetime"
+    },
+    "macos": "iPadOS & macOS coming soon"
+  },
+  "download": {
+    "title": "Keep your subs\non the leash!",
+    "subtitle": "Take control of your subscriptions.",
+    "appStore": "Download on App Store"
+  },
+  "footer": {
+    "madeWith": "Made with care"
+  }
+}
