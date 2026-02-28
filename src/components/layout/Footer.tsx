@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Container } from './Container';
 
@@ -17,6 +18,15 @@ const FooterInner = styled.div`
   color: ${({ theme }) => theme.textSecondary};
 `;
 
+const FooterLink = styled(Link)`
+  color: ${({ theme }) => theme.textSecondary};
+  transition: color 0.2s;
+
+  &:hover {
+    color: ${({ theme }) => theme.accent};
+  }
+`;
+
 export function Footer() {
   const { t } = useTranslation();
 
@@ -27,6 +37,8 @@ export function Footer() {
           <span>{t('footer.madeWith')}</span>
           <span>·</span>
           <span>Uha</span>
+          <span>·</span>
+          <FooterLink to="/docs">{t('nav.docs')}</FooterLink>
         </FooterInner>
       </Container>
     </FooterWrapper>

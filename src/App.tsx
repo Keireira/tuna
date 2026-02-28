@@ -1,19 +1,14 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '@/styles/GlobalStyles';
 import { useTheme } from '@/hooks/useTheme';
 
 import { SquircleMask } from '@/components/common/SquircleMask';
-import { FloatingLogos } from '@/components/common/FloatingLogos';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { Hero } from '@/components/sections/Hero';
-import { Features } from '@/components/sections/Features';
-import { Privacy } from '@/components/sections/Privacy';
-import { AIFeature } from '@/components/sections/AIFeature';
-import { Customization } from '@/components/sections/Customization';
-import { Stats } from '@/components/sections/Stats';
-import { Download } from '@/components/sections/Download';
+import { LandingPage } from '@/pages/LandingPage';
+import { DocsPage } from '@/pages/DocsPage';
 
 export const APP_ICONS = [
   { id: 'classic', src: '/assets/icons/ios-light.png', key: 'classic' },
@@ -34,23 +29,22 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <SquircleMask />
-      <FloatingLogos />
       <Navbar themeMode={mode} onToggleTheme={toggleMode} appIconSrc={currentIcon.src} />
-      <main style={{ position: 'relative', zIndex: 1 }}>
-        <Hero appIconSrc={currentIcon.src} />
-        <Features />
-        <Privacy />
-        <AIFeature />
-        <Customization
-          selectedIcon={selectedIcon}
-          onSelectIcon={setSelectedIcon}
-          onAccentChange={setAccent}
-          themeMode={mode}
-          onThemeChange={setMode}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <LandingPage
+              selectedIcon={selectedIcon}
+              onSelectIcon={setSelectedIcon}
+              onAccentChange={setAccent}
+              themeMode={mode}
+              onThemeChange={setMode}
+            />
+          }
         />
-        <Stats />
-        <Download />
-      </main>
+        <Route path="/docs" element={<DocsPage />} />
+      </Routes>
       <Footer />
     </ThemeProvider>
   );

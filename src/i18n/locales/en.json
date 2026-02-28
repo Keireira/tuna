@@ -1,6 +1,7 @@
 {
   "nav": {
-    "download": "Download"
+    "download": "Download",
+    "docs": "Docs"
   },
   "hero": {
     "headline": "Track your subscriptions\ndown!",
@@ -160,5 +161,126 @@
   },
   "footer": {
     "madeWith": "Made with care"
+  },
+  "docs": {
+    "title": "Documentation",
+    "subtitle": "Everything you need to know about using Uha",
+    "nav": {
+      "getting-started": "Getting Started",
+      "adding": "Adding Subscriptions",
+      "managing": "Managing",
+      "spending": "Spending Analytics",
+      "reminders": "Reminders",
+      "privacy": "Privacy & Security",
+      "ai": "AI Features",
+      "customization": "Customization",
+      "export": "Data Export",
+      "icloud": "iCloud Backup",
+      "faq": "FAQ"
+    },
+    "gettingStarted": {
+      "intro": "Uha is a subscription manager for iOS that keeps all your data on your device. No accounts, no sign-ups — just open the app and start tracking.",
+      "step1": "Download Uha from the App Store and open it.",
+      "step2": "Tap \"+\" to add your first subscription — manually, from a receipt, or a screenshot.",
+      "step3": "Set a reminder so you never miss a renewal date.",
+      "tip": "Uha comes with 80+ built-in service presets. Start typing a service name and it will auto-suggest the details."
+    },
+    "adding": {
+      "intro": "There are several ways to add a subscription to Uha:",
+      "manual": "Manual entry",
+      "manualDesc": "Fill in the name, price, billing cycle, and category. Pick from presets or create a custom service.",
+      "receipt": "From a receipt",
+      "receiptDesc": "Point your camera at a paper or digital receipt. On-device text recognition will extract the details automatically.",
+      "screenshot": "From a screenshot",
+      "screenshotDesc": "Share a screenshot of a confirmation email or billing page with Uha, and it will parse the subscription info.",
+      "natural": "Natural language",
+      "naturalDesc": "Type something like \"Netflix 15.99 monthly\" into a single field and Uha will parse it into separate fields.",
+      "tip": "Receipt and screenshot scanning, as well as natural language input, use on-device ML — your data never leaves the device."
+    },
+    "managing": {
+      "intro": "Once you've added subscriptions, Uha gives you two ways to view and manage them:",
+      "calendar": "Calendar view",
+      "calendarDesc": "See upcoming renewals on a visual calendar. Great for planning when charges will hit.",
+      "list": "List view",
+      "listDesc": "A chronological list of all your subscriptions with prices and next renewal dates.",
+      "categories": "Categories",
+      "categoriesDesc": "Organize subscriptions into categories like Streaming, Productivity, Health, etc. Fully customizable.",
+      "edit": "Edit anytime",
+      "editDesc": "Tap any subscription to update the price, cycle, category, or cancel it entirely."
+    },
+    "spending": {
+      "intro": "Uha gives you a clear picture of where your money goes:",
+      "monthly": "Monthly total — see how much you're spending each month across all subscriptions.",
+      "annual": "Annual total — the full yearly cost at a glance.",
+      "category": "Category breakdown — visual split of spending by category.",
+      "forecast": "Forecast — project your spending up to 3 years ahead (10 years with Unlimited)."
+    },
+    "reminders": {
+      "intro": "Never pay for something you meant to cancel. Set up renewal alerts:",
+      "step1": "Open a subscription and tap \"Reminder\".",
+      "step2": "Choose when to be notified: 1 day before, 3 days, 1 week, or a custom interval.",
+      "step3": "You'll receive a local notification — no server needed.",
+      "tip": "With AI features enabled, Uha can suggest smarter reminder timing based on the subscription type."
+    },
+    "privacy": {
+      "intro": "Uha is built with privacy at its core. Here's what that means in practice:",
+      "noAccount": "No accounts or sign-ups — open and use. Your identity is not our business.",
+      "noTracking": "Zero analytics, telemetry, crash reporters, or third-party SDKs.",
+      "faceId": "Protect the app with Face ID or a passcode — your data stays hidden even if someone picks up your phone.",
+      "network": "The only network request Uha makes is to fetch currency exchange rates. Only a date is sent — no personal data.",
+      "statement": "We believe privacy isn't a feature — it's a right. Uha is built for people who agree."
+    },
+    "ai": {
+      "intro": "On supported devices (iPhone 15 Pro+), Uha uses on-device machine learning to make things faster:",
+      "scan": "Receipt & screenshot scanning",
+      "scanDesc": "Extracts service name, price, and renewal date using on-device text recognition.",
+      "nlp": "Natural language input",
+      "nlpDesc": "Write \"Spotify 9.99 monthly\" in one field — Uha parses it into structured data.",
+      "categorize": "Auto-categorization",
+      "categorizeDesc": "Recognizes the service and suggests a category, icon, and typical pricing.",
+      "duplicates": "Overlap detection",
+      "duplicatesDesc": "Flags duplicate services or ones already included in a bundle you have.",
+      "summary": "Spending summary",
+      "summaryDesc": "A sentence like \"This month you'll spend 12% more because of the annual Figma renewal.\"",
+      "tip": "All AI features run entirely on your device. Nothing is sent to any server."
+    },
+    "customization": {
+      "intro": "Make Uha feel like it was made just for you:",
+      "icons": "App Icons",
+      "iconsDesc": "Choose from classic, dark, and pride icon variants for your home screen.",
+      "themes": "Themes",
+      "themesDesc": "Light, Dark, and OLED modes. Follows system preference or set independently.",
+      "accent": "Accent Color",
+      "accentDesc": "Pick from 8 iOS-inspired accent colors that style the entire interface.",
+      "currency": "Base Currency",
+      "currencyDesc": "Set your home currency and all subscriptions are automatically converted with live exchange rates."
+    },
+    "export": {
+      "intro": "Your data belongs to you. Export it anytime in two formats:",
+      "csv": "Opens in any spreadsheet app. Great for personal analysis or sharing.",
+      "sql": "A database dump you can import into any SQL-compatible tool.",
+      "step1": "Go to Settings → Export Data.",
+      "step2": "Choose CSV or SQL format.",
+      "step3": "Share or save the file via the iOS share sheet."
+    },
+    "icloud": {
+      "intro": "Uha supports optional iCloud backup. Your data is encrypted by Apple and controlled by you.",
+      "step1": "Go to Settings → iCloud Backup.",
+      "step2": "Toggle on \"Enable iCloud Sync\".",
+      "step3": "Your data will sync across devices signed into the same Apple ID.",
+      "tip": "iCloud backup is entirely opt-in. Uha never sees or accesses your iCloud data."
+    },
+    "faq": {
+      "q1": "Is Uha really free?",
+      "a1": "Yes. The free plan includes up to 5 subscriptions, 3 currencies, and a 3-year forecast. Upgrade to Unlimited to remove all limits.",
+      "q2": "Does Uha work without internet?",
+      "a2": "Yes. Everything works offline except currency exchange rate updates, which require a brief network request.",
+      "q3": "Can I use Uha on iPad or Mac?",
+      "a3": "iPadOS and macOS versions are coming soon. Currently Uha is available on iPhone.",
+      "q4": "What happens if I delete the app?",
+      "a4": "All data is stored locally on your device. If you delete the app without an iCloud backup, your data is gone. We recommend enabling iCloud sync or exporting regularly.",
+      "q5": "Is Uha open source?",
+      "a5": "Yes. Uha is open source — you can inspect the code and verify that your data stays private."
+    }
   }
 }

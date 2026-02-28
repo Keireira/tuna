@@ -1,6 +1,7 @@
 {
   "nav": {
-    "download": "Descargar"
+    "download": "Descargar",
+    "docs": "Docs"
   },
   "hero": {
     "headline": "¡Rastrea tus\nsuscripciones!",
@@ -160,5 +161,126 @@
   },
   "footer": {
     "madeWith": "Hecho con cariño"
+  },
+  "docs": {
+    "title": "Documentación",
+    "subtitle": "Todo lo que necesitas saber sobre Uha",
+    "nav": {
+      "getting-started": "Primeros pasos",
+      "adding": "Agregar suscripciones",
+      "managing": "Gestión",
+      "spending": "Análisis de gastos",
+      "reminders": "Recordatorios",
+      "privacy": "Privacidad",
+      "ai": "Funciones IA",
+      "customization": "Personalización",
+      "export": "Exportar datos",
+      "icloud": "Respaldo en iCloud",
+      "faq": "Preguntas frecuentes"
+    },
+    "gettingStarted": {
+      "intro": "Uha es un gestor de suscripciones para iOS que mantiene todos tus datos en tu dispositivo. Sin cuentas ni registros — solo abre la app y empieza.",
+      "step1": "Descarga Uha desde la App Store y ábrela.",
+      "step2": "Toca \"+\" para agregar tu primera suscripción — manualmente, desde un recibo o una captura.",
+      "step3": "Configura un recordatorio para no perder nunca una fecha de renovación.",
+      "tip": "Uha incluye más de 80 presets de servicios. Empieza a escribir el nombre y los detalles se completan automáticamente."
+    },
+    "adding": {
+      "intro": "Hay varias formas de agregar una suscripción a Uha:",
+      "manual": "Entrada manual",
+      "manualDesc": "Completa el nombre, precio, ciclo de facturación y categoría. Elige de presets o crea un servicio personalizado.",
+      "receipt": "Desde un recibo",
+      "receiptDesc": "Apunta tu cámara a un recibo en papel o digital. El reconocimiento de texto en el dispositivo extraerá los detalles automáticamente.",
+      "screenshot": "Desde una captura",
+      "screenshotDesc": "Comparte una captura de un correo de confirmación o página de facturación — Uha analizará la información de la suscripción.",
+      "natural": "Lenguaje natural",
+      "naturalDesc": "Escribe algo como \"Netflix 15.99 mensual\" en un solo campo y Uha lo dividirá en campos separados.",
+      "tip": "El escaneo de recibos y capturas, así como la entrada en lenguaje natural, usan ML en el dispositivo — tus datos nunca salen del dispositivo."
+    },
+    "managing": {
+      "intro": "Una vez que hayas agregado suscripciones, Uha te da dos formas de verlas y gestionarlas:",
+      "calendar": "Vista de calendario",
+      "calendarDesc": "Ve las próximas renovaciones en un calendario visual. Ideal para planificar cuándo llegarán los cargos.",
+      "list": "Vista de lista",
+      "listDesc": "Una lista cronológica de todas tus suscripciones con precios y fechas de próxima renovación.",
+      "categories": "Categorías",
+      "categoriesDesc": "Organiza suscripciones en categorías como Streaming, Productividad, Salud, etc. Totalmente personalizables.",
+      "edit": "Edita cuando quieras",
+      "editDesc": "Toca cualquier suscripción para actualizar el precio, ciclo, categoría o cancelarla."
+    },
+    "spending": {
+      "intro": "Uha te da una imagen clara de a dónde va tu dinero:",
+      "monthly": "Total mensual — cuánto gastas cada mes en todas tus suscripciones.",
+      "annual": "Total anual — el costo completo del año de un vistazo.",
+      "category": "Desglose por categoría — distribución visual del gasto.",
+      "forecast": "Pronóstico — proyecta tu gasto hasta 3 años adelante (10 años con Unlimited)."
+    },
+    "reminders": {
+      "intro": "No pagues por algo que querías cancelar. Configura alertas de renovación:",
+      "step1": "Abre una suscripción y toca \"Recordatorio\".",
+      "step2": "Elige cuándo notificarte: 1 día antes, 3 días, 1 semana o un intervalo personalizado.",
+      "step3": "Recibirás una notificación local — no se necesita servidor.",
+      "tip": "Con las funciones IA activadas, Uha puede sugerir un momento más adecuado para el recordatorio según el tipo de suscripción."
+    },
+    "privacy": {
+      "intro": "Uha está construido con la privacidad en su núcleo. Esto es lo que significa en la práctica:",
+      "noAccount": "Sin cuentas ni registros — abre y usa. Tu identidad no es asunto nuestro.",
+      "noTracking": "Cero analíticas, telemetría, reportes de fallos o SDKs de terceros.",
+      "faceId": "Protege la app con Face ID o código — tus datos permanecen ocultos aunque alguien tome tu teléfono.",
+      "network": "La única solicitud de red que hace Uha es para obtener tipos de cambio. Solo se envía una fecha — ningún dato personal.",
+      "statement": "Creemos que la privacidad no es una función — es un derecho. Uha está hecho para quienes están de acuerdo."
+    },
+    "ai": {
+      "intro": "En dispositivos compatibles (iPhone 15 Pro+), Uha usa aprendizaje automático en el dispositivo para acelerar las cosas:",
+      "scan": "Escaneo de recibos y capturas",
+      "scanDesc": "Extrae nombre del servicio, precio y fecha de renovación usando reconocimiento de texto en el dispositivo.",
+      "nlp": "Entrada en lenguaje natural",
+      "nlpDesc": "Escribe \"Spotify 9.99 mensual\" en un campo — Uha lo convierte en datos estructurados.",
+      "categorize": "Auto-categorización",
+      "categorizeDesc": "Reconoce el servicio y sugiere categoría, ícono y precio típico.",
+      "duplicates": "Detección de duplicados",
+      "duplicatesDesc": "Detecta servicios duplicados o ya incluidos en un paquete que tienes.",
+      "summary": "Resumen de gastos",
+      "summaryDesc": "Una frase como \"Este mes gastarás 12% más por la renovación anual de Figma\".",
+      "tip": "Todas las funciones IA se ejecutan completamente en tu dispositivo. Nada se envía a ningún servidor."
+    },
+    "customization": {
+      "intro": "Haz que Uha se sienta hecho para ti:",
+      "icons": "Íconos de la app",
+      "iconsDesc": "Elige entre variantes clásicas, oscuras y de orgullo para tu pantalla de inicio.",
+      "themes": "Temas",
+      "themesDesc": "Modos Claro, Oscuro y OLED. Sigue la preferencia del sistema o configúralos independientemente.",
+      "accent": "Color de acento",
+      "accentDesc": "Elige entre 8 colores de acento inspirados en iOS que estilizan toda la interfaz.",
+      "currency": "Moneda base",
+      "currencyDesc": "Configura tu moneda base y todas las suscripciones se convierten automáticamente con tipos de cambio en vivo."
+    },
+    "export": {
+      "intro": "Tus datos te pertenecen. Expórtalos en cualquier momento en dos formatos:",
+      "csv": "Se abre en cualquier app de hojas de cálculo. Ideal para análisis personal o compartir.",
+      "sql": "Un volcado de base de datos que puedes importar en cualquier herramienta compatible con SQL.",
+      "step1": "Ve a Ajustes → Exportar datos.",
+      "step2": "Elige el formato: CSV o SQL.",
+      "step3": "Comparte o guarda el archivo a través del menú de compartir de iOS."
+    },
+    "icloud": {
+      "intro": "Uha soporta respaldo opcional en iCloud. Tus datos están cifrados por Apple y controlados por ti.",
+      "step1": "Ve a Ajustes → Respaldo en iCloud.",
+      "step2": "Activa \"Sincronización de iCloud\".",
+      "step3": "Tus datos se sincronizarán entre dispositivos con el mismo Apple ID.",
+      "tip": "El respaldo en iCloud es completamente opcional. Uha nunca ve ni accede a tus datos de iCloud."
+    },
+    "faq": {
+      "q1": "¿Uha es realmente gratis?",
+      "a1": "Sí. El plan gratuito incluye hasta 5 suscripciones, 3 monedas y un pronóstico de 3 años. Pasa a Unlimited para eliminar todos los límites.",
+      "q2": "¿Uha funciona sin internet?",
+      "a2": "Sí. Todo funciona sin conexión excepto las actualizaciones de tipos de cambio, que requieren una breve solicitud de red.",
+      "q3": "¿Puedo usar Uha en iPad o Mac?",
+      "a3": "Las versiones para iPadOS y macOS llegarán pronto. Actualmente Uha está disponible en iPhone.",
+      "q4": "¿Qué pasa si elimino la app?",
+      "a4": "Todos los datos se almacenan localmente en tu dispositivo. Si eliminas la app sin un respaldo en iCloud, tus datos se perderán. Recomendamos activar la sincronización con iCloud o exportar regularmente.",
+      "q5": "¿Uha es de código abierto?",
+      "a5": "Sí. Uha es de código abierto — puedes inspeccionar el código y verificar que tus datos permanecen privados."
+    }
   }
 }

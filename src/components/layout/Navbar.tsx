@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { ThemeMode } from '@/styles/theme';
@@ -30,7 +31,7 @@ const NavInner = styled.div`
   justify-content: space-between;
 `;
 
-const Logo = styled.a`
+const Logo = styled(Link)`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -45,6 +46,29 @@ const LogoIcon = styled(motion.img)`
   width: 36px;
   height: 36px;
   clip-path: url(#squircle);
+`;
+
+const NavLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+`;
+
+const NavLink = styled(Link)<{ $active: boolean }>`
+  padding: 6px 12px;
+  border-radius: 980px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: ${({ theme, $active }) => ($active ? theme.accent : theme.textSecondary)};
+  transition: color 0.2s;
+
+  &:hover {
+    color: ${({ theme }) => theme.accent};
+  }
 `;
 
 const NavRight = styled.div`
@@ -103,6 +127,13 @@ const MobileMenu = styled(motion.div)`
   z-index: 999;
 `;
 
+const MobileNavLink = styled(Link)`
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: ${({ theme }) => theme.textSecondary};
+`;
+
 const MobileCtaButton = styled.a`
   display: inline-flex;
   align-items: center;
@@ -122,6 +153,7 @@ interface NavbarProps {
 
 export function Navbar({ themeMode, onToggleTheme, appIconSrc }: NavbarProps) {
   const { t } = useTranslation();
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -136,7 +168,7 @@ export function Navbar({ themeMode, onToggleTheme, appIconSrc }: NavbarProps) {
       <Nav $scrolled={scrolled}>
         <Container>
           <NavInner>
-            <Logo href="#">
+            <Logo to="/">
               <LogoIcon
                 key={appIconSrc}
                 src={appIconSrc}
@@ -148,6 +180,11 @@ export function Navbar({ themeMode, onToggleTheme, appIconSrc }: NavbarProps) {
               Uha
             </Logo>
             <NavRight>
+              <NavLinks>
+                <NavLink to="/docs" $active={location.pathname === '/docs'}>
+                  {t('nav.docs')}
+                </NavLink>
+              </NavLinks>
               <LanguageSwitcher />
               <ThemeToggle mode={themeMode} onToggle={onToggleTheme} />
               <CtaButton href="https://apps.apple.com/app/uha" target="_blank" rel="noopener">{t('nav.download')}</CtaButton>
@@ -172,6 +209,9 @@ export function Navbar({ themeMode, onToggleTheme, appIconSrc }: NavbarProps) {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
           >
+            <MobileNavLink to="/docs" onClick={() => setMobileOpen(false)}>
+              {t('nav.docs')}
+            </MobileNavLink>
             <MobileCtaButton href="https://apps.apple.com/app/uha" target="_blank" rel="noopener" onClick={() => setMobileOpen(false)}>
               {t('nav.download')}
             </MobileCtaButton>
