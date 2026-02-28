@@ -1,3 +1,5 @@
+'use client';
+
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
@@ -37,6 +39,15 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     border: none;
     background: none;
+  }
+
+  main a,
+  main button,
+  main input,
+  main select,
+  main textarea,
+  main [role="button"] {
+    pointer-events: auto;
   }
 
   ::selection {

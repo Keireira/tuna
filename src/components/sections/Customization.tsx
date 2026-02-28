@@ -1,4 +1,6 @@
-import { useState } from 'react';
+'use client';
+
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,7 +9,7 @@ import { Section, SectionTitle, SectionSubtitle } from '../layout/Section';
 import { GlassCard } from '../common/GlassCard';
 import { fadeInUp, staggerContainer } from '@/styles/animations';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { APP_ICONS } from '@/App';
+import { APP_ICONS } from '@/components/AppShell';
 import { ACCENT_COLORS } from '@/styles/accents';
 import type { AccentColor } from '@/styles/accents';
 import type { ThemeMode } from '@/styles/theme';
@@ -388,9 +390,12 @@ export function Customization({ selectedIcon, onSelectIcon, onAccentChange, them
 
   const [activeTab, setActiveTab] = useState<TabKey>('icon');
 
-  const [activeAccentId, setActiveAccentId] = useState(() =>
-    localStorage.getItem('uha-accent') ?? 'blue'
-  );
+  const [activeAccentId, setActiveAccentId] = useState('blue');
+
+  useEffect(() => {
+    const saved = localStorage.getItem('uha-accent');
+    if (saved) setActiveAccentId(saved);
+  }, []);
 
   const [activeCurrency, setActiveCurrency] = useState('USD');
 

@@ -1,6 +1,9 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { ThemeMode } from '@/styles/theme';
@@ -58,7 +61,7 @@ const NavLinks = styled.div`
   }
 `;
 
-const NavLink = styled(Link)<{ $active: boolean }>`
+const NavAnchor = styled(Link)<{ $active: boolean }>`
   padding: 6px 12px;
   border-radius: 980px;
   font-size: 0.875rem;
@@ -153,7 +156,7 @@ interface NavbarProps {
 
 export function Navbar({ themeMode, onToggleTheme, appIconSrc }: NavbarProps) {
   const { t } = useTranslation();
-  const location = useLocation();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -168,7 +171,7 @@ export function Navbar({ themeMode, onToggleTheme, appIconSrc }: NavbarProps) {
       <Nav $scrolled={scrolled}>
         <Container>
           <NavInner>
-            <Logo to="/">
+            <Logo href="/">
               <LogoIcon
                 key={appIconSrc}
                 src={appIconSrc}
@@ -181,9 +184,9 @@ export function Navbar({ themeMode, onToggleTheme, appIconSrc }: NavbarProps) {
             </Logo>
             <NavRight>
               <NavLinks>
-                <NavLink to="/docs" $active={location.pathname === '/docs'}>
+                <NavAnchor href="/docs" $active={pathname === '/docs'}>
                   {t('nav.docs')}
-                </NavLink>
+                </NavAnchor>
               </NavLinks>
               <LanguageSwitcher />
               <ThemeToggle mode={themeMode} onToggle={onToggleTheme} />
@@ -209,7 +212,7 @@ export function Navbar({ themeMode, onToggleTheme, appIconSrc }: NavbarProps) {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
           >
-            <MobileNavLink to="/docs" onClick={() => setMobileOpen(false)}>
+            <MobileNavLink href="/docs" onClick={() => setMobileOpen(false)}>
               {t('nav.docs')}
             </MobileNavLink>
             <MobileCtaButton href="https://apps.apple.com/app/uha" target="_blank" rel="noopener" onClick={() => setMobileOpen(false)}>

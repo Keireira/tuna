@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled, { keyframes } from 'styled-components';
@@ -35,9 +37,9 @@ const ShieldIcon = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #34C759 0%, #30D158 100%);
+  background: var(--uha-accent-gradient);
   color: #fff;
-  box-shadow: 0 12px 40px rgba(52, 199, 89, 0.3);
+  box-shadow: 0 12px 40px var(--uha-accent-40);
 `;
 
 const Title = styled.h2`
@@ -69,19 +71,19 @@ const Tab = styled.button<{ $active: boolean }>`
   padding: 8px 16px;
   border-radius: 980px;
   border: 1.5px solid ${({ $active }) =>
-    $active ? '#34C759' : 'rgba(128,128,128,0.2)'};
+    $active ? 'var(--uha-accent)' : 'rgba(128,128,128,0.2)'};
   background: ${({ $active }) =>
-    $active ? 'rgba(52, 199, 89, 0.12)' : 'transparent'};
+    $active ? 'var(--uha-accent-20)' : 'transparent'};
   color: ${({ $active, theme }) =>
-    $active ? '#34C759' : theme.textSecondary};
+    $active ? 'var(--uha-accent)' : theme.textSecondary};
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
 
   &:hover {
-    border-color: #34C759;
-    color: #34C759;
+    border-color: var(--uha-accent);
+    color: var(--uha-accent);
   }
 `;
 
@@ -153,7 +155,7 @@ const StatementText = styled.p`
   color: ${({ theme }) => theme.text};
 
   span {
-    color: #34C759;
+    color: var(--uha-accent);
   }
 `;
 
@@ -172,7 +174,7 @@ const DemoCard = styled.div`
 
 const DemoLabel = styled.div`
   font-size: 0.7rem;
-  color: #34C759;
+  color: var(--uha-accent);
   font-weight: 600;
   margin-bottom: 12px;
   text-transform: uppercase;
@@ -218,8 +220,8 @@ const OpenBadge = styled(motion.div)`
   gap: 8px;
   padding: 12px;
   border-radius: 12px;
-  background: rgba(52, 199, 89, 0.12);
-  color: #34C759;
+  background: var(--uha-accent-20);
+  color: var(--uha-accent);
   font-size: 0.9rem;
   font-weight: 600;
   margin-top: 16px;
@@ -305,7 +307,7 @@ const SdkName = styled.span`
 const SdkStatus = styled.span<{ $removed?: boolean }>`
   font-size: 0.75rem;
   font-weight: 600;
-  color: ${({ $removed }) => ($removed ? '#FF3B30' : '#34C759')};
+  color: ${({ $removed }) => ($removed ? '#FF3B30' : 'var(--uha-accent)')};
 `;
 
 const SDKS = [
@@ -370,20 +372,20 @@ const ScanCircle = styled.div<{ $done?: boolean }>`
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 3px solid ${({ $done }) => ($done ? '#34C759' : 'rgba(128,128,128,0.3)')};
+  border: 3px solid ${({ $done }) => ($done ? 'var(--uha-accent)' : 'rgba(128,128,128,0.3)')};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   transition: border-color 0.4s;
-  color: ${({ $done }) => ($done ? '#34C759' : 'rgba(128,128,128,0.4)')};
+  color: ${({ $done }) => ($done ? 'var(--uha-accent)' : 'rgba(128,128,128,0.4)')};
 
   &::before {
     content: '';
     position: absolute;
     inset: -8px;
     border-radius: 50%;
-    border: 2px solid ${({ $done }) => ($done ? '#34C759' : 'rgba(128,128,128,0.15)')};
+    border: 2px solid ${({ $done }) => ($done ? 'var(--uha-accent)' : 'rgba(128,128,128,0.15)')};
     animation: ${({ $done }) => ($done ? 'none' : scanPulse)} 1.5s ease-in-out infinite;
     transition: border-color 0.4s;
   }
@@ -392,7 +394,7 @@ const ScanCircle = styled.div<{ $done?: boolean }>`
 const LockLabel = styled(motion.div)<{ $unlocked?: boolean }>`
   font-size: 0.85rem;
   font-weight: 600;
-  color: ${({ $unlocked }) => ($unlocked ? '#34C759' : 'rgba(128,128,128,0.5)')};
+  color: ${({ $unlocked }) => ($unlocked ? 'var(--uha-accent)' : 'rgba(128,128,128,0.5)')};
 `;
 
 function FaceIdDemo() {
@@ -461,7 +463,7 @@ const LogDot = styled.span<{ $green?: boolean }>`
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: ${({ $green }) => ($green ? '#34C759' : 'rgba(128,128,128,0.2)')};
+  background: ${({ $green }) => ($green ? 'var(--uha-accent)' : 'rgba(128,128,128,0.2)')};
   flex-shrink: 0;
 `;
 
@@ -523,7 +525,7 @@ const ToggleTrack = styled.button<{ $on: boolean }>`
   width: 50px;
   height: 28px;
   border-radius: 14px;
-  background: ${({ $on }) => ($on ? '#34C759' : 'rgba(128,128,128,0.25)')};
+  background: ${({ $on }) => ($on ? 'var(--uha-accent)' : 'rgba(128,128,128,0.25)')};
   position: relative;
   cursor: pointer;
   border: none;
@@ -546,9 +548,9 @@ const BackupInfo = styled(motion.div)`
   gap: 10px;
   padding: 12px;
   border-radius: 12px;
-  background: rgba(52, 199, 89, 0.1);
+  background: var(--uha-accent-10);
   font-size: 0.8rem;
-  color: #34C759;
+  color: var(--uha-accent);
   font-weight: 500;
   margin-top: 12px;
 `;
@@ -601,9 +603,9 @@ const FormatBtn = styled.button<{ $active: boolean }>`
   flex: 1;
   padding: 10px;
   border-radius: 12px;
-  border: 1.5px solid ${({ $active }) => ($active ? '#34C759' : 'rgba(128,128,128,0.2)')};
-  background: ${({ $active }) => ($active ? 'rgba(52, 199, 89, 0.1)' : 'transparent')};
-  color: ${({ $active, theme }) => ($active ? '#34C759' : theme.textSecondary)};
+  border: 1.5px solid ${({ $active }) => ($active ? 'var(--uha-accent)' : 'rgba(128,128,128,0.2)')};
+  background: ${({ $active }) => ($active ? 'var(--uha-accent-10)' : 'transparent')};
+  color: ${({ $active, theme }) => ($active ? 'var(--uha-accent)' : theme.textSecondary)};
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;

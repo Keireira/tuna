@@ -1,5 +1,7 @@
+'use client';
+
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { Container } from './Container';
 
@@ -38,7 +40,7 @@ export function Footer() {
           <span>·</span>
           <span>Uha</span>
           <span>·</span>
-          <FooterLink to="/docs">{t('nav.docs')}</FooterLink>
+          <FooterLink href="/docs">{t('nav.docs')}</FooterLink>
         </FooterInner>
       </Container>
     </FooterWrapper>

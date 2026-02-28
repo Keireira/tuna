@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useCallback, useRef, useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 
@@ -75,7 +77,7 @@ const Wrapper = styled.div`
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 2;
+  z-index: 0;
   overflow: hidden;
 `;
 
@@ -143,11 +145,12 @@ export function FloatingLogos() {
   const lastTimeRef = useRef(0);
   const [, forceRender] = useState(0);
   const [explodingIds, setExplodingIds] = useState<Set<number>>(new Set());
+  const explodingIdsRef = useRef<Set<number>>(new Set());
   const [bursts, setBursts] = useState<ParticleBurstData[]>([]);
   const burstIdRef = useRef(0);
   const nextLogoId = useRef(LOGO_COUNT);
   const initRef = useRef(false);
-  const prevDims = useRef({ w: window.innerWidth, h: window.innerHeight });
+  const prevDims = useRef({ w: typeof window !== 'undefined' ? window.innerWidth : 1200, h: typeof window !== 'undefined' ? window.innerHeight : 800 });
 
   // Initialize logos once wrapper is measured
   useEffect(() => {
@@ -272,6 +275,7 @@ export function FloatingLogos() {
 
       // Update DOM directly (no React re-render)
       for (const l of logos) {
+        if (explodingIdsRef.current.has(l.id)) continue;
         const el = logoEls.current.get(l.id);
         if (el) {
           el.style.transform = `translate(${l.x}px, ${l.y}px)`;
@@ -290,6 +294,7 @@ export function FloatingLogos() {
 
   const explodeLogo = useCallback((logoId: number, cx: number, cy: number) => {
     setExplodingIds((prev) => new Set(prev).add(logoId));
+    explodingIdsRef.current.add(logoId);
 
     const count = 8 + Math.floor(Math.random() * 5);
     const particles = Array.from({ length: count }, () => {
@@ -319,6 +324,7 @@ export function FloatingLogos() {
     setTimeout(() => {
       logosRef.current = logosRef.current.filter((l) => l.id !== logoId);
       logoEls.current.delete(logoId);
+      explodingIdsRef.current.delete(logoId);
       setExplodingIds((prev) => {
         const next = new Set(prev);
         next.delete(logoId);

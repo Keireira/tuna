@@ -1,3 +1,5 @@
+'use client';
+
 import { FloatingLogos } from '@/components/common/FloatingLogos';
 import { Hero } from '@/components/sections/Hero';
 import { Features } from '@/components/sections/Features';
@@ -6,41 +8,26 @@ import { AIFeature } from '@/components/sections/AIFeature';
 import { Customization } from '@/components/sections/Customization';
 import { Stats } from '@/components/sections/Stats';
 import { Download } from '@/components/sections/Download';
-import { APP_ICONS } from '@/App';
-import type { ThemeMode } from '@/styles/theme';
-import type { AccentColor } from '@/styles/accents';
+import { APP_ICONS, useAppContext } from '@/components/AppShell';
 
-interface LandingPageProps {
-  selectedIcon: string;
-  onSelectIcon: (id: string) => void;
-  onAccentChange: (accent: AccentColor) => void;
-  themeMode: ThemeMode;
-  onThemeChange: (mode: ThemeMode) => void;
-}
-
-export function LandingPage({
-  selectedIcon,
-  onSelectIcon,
-  onAccentChange,
-  themeMode,
-  onThemeChange,
-}: LandingPageProps) {
+export function LandingPage() {
+  const { selectedIcon, setSelectedIcon, setAccent, mode, setMode } = useAppContext();
   const currentIcon = APP_ICONS.find((i) => i.id === selectedIcon) ?? APP_ICONS[0];
 
   return (
     <>
       <FloatingLogos />
-      <main style={{ position: 'relative', zIndex: 1 }}>
+      <main style={{ position: 'relative', zIndex: 1, pointerEvents: 'none' }}>
         <Hero appIconSrc={currentIcon.src} />
         <Features />
         <Privacy />
         <AIFeature />
         <Customization
           selectedIcon={selectedIcon}
-          onSelectIcon={onSelectIcon}
-          onAccentChange={onAccentChange}
-          themeMode={themeMode}
-          onThemeChange={onThemeChange}
+          onSelectIcon={setSelectedIcon}
+          onAccentChange={setAccent}
+          themeMode={mode}
+          onThemeChange={setMode}
         />
         <Stats />
         <Download />
