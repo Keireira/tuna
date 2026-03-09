@@ -119,6 +119,7 @@ export function PrivacyPage() {
             <BulletList>
               <li><strong>RevenueCat</strong> — {t('privacyPolicy.third_party_revenuecat')}</li>
               <li><strong>Logo.dev</strong> — {t('privacyPolicy.third_party_logodev')}</li>
+              <li><strong>Cloudflare</strong> — {t('privacyPolicy.third_party_cloudflare')}</li>
             </BulletList>
             <Paragraph>{t('privacyPolicy.third_party_outro')}</Paragraph>
           </Section>
