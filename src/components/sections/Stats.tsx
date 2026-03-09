@@ -124,15 +124,16 @@ const FREE_FEATURES = [
   'pricing.free.currencies',
   'pricing.free.horizon',
   'pricing.free.ai',
-  'pricing.free.export',
 ];
 
 const UNLIMITED_FEATURES = [
   'pricing.unlimited.subscriptions',
+  'pricing.unlimited.categories',
   'pricing.unlimited.currencies',
   'pricing.unlimited.horizon',
-  'pricing.unlimited.ai',
   'pricing.unlimited.icloud',
+  'pricing.unlimited.customization',
+  'pricing.unlimited.ai',
 ];
 
 /* ── Component ── */

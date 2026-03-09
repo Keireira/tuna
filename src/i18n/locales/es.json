@@ -138,19 +138,20 @@
       "title": "Gratis",
       "subscriptions": "Hasta 5 suscripciones",
       "currencies": "3 monedas (USD, EUR y tu región)",
-      "horizon": "Pronóstico a 3 años",
-      "ai": "Sugerencias IA al completar",
-      "export": "Exportación CSV y SQL"
+      "horizon": "Pronóstico a 2 años",
+      "ai": "Sugerencias IA al completar"
     },
     "unlimited": {
       "title": "Unlimited",
       "includes": "Todo lo gratuito, más:",
       "subscriptions": "Suscripciones ilimitadas",
+      "categories": "Categorías personalizadas",
       "currencies": "Las 100+ monedas",
       "horizon": "Pronóstico a 10 años",
-      "ai": "Análisis IA y alertas inteligentes",
-      "icloud": "Sincronización vía iCloud",
-      "plans": "Mensual \u00b7 Anual \u00b7 De por vida"
+      "icloud": "Sincronización iCloud y respaldo extendido",
+      "customization": "Personalización extendida",
+      "ai": "Análisis IA, alertas inteligentes y más",
+      "plans": "Compra única"
     },
     "macos": "iPadOS y macOS próximamente"
   },
@@ -160,7 +161,56 @@
     "appStore": "Descargar en App Store"
   },
   "footer": {
-    "madeWith": "Hecho con cariño"
+    "madeWith": "Hecho con cariño",
+    "terms": "Términos",
+    "privacy": "Privacidad"
+  },
+  "terms": {
+    "title": "Términos de Uso",
+    "updated": "Última actualización: 9 de marzo de 2026",
+    "intro": "Estos Términos de Uso rigen el acceso y uso de Uha, una aplicación de gestión de suscripciones para iOS desarrollada por Alena Dzhukich (\"nosotros\" o \"nuestro\"). Al descargar o usar Uha, aceptas estos términos.",
+    "use_title": "Uso de la aplicación",
+    "use_body": "Uha se proporciona para uso personal y no comercial. Puedes usar la app para rastrear suscripciones, gestionar gastos y organizar datos financieros en tu dispositivo. Aceptas no hacer mal uso de la app, no usarla para fines ilegales ni con fines comerciales. Uha es software de código abierto — el código fuente está disponible públicamente para inspección y transparencia, pero el proyecto, su nombre, marca y recursos siguen siendo propiedad del desarrollador. Los términos completos de la licencia están disponibles en el repositorio del proyecto.",
+    "subscriptions_title": "Compra dentro de la app",
+    "subscriptions_body": "Uha ofrece una compra única opcional (\"Uha Unlimited\") que desbloquea permanentemente todas las funciones: suscripciones ilimitadas, categorías personalizadas, todas las monedas disponibles, un horizonte de pronóstico de 10 años, sincronización con iCloud, respaldo extendido, personalización del color de acento y funciones con IA. La compra se procesa a través de la App Store de Apple y es gestionada por RevenueCat. El pago se cobra a tu cuenta de Apple ID al confirmar. Al ser una compra de por vida, no se renueva ni se repite. El precio está establecido en USD y puede variar según la región de acuerdo con los precios de la App Store. No procesamos pagos directamente y no tenemos acceso a tu información de pago.",
+    "content_title": "Tu contenido",
+    "content_body": "Todos los datos de suscripciones, categorías y preferencias que creas en Uha se almacenan localmente en tu dispositivo. No tenemos acceso a tu contenido. Eres responsable de mantener copias de seguridad de tus datos. Si eliminas la app sin hacer una copia de seguridad, tus datos no podrán recuperarse.",
+    "icloud_title": "Respaldo en iCloud",
+    "icloud_body": "Uha ofrece respaldo opcional en iCloud para mantener tus datos seguros en múltiples dispositivos. Cuando está habilitado, tus datos se almacenan en tu cuenta personal de iCloud, cifrados y gestionados por Apple. No tenemos acceso a tus datos de iCloud. El respaldo en iCloud es completamente opcional — está deshabilitado por defecto y puede desactivarse en cualquier momento. Los términos y la política de privacidad de Apple se aplican a todos los datos almacenados allí.",
+    "third_party_title": "Servicios de terceros",
+    "third_party_body": "Uha se integra con servicios de terceros para proporcionar ciertas funciones. RevenueCat se usa para gestionar compras y validación de derechos dentro de la app. Logo.dev se usa para mostrar logotipos e íconos de servicios. Estos servicios operan bajo sus propios términos y políticas de privacidad. No somos responsables de las prácticas de proveedores externos.",
+    "termination_title": "Terminación",
+    "termination_body": "Puedes dejar de usar Uha en cualquier momento eliminando la app. Nos reservamos el derecho de modificar o descontinuar la app en cualquier momento sin previo aviso, aunque como proyecto de código abierto nos esforzamos por comunicar cambios significativos de manera razonable.",
+    "disclaimer_title": "Descargo de responsabilidad",
+    "disclaimer_body": "Uha se proporciona \"tal cual\" sin garantías de ningún tipo, ya sean expresas o implícitas. No garantizamos que la app esté libre de errores, sea ininterrumpida o que cumpla con tus requisitos específicos. Uha es una herramienta de seguimiento y no proporciona asesoramiento financiero. Eres el único responsable de tus decisiones financieras.",
+    "changes_title": "Cambios en estos términos",
+    "changes_body": "Podemos actualizar estos Términos de Uso de vez en cuando. Los cambios se reflejarán en esta página con una fecha actualizada. El uso continuado de Uha después de los cambios constituye la aceptación de los términos revisados.",
+    "contact_title": "Contacto",
+    "contact_body": "Si tienes preguntas sobre estos términos, puedes contactarnos en github@alena.red o abrir un issue en nuestro repositorio de GitHub."
+  },
+  "privacyPolicy": {
+    "title": "Política de Privacidad",
+    "updated": "Última actualización: 9 de marzo de 2026",
+    "intro": "Uha está construido con la privacidad como principio fundamental. Esta Política de Privacidad explica qué datos recopila Uha, cómo se utilizan y cómo están involucrados los servicios de terceros.",
+    "collect_title": "Qué recopilamos",
+    "collect_body": "Uha no recopila datos personales. No hay cuentas, registros, direcciones de correo electrónico ni contraseñas. No rastreamos tu uso, comportamiento ni ubicación. La app no contiene analíticas ni telemetría de ningún tipo.",
+    "local_title": "Datos almacenados en tu dispositivo",
+    "local_body": "Todos los datos que ingresas en Uha — suscripciones, categorías, métodos de pago, preferencias — se almacenan localmente en tu dispositivo usando una base de datos SQLite. Estos datos nunca salen de tu dispositivo a menos que elijas explícitamente exportarlos o habilitar el respaldo en iCloud. La única solicitud de red que Uha realiza por sí mismo es para obtener tipos de cambio, enviando solo un parámetro de fecha sin información personal.",
+    "third_party_title": "Servicios de terceros",
+    "third_party_intro": "Uha utiliza los siguientes servicios de terceros:",
+    "third_party_revenuecat": "Gestiona la compra dentro de la app y la validación de derechos. RevenueCat recibe un ID de usuario anónimo y datos del recibo de compra de Apple. No recibe tu nombre, correo electrónico ni los datos de suscripción que rastreas en la app.",
+    "third_party_logodev": "Proporciona logotipos e íconos de servicios mostrados en la app. Cuando la app solicita un logotipo, el nombre del servicio se envía a la API de Logo.dev. No se incluyen datos personales ni financieros en estas solicitudes.",
+    "third_party_outro": "No vendemos, compartimos ni transferimos tus datos personales a terceros. Las integraciones anteriores son estrictamente funcionales y no implican recopilación de datos personales.",
+    "icloud_title": "Respaldo en iCloud",
+    "icloud_body": "Uha soporta respaldo opcional en iCloud. Cuando está habilitado, tus datos de suscripción se almacenan en tu cuenta personal de iCloud. Estos datos son cifrados y gestionados completamente por Apple — no tenemos acceso a ellos. El respaldo en iCloud está deshabilitado por defecto y es completamente opcional. No se envían datos a iCloud a menos que habilites explícitamente esta función. La política de privacidad de Apple rige todos los datos almacenados en iCloud.",
+    "analytics_title": "Analíticas y seguimiento",
+    "analytics_body": "Uha no contiene analíticas, reportes de fallos ni SDKs publicitarios. No sabemos cómo usas la app, con qué frecuencia la abres ni qué suscripciones rastreas. Esto es por diseño.",
+    "children_title": "Privacidad de menores",
+    "children_body": "Uha no recopila conscientemente datos de menores de 13 años. Dado que la app no recopila datos personales de ningún usuario, no existe preocupación sobre datos específicos por edad.",
+    "changes_title": "Cambios en esta política",
+    "changes_body": "Podemos actualizar esta Política de Privacidad si nuestras prácticas cambian. Las actualizaciones se reflejarán en esta página con una fecha revisada. Como Uha es de código abierto, también puedes revisar los cambios en el historial de commits del proyecto.",
+    "contact_title": "Contacto",
+    "contact_body": "Si tienes preguntas sobre esta política, puedes contactarnos en github@alena.red o abrir un issue en nuestro repositorio de GitHub."
   },
   "docs": {
     "title": "Documentación",
@@ -213,7 +263,7 @@
       "monthly": "Total mensual — cuánto gastas cada mes en todas tus suscripciones.",
       "annual": "Total anual — el costo completo del año de un vistazo.",
       "category": "Desglose por categoría — distribución visual del gasto.",
-      "forecast": "Pronóstico — proyecta tu gasto hasta 3 años adelante (10 años con Unlimited)."
+      "forecast": "Pronóstico — proyecta tu gasto hasta 2 años adelante (10 años con Unlimited)."
     },
     "reminders": {
       "intro": "No pagues por algo que querías cancelar. Configura alertas de renovación:",
@@ -272,7 +322,7 @@
     },
     "faq": {
       "q1": "¿Uha es realmente gratis?",
-      "a1": "Sí. El plan gratuito incluye hasta 5 suscripciones, 3 monedas y un pronóstico de 3 años. Pasa a Unlimited para eliminar todos los límites.",
+      "a1": "Sí. El plan gratuito incluye hasta 5 suscripciones, 3 monedas y un pronóstico de 2 años. Pasa a Unlimited para eliminar todos los límites.",
       "q2": "¿Uha funciona sin internet?",
       "a2": "Sí. Todo funciona sin conexión excepto las actualizaciones de tipos de cambio, que requieren una breve solicitud de red.",
       "q3": "¿Puedo usar Uha en iPad o Mac?",

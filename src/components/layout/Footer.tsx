@@ -41,6 +41,10 @@ export function Footer() {
           <span>Uha</span>
           <span>·</span>
           <FooterLink href="/docs">{t('nav.docs')}</FooterLink>
+          <span>·</span>
+          <FooterLink href="/terms">{t('footer.terms')}</FooterLink>
+          <span>·</span>
+          <FooterLink href="/privacy">{t('footer.privacy')}</FooterLink>
         </FooterInner>
       </Container>
     </FooterWrapper>

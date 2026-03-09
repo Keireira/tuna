@@ -138,19 +138,20 @@
       "title": "Free",
       "subscriptions": "Up to 5 subscriptions",
       "currencies": "3 currencies (USD, EUR & your region)",
-      "horizon": "3-year forecast",
-      "ai": "AI form suggestions",
-      "export": "CSV & SQL export"
+      "horizon": "2-year forecast",
+      "ai": "AI form suggestions"
     },
     "unlimited": {
       "title": "Unlimited",
       "includes": "Everything in Free, plus:",
       "subscriptions": "Unlimited subscriptions",
+      "categories": "Custom categories",
       "currencies": "All 100+ currencies",
       "horizon": "10-year forecast",
-      "ai": "AI insights & smart alerts",
-      "icloud": "iCloud sync across devices",
-      "plans": "Monthly \u00b7 Annual \u00b7 Lifetime"
+      "icloud": "iCloud sync & extended backup",
+      "customization": "Extended customization",
+      "ai": "AI insights, smart alerts & more",
+      "plans": "One-time purchase"
     },
     "macos": "iPadOS & macOS coming soon"
   },
@@ -160,7 +161,56 @@
     "appStore": "Download on App Store"
   },
   "footer": {
-    "madeWith": "Made with care"
+    "madeWith": "Made with care",
+    "terms": "Terms",
+    "privacy": "Privacy"
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "updated": "Last updated: March 9, 2026",
+    "intro": "These Terms of Use govern your access to and use of Uha, a subscription management application for iOS developed by Alena Dzhukich (\"we\", \"us\", or \"our\"). By downloading or using Uha, you agree to these terms.",
+    "use_title": "Use of the App",
+    "use_body": "Uha is provided for personal, non-commercial use. You may use the app to track your subscriptions, manage spending, and organize financial data on your device. You agree not to misuse the app, use it for any unlawful purpose, or use it for commercial purposes. Uha is open-source software — the source code is publicly available for inspection and transparency, but the project and its name, branding, and assets remain the property of the developer. The full license terms are available in the project's repository.",
+    "subscriptions_title": "In-App Purchase",
+    "subscriptions_body": "Uha offers an optional one-time purchase (\"Uha Unlimited\") that permanently unlocks all features, including unlimited subscriptions, custom categories, all available currencies, a 10-year forecast horizon, iCloud sync, extended backup, accent customization, and AI-powered features. The purchase is processed through Apple's App Store and managed by RevenueCat. Payment is charged to your Apple ID account at confirmation. As a lifetime purchase, it does not renew or recur. The price is set in USD and may vary by region according to Apple's App Store pricing. We do not process payments directly and have no access to your payment information.",
+    "content_title": "Your Content",
+    "content_body": "All subscription data, categories, and preferences you create in Uha are stored locally on your device. We do not have access to your content. You are responsible for maintaining backups of your data. If you delete the app without backing up, your data cannot be recovered.",
+    "icloud_title": "iCloud Backup",
+    "icloud_body": "Uha offers optional iCloud backup as a way to keep your data safe across devices. When enabled, your data is stored in your personal iCloud account, encrypted and managed by Apple. We do not have access to your iCloud data. iCloud backup is entirely opt-in — it is disabled by default and can be turned off at any time. Apple's iCloud terms and privacy policy apply to any data stored there.",
+    "third_party_title": "Third-Party Services",
+    "third_party_body": "Uha integrates with third-party services to provide certain features. RevenueCat is used to manage in-app purchases and purchase validation. Logo.dev is used to display service logos and brand icons. These services operate under their own terms and privacy policies. We are not responsible for the practices of third-party providers.",
+    "termination_title": "Termination",
+    "termination_body": "You may stop using Uha at any time by deleting the app. We reserve the right to modify or discontinue the app at any time without prior notice, though as an open-source project we aim to provide reasonable communication about significant changes.",
+    "disclaimer_title": "Disclaimer",
+    "disclaimer_body": "Uha is provided \"as is\" without warranties of any kind, whether express or implied. We do not guarantee that the app will be error-free, uninterrupted, or that it will meet your specific requirements. Uha is a tracking tool and does not provide financial advice. You are solely responsible for your financial decisions.",
+    "changes_title": "Changes to These Terms",
+    "changes_body": "We may update these Terms of Use from time to time. Changes will be reflected on this page with an updated date. Continued use of Uha after changes constitutes acceptance of the revised terms.",
+    "contact_title": "Contact",
+    "contact_body": "If you have questions about these terms, you can reach us at github@alena.red or open an issue on our GitHub repository."
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: March 9, 2026",
+    "intro": "Uha is built with privacy as a core principle. This Privacy Policy explains what data Uha collects, how it is used, and how third-party services are involved.",
+    "collect_title": "What We Collect",
+    "collect_body": "Uha does not collect personal data. There are no accounts, no sign-ups, no email addresses, and no passwords. We do not track your usage, behavior, or location. The app does not contain analytics or telemetry of any kind.",
+    "local_title": "Data Stored on Your Device",
+    "local_body": "All data you enter in Uha — subscriptions, categories, payment methods, preferences — is stored locally on your device using an on-device SQLite database. This data never leaves your device unless you explicitly choose to export it or enable iCloud backup. The only network request Uha makes on its own is to fetch currency exchange rates, which sends only a date parameter with no personal information.",
+    "third_party_title": "Third-Party Services",
+    "third_party_intro": "Uha uses the following third-party services:",
+    "third_party_revenuecat": "Manages the in-app purchase and entitlement validation. RevenueCat receives an anonymous app user ID and purchase receipt data from Apple. It does not receive your name, email, or any subscription data you track in the app. See RevenueCat's privacy policy for details.",
+    "third_party_logodev": "Provides service logos and brand icons displayed in the app. When the app requests a logo, the service name is sent to Logo.dev's API. No personal or financial data is included in these requests.",
+    "third_party_outro": "We do not sell, share, or transfer your personal data to any third party. The integrations above are strictly functional and do not involve personal data collection.",
+    "icloud_title": "iCloud Backup",
+    "icloud_body": "Uha supports optional iCloud backup. When enabled, your subscription data is stored in your personal iCloud account. This data is encrypted and managed entirely by Apple — we have no access to it. iCloud backup is disabled by default and is fully opt-in. No data is sent to iCloud unless you explicitly enable this feature. Apple's own privacy policy governs all data stored in iCloud.",
+    "analytics_title": "Analytics & Tracking",
+    "analytics_body": "Uha contains zero analytics, zero crash reporters, and zero advertising SDKs. We do not know how you use the app, how often you open it, or what subscriptions you track. This is by design.",
+    "children_title": "Children's Privacy",
+    "children_body": "Uha does not knowingly collect data from children under 13. Since the app does not collect any personal data from any user, there is no age-specific data concern.",
+    "changes_title": "Changes to This Policy",
+    "changes_body": "We may update this Privacy Policy if our practices change. Updates will be reflected on this page with a revised date. Since Uha is open source, you can also review changes in the project's commit history.",
+    "contact_title": "Contact",
+    "contact_body": "If you have questions about this policy, you can reach us at github@alena.red or open an issue on our GitHub repository."
   },
   "docs": {
     "title": "Documentation",
@@ -213,7 +263,7 @@
       "monthly": "Monthly total — see how much you're spending each month across all subscriptions.",
       "annual": "Annual total — the full yearly cost at a glance.",
       "category": "Category breakdown — visual split of spending by category.",
-      "forecast": "Forecast — project your spending up to 3 years ahead (10 years with Unlimited)."
+      "forecast": "Forecast — project your spending up to 2 years ahead (10 years with Unlimited)."
     },
     "reminders": {
       "intro": "Never pay for something you meant to cancel. Set up renewal alerts:",
@@ -272,7 +322,7 @@
     },
     "faq": {
       "q1": "Is Uha really free?",
-      "a1": "Yes. The free plan includes up to 5 subscriptions, 3 currencies, and a 3-year forecast. Upgrade to Unlimited to remove all limits.",
+      "a1": "Yes. The free plan includes up to 5 subscriptions, 3 currencies, and a 2-year forecast. Upgrade to Unlimited to remove all limits.",
       "q2": "Does Uha work without internet?",
       "a2": "Yes. Everything works offline except currency exchange rate updates, which require a brief network request.",
       "q3": "Can I use Uha on iPad or Mac?",
