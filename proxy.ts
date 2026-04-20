@@ -25,8 +25,14 @@ export const proxy = (request: NextRequest) => {
 	const { pathname } = request.nextUrl;
 	const pathLocale = pathname.split('/')[1];
 
-	if (isValidLocale(pathLocale)) return;
+	// Для валидных локалей — пропускаем, только ставим header
+	if (isValidLocale(pathLocale)) {
+		const response = NextResponse.next();
+		response.headers.set('x-pathname', pathname);
+		return response;
+	}
 
+	// Иначе редиректим
 	const locale = getPreferredLocale(request);
 	const url = request.nextUrl.clone();
 	url.pathname = `/${locale}${pathname}`;

@@ -1,22 +1,19 @@
 'use client';
 
-import { useEffect } from 'react';
-import i18n from '@lib/i18n/client';
+import { useEffect, useLayoutEffect } from 'react';
 import { I18nextProvider } from 'react-i18next';
-
-import type { TLocale } from '@lib/i18n';
+import i18n from '@lib/i18n/client';
+import type { TLocale } from '@/lib/i18n';
 import type { PropsWithChildren } from 'react';
 
 type TProps = PropsWithChildren<{
 	locale: TLocale;
 }>;
 
-const I18nProvider = ({ children, locale }: TProps) => {
-	if (i18n.resolvedLanguage !== locale) {
-		i18n.changeLanguage(locale);
-	}
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-	useEffect(() => {
+const I18nProvider = ({ children, locale }: TProps) => {
+	useIsomorphicLayoutEffect(() => {
 		if (i18n.resolvedLanguage !== locale) {
 			i18n.changeLanguage(locale);
 		}

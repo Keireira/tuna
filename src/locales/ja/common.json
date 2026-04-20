@@ -2,6 +2,10 @@
   "nav": {
     "join_beta": "ベータ版に参加"
   },
+  "not_found": {
+    "message": "このページは逃げてしまいました。",
+    "back": "Uhaに戻る"
+  },
   "meta": {
     "title": "Uha — iOS用サブスク管理アプリ",
     "title_template": "%s | Uha",

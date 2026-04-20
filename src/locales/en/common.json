@@ -2,6 +2,10 @@
   "nav": {
     "join_beta": "Join Beta"
   },
+  "not_found": {
+    "message": "This page slipped away.",
+    "back": "Back to Uha"
+  },
   "meta": {
     "title": "Uha — Subscription Manager for iOS",
     "title_template": "%s | Uha",

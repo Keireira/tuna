@@ -2,6 +2,10 @@
   "nav": {
     "join_beta": "Unirse a la beta"
   },
+  "not_found": {
+    "message": "Esta página se escapó.",
+    "back": "Volver a Uha"
+  },
   "meta": {
     "title": "Uha — Gestor de suscripciones para iOS",
     "title_template": "%s | Uha",

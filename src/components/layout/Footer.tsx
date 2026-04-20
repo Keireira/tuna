@@ -30,7 +30,7 @@ const FooterLink = styled(Link)`
 `;
 
 const Footer = () => {
-	const { t, i18n } = useTranslation();
+	const { t, i18n } = useTranslation('landing');
 
 	return (
 		<FooterWrapper>

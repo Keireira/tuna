@@ -2,6 +2,10 @@
   "nav": {
     "join_beta": "Бетаға қосылу"
   },
+  "not_found": {
+    "message": "Бұл бет таса қалды.",
+    "back": "Uha-ға оралу"
+  },
   "meta": {
     "title": "Uha — iOS үшін жазылымдарды басқару",
     "title_template": "%s | Uha",

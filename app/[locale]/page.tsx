@@ -1,5 +1,6 @@
 import { LandingPage } from '@views';
 import { buildAlternates, isValidLocale } from '@lib/i18n';
+
 import type { Metadata } from 'next';
 
 type TProps = {

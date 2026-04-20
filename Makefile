@@ -1,4 +1,4 @@
-.PHONY: rm dev lint fix
+.PHONY: rm dev build lint fix
 
 rm:
 	rm -rf ./.next
@@ -7,6 +7,9 @@ rm:
 
 dev:
 	pnpm run dev
+
+build:
+	pnpm run build
 
 lint:
 	pnpm run lint
