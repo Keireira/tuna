@@ -51,18 +51,12 @@
     "join_beta": "Join Beta Now"
   },
   "hero": {
-    "headline": "Track your subscriptions\ndown!",
+    "headline_1": "Track your subscriptions\ndown!",
     "headline_2": "Keep your subs\non the leash!",
-    "subtitle": "A subscription manager that respects your privacy. All data stays on your device. Available on iOS.",
-    "subttile_2": "Take control of your subscriptions.",
+    "subtitle_1": "A subscription manager that respects your privacy. All data stays on your device. Available on iOS.",
+    "subtitle_2": "Take control of your subscriptions.",
     "join_beta": "Join Beta Now",
     "beta_disclaimer": "You will need to wipe all of your data on release, probably"
-  },
-
-  "download": {
-    "title": "Keep your subs\non the leash!",
-    "subtitle": "Take control of your subscriptions.",
-    "appStore": "Download on App Store"
   },
   "footer": {
     "madeWith": "Made with care",

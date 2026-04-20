@@ -11,15 +11,6 @@ import type { AccentColor } from '@styles/accents';
 import '@/i18n/config';
 import { applyClientLanguage } from '@/i18n/config';
 
-export const APP_ICONS = [
-	{ id: 'classic', src: '/assets/icons/fish.png', key: 'classic' },
-	{ id: 'default', src: '/assets/icons/default.png', key: 'default' },
-	{ id: 'trans', src: '/assets/icons/trans.png', key: 'trans' },
-	{ id: 'enby', src: '/assets/icons/enby.png', key: 'enby' },
-	{ id: 'lesbi', src: '/assets/icons/lesbi.png', key: 'lesbi' },
-	{ id: 'pan', src: '/assets/icons/pan.png', key: 'pan' }
-] as const;
-
 interface AppContextValue {
 	mode: ThemeMode;
 	setMode: (mode: ThemeMode) => void;
@@ -44,8 +35,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 		applyClientLanguage();
 	}, []);
 
-	const currentIcon = APP_ICONS.find((i) => i.id === selectedIcon) ?? APP_ICONS[0];
-
 	return (
 		<AppContext.Provider
 			value={{
@@ -60,7 +49,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />
 				<SquircleMask />
-				<Navbar themeMode={mode} onToggleTheme={toggleMode} appIconSrc={currentIcon.src} />
+				<Navbar themeMode={mode} onToggleTheme={toggleMode} />
 				{children}
 				<Footer />
 			</ThemeProvider>

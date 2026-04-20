@@ -74,10 +74,9 @@ const CtaButton = styled.a`
 interface NavbarProps {
 	themeMode: ThemeMode;
 	onToggleTheme: () => void;
-	appIconSrc: string;
 }
 
-const Navbar = ({ themeMode, onToggleTheme, appIconSrc }: NavbarProps) => {
+const Navbar = ({ themeMode, onToggleTheme }: NavbarProps) => {
 	const { t } = useTranslation();
 	const [scrolled, setScrolled] = useState(false);
 
@@ -94,8 +93,7 @@ const Navbar = ({ themeMode, onToggleTheme, appIconSrc }: NavbarProps) => {
 					<NavInner>
 						<Logo href="/">
 							<LogoIcon
-								key={appIconSrc}
-								src={appIconSrc}
+								src="/assets/icons/fish.png"
 								alt="Uha"
 								initial={{ scale: 0.8, opacity: 0 }}
 								animate={{ scale: 1, opacity: 1 }}

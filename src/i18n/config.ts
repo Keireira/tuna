@@ -4,8 +4,9 @@ import en from './locales/en.json';
 import ru from './locales/ru.json';
 import ja from './locales/ja.json';
 import es from './locales/es.json';
+import kk from './locales/kk.json';
 
-const supportedLangs = ['en', 'ru', 'ja', 'es'];
+const supportedLangs = ['en', 'ru', 'ja', 'es', 'kk'];
 
 // Always init with 'en' so server and client first-render match.
 // The real language is applied after hydration in AppShell.
@@ -14,7 +15,8 @@ i18n.use(initReactI18next).init({
 		en: { translation: en },
 		ru: { translation: ru },
 		ja: { translation: ja },
-		es: { translation: es }
+		es: { translation: es },
+		kk: { translation: kk }
 	},
 	lng: 'en',
 	fallbackLng: 'en',
@@ -25,7 +27,8 @@ export const languages = [
 	{ code: 'en', name: 'English', flag: '🇺🇸' },
 	{ code: 'ru', name: 'Русский', flag: '🇷🇺' },
 	{ code: 'ja', name: '日本語', flag: '🇯🇵' },
-	{ code: 'es', name: 'Español', flag: '🇪🇸' }
+	{ code: 'es', name: 'Español', flag: '🇪🇸' },
+	{ code: 'kk', name: 'Қазақша', flag: '🇰🇿' }
 ];
 
 /** Call after hydration to apply the user's saved / browser language. */
