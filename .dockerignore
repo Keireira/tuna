@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+dist
+.git
+.github
+.claude
+.zed
+.DS_Store
+README.md

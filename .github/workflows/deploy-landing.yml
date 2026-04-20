@@ -1,4 +1,4 @@
-name: Deploy Landing to GitHub Pages
+name: Build and Deploy
 
 on:
   workflow_dispatch:
@@ -6,49 +6,58 @@ on:
     branches:
       - master
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: registry
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - name: Log in to registry
+        uses: docker/login-action@v2
         with:
-          version: 9
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+          registry: registry.keireira.com
+          username: ${{ secrets.DOCKER_REGISTRY_USERNAME }}
+          password: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}
 
       - name: Build
-        run: pnpm build
+        run: docker build --tag "registry.keireira.com/tuna:latest" .
 
-      - name: Add .nojekyll
-        run: touch out/.nojekyll
+      - name: Publish
+        run: docker push "registry.keireira.com/tuna:latest"
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
+      - name: Registry cleanup
+        run: "curl -H 'X-Webhook-Token: ${{ secrets.HOOK_TOKEN }}' https://hooks.keireira.com/registry-cleanup"
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    environment: production
+
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Copy docker-compose to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOSTNAME }}
+          username: ${{ secrets.AUTH_USER }}
+          key: ${{ secrets.AUTH_KEY }}
+          source: "docker-compose.yml"
+          target: "/opt/tuna"
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOSTNAME }}
+          username: ${{ secrets.AUTH_USER }}
+          key: ${{ secrets.AUTH_KEY }}
+          script: |
+            cd /opt/tuna
+            docker login registry.keireira.com -u "${{ secrets.DOCKER_REGISTRY_USERNAME }}" -p "${{ secrets.DOCKER_REGISTRY_PASSWORD }}"
+            docker compose pull
+            docker compose up -d --remove-orphans
+            docker image prune -f
