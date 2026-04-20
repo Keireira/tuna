@@ -1,10 +1,10 @@
 # Tuna
 
-[![GitHub License](https://img.shields.io/github/license/Keireira/uha?&style=flat-square)](https://github.com/Keireira/uha/blob/master/LICENSE)
-[![Registry](https://img.shields.io/github/deployments/Keireira/uha/registry?label=registry&style=flat-square)](https://github.com/Keireira/uha/deployments/registry)
-[![Production](https://img.shields.io/github/deployments/Keireira/uha/production?label=production&style=flat-square)](https://github.com/Keireira/uha/deployments/production)
-![GitHub repo size](https://img.shields.io/github/repo-size/Keireira/uha)
-![GitHub last commit](https://img.shields.io/github/last-commit/Keireira/uha)
+[![GitHub License](https://img.shields.io/github/license/Keireira/tuna?&style=flat-square)](https://github.com/Keireira/tuna/blob/master/LICENSE)
+[![Registry](https://img.shields.io/github/deployments/Keireira/tuna/registry?label=registry&style=flat-square)](https://github.com/Keireira/tuna/deployments/registry)
+[![Production](https://img.shields.io/github/deployments/Keireira/tuna/production?label=production&style=flat-square)](https://github.com/Keireira/tuna/deployments/production)
+![GitHub repo size](https://img.shields.io/github/repo-size/Keireira/tuna)
+![GitHub last commit](https://img.shields.io/github/last-commit/Keireira/tuna)
 
 [Terms of Use](https://uha.app/terms) | [Privacy Policy](https://uha.app/privacy) | [MCP](https://uha.app/api/mcp)
 
