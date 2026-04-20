@@ -1,7 +1,13 @@
 {
-  "name": "uha-landing",
-  "version": "0.0.0",
+  "name": "tuna",
+  "version": "1.0.0",
   "private": true,
+  "license": "AGPL-3.0",
+  "author": "Alena Dzhukich <github@alena.red>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Keireira/tuna.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
