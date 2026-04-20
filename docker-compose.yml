@@ -4,11 +4,11 @@ services:
     container_name: TUNA
     restart: unless-stopped
     labels:
-      org.opencontainers.image.title: "Tuna — Uha Landing & MCP"
-      org.opencontainers.image.description: "uha.app"
-      org.opencontainers.image.authors: "Alena Dzhukich <mail@alena.red>"
+      org.opencontainers.image.title: 'Tuna — Uha Landing & MCP'
+      org.opencontainers.image.description: 'uha.app'
+      org.opencontainers.image.authors: 'Alena Dzhukich <mail@alena.red>'
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/ || exit 1"]
+      test: ['CMD-SHELL', 'wget -qO- http://localhost:3000/ || exit 1']
       interval: 15s
       timeout: 10s
       retries: 5

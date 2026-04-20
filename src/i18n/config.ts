@@ -10,32 +10,32 @@ const supportedLangs = ['en', 'ru', 'ja', 'es'];
 // Always init with 'en' so server and client first-render match.
 // The real language is applied after hydration in AppShell.
 i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: en },
-    ru: { translation: ru },
-    ja: { translation: ja },
-    es: { translation: es },
-  },
-  lng: 'en',
-  fallbackLng: 'en',
-  interpolation: { escapeValue: false },
+	resources: {
+		en: { translation: en },
+		ru: { translation: ru },
+		ja: { translation: ja },
+		es: { translation: es }
+	},
+	lng: 'en',
+	fallbackLng: 'en',
+	interpolation: { escapeValue: false }
 });
 
-export default i18n;
-
 export const languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-  { code: 'ja', name: '日本語', flag: '🇯🇵' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
+	{ code: 'en', name: 'English', flag: '🇺🇸' },
+	{ code: 'ru', name: 'Русский', flag: '🇷🇺' },
+	{ code: 'ja', name: '日本語', flag: '🇯🇵' },
+	{ code: 'es', name: 'Español', flag: '🇪🇸' }
 ];
 
 /** Call after hydration to apply the user's saved / browser language. */
 export function applyClientLanguage() {
-  const saved = localStorage.getItem('uha-lang');
-  const browser = navigator.language.slice(0, 2);
-  const lang = saved || (supportedLangs.includes(browser) ? browser : 'en');
-  if (lang !== i18n.language) {
-    i18n.changeLanguage(lang);
-  }
+	const saved = localStorage.getItem('uha-lang');
+	const browser = navigator.language.slice(0, 2);
+	const lang = saved || (supportedLangs.includes(browser) ? browser : 'en');
+	if (lang !== i18n.language) {
+		i18n.changeLanguage(lang);
+	}
 }
+
+export default i18n;

@@ -188,7 +188,7 @@
     "contact_title": "Contacto",
     "contact_body": "Si tienes preguntas sobre estos términos, puedes contactarnos en github@alena.red o abrir un issue en nuestro repositorio de GitHub."
   },
-  "privacyPolicy": {
+  "privacy_policy": {
     "title": "Política de Privacidad",
     "updated": "Última actualización: 9 de marzo de 2026",
     "intro": "Uha está construido con la privacidad como principio fundamental. Esta Política de Privacidad explica qué datos recopila Uha, cómo se utilizan y cómo están involucrados los servicios de terceros.",

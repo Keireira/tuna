@@ -46,8 +46,8 @@ jobs:
           host: ${{ secrets.HOSTNAME }}
           username: ${{ secrets.AUTH_USER }}
           key: ${{ secrets.AUTH_KEY }}
-          source: "docker-compose.yml"
-          target: "/opt/tuna"
+          source: 'docker-compose.yml'
+          target: '/opt/tuna'
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.3

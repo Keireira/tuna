@@ -188,7 +188,7 @@
     "contact_title": "お問い合わせ",
     "contact_body": "本規約についてご質問がある場合は、github@alena.redまでご連絡いただくか、GitHubリポジトリでissueを作成してください。"
   },
-  "privacyPolicy": {
+  "privacy_policy": {
     "title": "プライバシーポリシー",
     "updated": "最終更新日：2026年3月9日",
     "intro": "Uhaはプライバシーを核となる原則として構築されています。本プライバシーポリシーでは、Uhaが収集するデータ、その使用方法、およびサードパーティサービスの関与について説明します。",
