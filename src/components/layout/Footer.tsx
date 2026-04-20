@@ -43,6 +43,8 @@ const Footer = () => {
 					<FooterLink href="/terms">{t('footer.terms')}</FooterLink>
 					<span>·</span>
 					<FooterLink href="/privacy">{t('footer.privacy')}</FooterLink>
+					<span>·</span>
+					<FooterLink href="/api/mcp">MCP</FooterLink>
 				</FooterInner>
 			</Container>
 		</FooterWrapper>
