@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "join_beta": "Join Beta"
+  },
+  "meta": {
+    "title": "Uha — Subscription Manager for iOS",
+    "title_template": "%s | Uha",
+    "description": "The subscription tracker that isn't a subscription. Pay once. No recurring charges, ever. Track all your subscriptions on iOS with renewal alerts, iCloud backup, and a timeline of past and upcoming charges. All data stays on your device. Like a bank feed for your subscriptions.",
+    "short_description": "The subscription tracker that isn't a subscription. Pay once. No recurring charges, ever.",
+    "keywords": [
+      "subscription manager",
+      "iOS",
+      "privacy",
+      "subscription tracker",
+      "renewal alerts",
+      "spending analytics",
+      "open source"
+    ],
+    "og_title": "Uha — Subscription Manager",
+    "og_image_alt": "Uha — Subscription Manager for iOS"
+  },
+  "jsonld": {
+    "free_tier": "Up to 5 subscriptions, 3 currencies, 2-year timeline",
+    "unlimited_tier": "Unlimited subscriptions, all currencies, iCloud sync, backup restoration, 10-year timeline, all future premium features",
+    "features": [
+      "Track subscriptions locally (on-device)",
+      "Multi-currency support",
+      "iCloud sync and backup",
+      "CSV export",
+      "Subscriptions timeline",
+      "Bank-feed-like experience",
+      "Payment reminders"
+    ]
+  }
+}

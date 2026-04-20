@@ -29,6 +29,9 @@
       "@styles": ["./src/styles"],
       "@styles/*": ["./src/styles/*"],
 
+      "@locales": ["./src/locales"],
+      "@locales/*": ["./src/locales/*"],
+
       "@hooks": ["./src/hooks"],
       "@hooks/*": ["./src/hooks/*"],
 

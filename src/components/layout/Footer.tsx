@@ -30,7 +30,7 @@ const FooterLink = styled(Link)`
 `;
 
 const Footer = () => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 
 	return (
 		<FooterWrapper>
@@ -40,9 +40,9 @@ const Footer = () => {
 					<span>·</span>
 					<span>Uha</span>
 					<span>·</span>
-					<FooterLink href="/terms">{t('footer.terms')}</FooterLink>
+					<FooterLink href={`/${i18n.language}/terms`}>{t('footer.terms')}</FooterLink>
 					<span>·</span>
-					<FooterLink href="/privacy">{t('footer.privacy')}</FooterLink>
+					<FooterLink href={`/${i18n.language}/privacy`}>{t('footer.privacy')}</FooterLink>
 					<span>·</span>
 					<FooterLink href="/api/mcp">MCP</FooterLink>
 				</FooterInner>

@@ -18,7 +18,7 @@ import { Container } from '@layout';
 import { fadeInUp, staggerContainer } from '@styles/animations';
 
 const PrivacyPage = () => {
-	const { t } = useTranslation();
+	const { t } = useTranslation('landing');
 	const { ref, isInView } = useScrollAnimation();
 
 	useEffect(() => {

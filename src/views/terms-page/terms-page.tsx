@@ -9,7 +9,7 @@ import { fadeInUp, staggerContainer } from '@styles/animations';
 import Root, { HeroSection, Title, Subtitle, Content, Section, SectionTitle, Paragraph } from './terms-page.styles';
 
 const TermsPage = () => {
-	const { t } = useTranslation();
+	const { t } = useTranslation('landing');
 	const { ref, isInView } = useScrollAnimation();
 
 	useEffect(() => {

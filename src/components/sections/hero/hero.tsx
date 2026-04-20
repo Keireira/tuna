@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { random } from '@lib';
 import { useTranslation } from 'react-i18next';
+import { random } from '@lib';
 
 import { Container } from '@layout';
 import { Button } from '@common/Button';
@@ -10,17 +10,22 @@ import { fadeInUp, staggerContainer } from '@styles/animations';
 import Root, { AppIcon, ButtonGroup, Headline, Subtitle, HeroContent } from './hero.styles';
 
 const Hero = () => {
-	const { t } = useTranslation();
-	const [variant, setVariant] = useState(1);
-	useEffect(() => setVariant(random(1, 4)), []);
+	const { t } = useTranslation('landing');
+	const [headlineVariant, setHeadlineVariant] = useState(1);
+	const [subtitleVariant, setSubtitleVariant] = useState(1);
+
+	useEffect(() => {
+		setHeadlineVariant(random(1, 4));
+		setSubtitleVariant(random(1, 2));
+	}, []);
 
 	return (
 		<Root>
 			<Container>
 				<HeroContent variants={staggerContainer} initial="hidden" animate="visible">
 					<AppIcon src="/assets/icons/fish.png" alt="Uha" variants={fadeInUp} />
-					<Headline variants={fadeInUp}>{t(`hero.headline_${variant}`)}</Headline>
-					<Subtitle variants={fadeInUp}>{t(`hero.subtitle_${variant}`)}</Subtitle>
+					<Headline variants={fadeInUp}>{t(`hero.headline_${headlineVariant}`)}</Headline>
+					<Subtitle variants={fadeInUp}>{t(`hero.subtitle_${subtitleVariant}`)}</Subtitle>
 					<ButtonGroup variants={fadeInUp}>
 						<Button
 							href="https://testflight.apple.com/join/uVYrDkbA"

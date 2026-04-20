@@ -2,9 +2,10 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { usePathname, useRouter } from 'next/navigation';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
-import { languages } from '@/i18n/config';
+import { LANGUAGES, DEFAULT_LOCALE, isValidLocale, type TLocale } from '@lib/i18n';
 
 const Wrapper = styled.div`
 	position: relative;
@@ -60,46 +61,75 @@ const Option = styled.button<{ $active: boolean }>`
 	}
 `;
 
-export function LanguageSwitcher() {
+export const LanguageSwitcher = () => {
 	const { i18n } = useTranslation();
+	const pathname = usePathname();
+	const router = useRouter();
 	const [open, setOpen] = useState(false);
 	const ref = useRef<HTMLDivElement>(null);
 
+	const pathLocale = pathname.split('/')[1];
+	const currentLocale: TLocale = isValidLocale(pathLocale)
+		? pathLocale
+		: isValidLocale(i18n.language)
+			? i18n.language
+			: DEFAULT_LOCALE;
+
+	const current = LANGUAGES.find((l) => l.code === currentLocale) ?? LANGUAGES[0];
+
 	useEffect(() => {
-		const handler = (e: MouseEvent) => {
-			if (ref.current && !ref.current.contains(e.target as Node)) {
+		if (!open) return;
+
+		const handlePointer = (event: PointerEvent) => {
+			if (ref.current && !ref.current.contains(event.target as Node)) {
 				setOpen(false);
 			}
 		};
-		document.addEventListener('mousedown', handler);
-		return () => document.removeEventListener('mousedown', handler);
-	}, []);
 
-	const current = languages.find((l) => l.code === i18n.language) || languages[0];
+		const handleKey = (event: KeyboardEvent) => {
+			if (event.key === 'Escape') setOpen(false);
+		};
 
-	const handleChange = (code: string) => {
-		i18n.changeLanguage(code);
-		localStorage.setItem('uha-lang', code);
+		document.addEventListener('pointerdown', handlePointer);
+		document.addEventListener('keydown', handleKey);
+
+		return () => {
+			document.removeEventListener('pointerdown', handlePointer);
+			document.removeEventListener('keydown', handleKey);
+		};
+	}, [open]);
+
+	const handleChange = (code: TLocale) => {
+		document.cookie = `NEXT_LOCALE=${code}; path=/; max-age=31536000; SameSite=Lax`;
+		const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/';
+		router.push(`/${code}${pathWithoutLocale}`);
 		setOpen(false);
 	};
 
 	return (
 		<Wrapper ref={ref}>
-			<Trigger onClick={() => setOpen(!open)}>
-				<span>{current.flag}</span>
+			<Trigger onClick={() => setOpen(!open)} aria-expanded={open} aria-haspopup="listbox" aria-label="Select language">
+				<span aria-hidden="true">{current.flag}</span>
 				<span>{current.code.toUpperCase()}</span>
 			</Trigger>
 			<AnimatePresence>
 				{open && (
 					<Dropdown
+						role="listbox"
 						initial={{ opacity: 0, y: -4, scale: 0.96 }}
 						animate={{ opacity: 1, y: 0, scale: 1 }}
 						exit={{ opacity: 0, y: -4, scale: 0.96 }}
 						transition={{ duration: 0.15 }}
 					>
-						{languages.map((lang) => (
-							<Option key={lang.code} $active={lang.code === i18n.language} onClick={() => handleChange(lang.code)}>
-								<span>{lang.flag}</span>
+						{LANGUAGES.map((lang) => (
+							<Option
+								key={lang.code}
+								role="option"
+								aria-selected={lang.code === currentLocale}
+								$active={lang.code === currentLocale}
+								onClick={() => handleChange(lang.code)}
+							>
+								<span aria-hidden="true">{lang.flag}</span>
 								<span>{lang.name}</span>
 							</Option>
 						))}
@@ -108,4 +138,4 @@ export function LanguageSwitcher() {
 			</AnimatePresence>
 		</Wrapper>
 	);
-}
+};

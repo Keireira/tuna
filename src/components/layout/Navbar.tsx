@@ -77,7 +77,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({ themeMode, onToggleTheme }: NavbarProps) => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const [scrolled, setScrolled] = useState(false);
 
 	useEffect(() => {
@@ -91,7 +91,7 @@ const Navbar = ({ themeMode, onToggleTheme }: NavbarProps) => {
 			<Nav $scrolled={scrolled}>
 				<Container>
 					<NavInner>
-						<Logo href="/">
+						<Logo href={`/${i18n.language}`}>
 							<LogoIcon
 								src="/assets/icons/fish.png"
 								alt="Uha"
