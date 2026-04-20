@@ -1,0 +1,18 @@
+services:
+  app:
+    image: registry.keireira.com/tuna:latest
+    container_name: TUNA
+    restart: unless-stopped
+    labels:
+      org.opencontainers.image.title: 'Tuna — Uha Landing & MCP'
+      org.opencontainers.image.description: 'uha.app'
+      org.opencontainers.image.authors: 'Alena Dzhukich <mail@alena.red>'
+    healthcheck:
+      test: ['CMD-SHELL', 'wget -qO- http://localhost:3000/ || exit 1']
+      interval: 15s
+      timeout: 10s
+      retries: 5
+    ports:
+      - 127.0.0.1:7777:3000
+    environment:
+      - NODE_ENV=production

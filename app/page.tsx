@@ -1,5 +1,3 @@
-import { LandingPage } from '@/views/LandingPage';
+import { LandingPage } from '@views';
 
-export default function Home() {
-  return <LandingPage />;
-}
+export default LandingPage;
