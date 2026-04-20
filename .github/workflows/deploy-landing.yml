@@ -29,7 +29,9 @@ jobs:
         run: docker push "registry.keireira.com/tuna:latest"
 
       - name: Registry cleanup
-        run: "curl -H 'X-Webhook-Token: ${{ secrets.HOOK_TOKEN }}' https://hooks.keireira.com/registry-cleanup"
+        run: |
+          curl -sf -H 'X-Webhook-Token: ${{ secrets.HOOK_TOKEN }}' \
+            https://hooks.keireira.com/registry-cleanup
 
   deploy:
     needs: build
@@ -38,26 +40,29 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Copy docker-compose to server
-        uses: appleboy/scp-action@v0.1.7
+        uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.HOSTNAME }}
           username: ${{ secrets.AUTH_USER }}
           key: ${{ secrets.AUTH_KEY }}
-          source: 'docker-compose.yml'
-          target: '/opt/tuna'
+          source: "docker-compose.yml"
+          target: "/opt/tuna"
 
       - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.5
         with:
           host: ${{ secrets.HOSTNAME }}
           username: ${{ secrets.AUTH_USER }}
           key: ${{ secrets.AUTH_KEY }}
           script: |
             cd /opt/tuna
-            docker login registry.keireira.com -u "${{ secrets.DOCKER_REGISTRY_USERNAME }}" -p "${{ secrets.DOCKER_REGISTRY_PASSWORD }}"
+            docker login registry.keireira.com \
+              -u "${{ secrets.DOCKER_REGISTRY_USERNAME }}" \
+              -p "${{ secrets.DOCKER_REGISTRY_PASSWORD }}"
             docker compose pull
             docker compose up -d --remove-orphans
             docker image prune -f
+            docker logout registry.keireira.com
