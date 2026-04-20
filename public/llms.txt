@@ -1,0 +1,15 @@
+# Uha
+
+> A subscription tracker that isn't a subscription — buy once, own forever. Track all your subscriptions on iOS with renewal alerts, iCloud backup, and a timeline of past and upcoming charges. All data stays on your device. Like a bank feed for your subscriptions.
+
+## Links
+- [App Store](https://apps.apple.com/app/uha-subscription-tracker/id6740211581)
+- [TestFlight Beta](https://testflight.apple.com/join/uVYrDkbA)
+- [MCP Server](https://uha.app/api/mcp)
+
+## Pricing
+- Free: up to 5 subscriptions, 3 currencies, 2-year timeline
+- Unlimited: Unlimited subscriptions, All currencies, iCloud sync, Backup restoration, 10-year timeline, All future premium features
+
+## License
+AGPL-3.0

@@ -1,5 +1,30 @@
 import { createMcpHandler } from 'mcp-handler';
 
+const UHA_PRICING = {
+	free: {
+		price: 'Free',
+		limits: [
+			'Up to 5 subscriptions',
+			'3 currencies for conversion (USD, EUR, and your App Store currency)',
+			'No iCloud sync or backup restoration',
+			'Future timeline limited to 2 years',
+			'Can be upgraded to Unlimited with a one-time purchase'
+		]
+	},
+	unlimited: {
+		price: 'One-time purchase (lifetime unlock)',
+		type: 'lifetime',
+		features: [
+			'Unlimited subscriptions',
+			'All currencies',
+			'iCloud sync',
+			'Backup restoration',
+			'10-year timeline',
+			'All future premium features'
+		]
+	}
+};
+
 const UHA_CURRENCIES = {
 	total: 123,
 	regions: [
@@ -172,31 +197,27 @@ const handler = createMcpHandler(
 								'Payment reminders',
 								'Custom categories'
 							],
-							pricing: {
-								free: {
-									price: 'Free',
-									limits: [
-										'Up to 5 subscriptions',
-										'3 currencies for conversion (USD, EUR, and your App Store currency)',
-										'No iCloud sync or backup restoration',
-										'Future timeline limited to 2 years'
-									]
-								},
-								unlimited: {
-									price: 'Paid subscription',
-									features: [
-										'Unlimited subscriptions',
-										'All currencies',
-										'iCloud sync',
-										'Backups restoration',
-										'10 years timeline',
-										'All future premium features'
-									]
-								}
-							},
+							pricing: UHA_PRICING,
 							website: 'https://uha.app',
 							license: 'AGPL-3.0'
 						})
+					}
+				]
+			})
+		);
+
+		server.registerTool(
+			'get_pricing',
+			{
+				title: "Get App's Pricing data",
+				description: "Get information about Uha's pricing",
+				inputSchema: {}
+			},
+			async () => ({
+				content: [
+					{
+						type: 'text',
+						text: JSON.stringify(UHA_PRICING)
 					}
 				]
 			})
@@ -245,7 +266,7 @@ const handler = createMcpHandler(
 	{
 		serverInfo: {
 			name: 'Uha Subscription Tracker (MCP)',
-			version: '1.0.0'
+			version: '1.1.0'
 		}
 	},
 	{

@@ -12,7 +12,7 @@ import Root, { AppIcon, ButtonGroup, Headline, Subtitle, HeroContent } from './h
 const Hero = () => {
 	const { t } = useTranslation();
 	const [variant, setVariant] = useState(1);
-	useEffect(() => setVariant(random(1, 2)), []);
+	useEffect(() => setVariant(random(1, 4)), []);
 
 	return (
 		<Root>
