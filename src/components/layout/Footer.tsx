@@ -38,8 +38,6 @@ const Footer = () => {
 				<FooterInner>
 					<span>{t('footer.madeWith')}</span>
 					<span>·</span>
-					<span>Uha</span>
-					<span>·</span>
 					<FooterLink href={`/${i18n.language}/terms`}>{t('footer.terms')}</FooterLink>
 					<span>·</span>
 					<FooterLink href={`/${i18n.language}/privacy`}>{t('footer.privacy')}</FooterLink>
