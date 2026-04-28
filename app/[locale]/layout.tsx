@@ -46,6 +46,7 @@ export const generateMetadata = async ({ params }: Pick<TProps, 'params'>): Prom
 		openGraph: {
 			title: t('meta.og_title'),
 			description: t('meta.description'),
+			url: `/${locale}`,
 			type: 'website',
 			siteName: 'Uha',
 			locale: OG_LOCALE_MAP[locale],

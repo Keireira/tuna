@@ -23,6 +23,16 @@ const getPreferredLocale = (request: NextRequest): TLocale => {
 
 export const proxy = (request: NextRequest) => {
 	const { pathname } = request.nextUrl;
+	const hostname = request.nextUrl.hostname.toLowerCase();
+	const proto = request.headers.get('x-forwarded-proto') ?? request.nextUrl.protocol.replace(':', '');
+
+	if ((hostname === 'uha.app' || hostname === 'www.uha.app') && (proto !== 'https' || hostname === 'www.uha.app')) {
+		const url = request.nextUrl.clone();
+		url.protocol = 'https';
+		url.hostname = 'uha.app';
+		return NextResponse.redirect(url, 308);
+	}
+
 	const pathLocale = pathname.split('/')[1];
 
 	// Для валидных локалей — пропускаем, только ставим header
