@@ -2,15 +2,19 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
 	output: 'standalone',
-	// experimental: {
-	// 	rootParams: true
-	// },
 	compress: true,
 	reactStrictMode: true,
 	poweredByHeader: false,
 	compiler: {
 		styledComponents: true
-	}
+	},
+	redirects: async () => [
+		{
+			source: '/favicon.ico',
+			destination: '/favicon.png',
+			permanent: true
+		}
+	]
 };
 
 export default nextConfig;

@@ -66,8 +66,13 @@ export const generateMetadata = async ({ params }: Pick<TProps, 'params'>): Prom
 			images: ['/og-image.png']
 		},
 		icons: {
-			icon: '/favicon.ico',
-			apple: '/apple-touch-icon.png'
+			icon: [
+				{ url: '/favicon.ico', type: 'image/x-icon', sizes: 'any' },
+				{ url: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
+				{ url: '/favicon.png', type: 'image/png', sizes: '512x512' }
+			],
+			shortcut: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+			apple: [{ url: '/apple-touch-icon.png', type: 'image/png', sizes: '180x180' }]
 		},
 		alternates: buildAlternates(locale)
 	};
