@@ -12,7 +12,7 @@ const UHA_PRICING = {
 		]
 	},
 	unlimited: {
-		price: 'One-time purchase (lifetime unlock)',
+		price: 'One-time purchase',
 		type: 'lifetime',
 		features: [
 			'Unlimited subscriptions',

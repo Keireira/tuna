@@ -9,7 +9,7 @@
   "meta": {
     "title": "Uha — Subscription Manager for iOS",
     "title_template": "%s | Uha",
-    "description": "The subscription tracker that isn't a subscription. Pay once. No recurring charges, ever. Track all your subscriptions on iOS with renewal alerts, iCloud backup, and a timeline of past and upcoming charges. All data stays on your device. Like a bank feed for your subscriptions.",
+    "description": "The subscription tracker that isn't a subscription. Pay once. No recurring charges, ever. Track all your subscriptions on iOS with renewal alerts, iCloud backup, and a timeline of past and upcoming charges. All data stays on your device. Like a bank feed, but for your subscriptions.",
     "short_description": "The subscription tracker that isn't a subscription. Pay once. No recurring charges, ever.",
     "keywords": [
       "subscription manager",
@@ -17,8 +17,7 @@
       "privacy",
       "subscription tracker",
       "renewal alerts",
-      "spending analytics",
-      "open source"
+      "spending analytics"
     ],
     "og_title": "Uha — Subscription Manager",
     "og_image_alt": "Uha — Subscription Manager for iOS"
