@@ -7,7 +7,6 @@ import { useTheme } from '@hooks';
 
 import { Navbar, Footer } from '@layout';
 import GlobalStyles from '@styles/GlobalStyles';
-import { WebMcpTools } from './agent/WebMcpTools';
 import { SquircleMask } from '@common/SquircleMask';
 
 import type { ThemeMode } from '@styles/theme';
@@ -44,7 +43,6 @@ export const AppShell = ({ children }: PropsWithChildren) => {
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />
 				<SquircleMask />
-				<WebMcpTools />
 				<Navbar themeMode={mode} onToggleTheme={toggleMode} />
 				{children}
 				<Footer />

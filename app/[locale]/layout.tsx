@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import I18nProvider from '@/providers/I18nProvider';
 import { AppShell } from '@/components/AppShell';
 import { StyledComponentsRegistry } from '@/lib/registry';
+import { WEBMCP_BOOTSTRAP_SCRIPT } from '@/lib/agent-discovery';
 import { getTranslation } from '@lib/i18n/server';
 import { LOCALES, OG_LOCALE_MAP, isValidLocale, buildAlternates } from '@/lib/i18n';
 import type { PropsWithChildren } from 'react';
@@ -121,6 +122,7 @@ const LocaleLayout = async ({ children, params }: TProps) => {
 		<html lang={locale} className={onest.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
 			<head>
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+				<script dangerouslySetInnerHTML={{ __html: WEBMCP_BOOTSTRAP_SCRIPT }} />
 			</head>
 			<body>
 				<StyledComponentsRegistry>
