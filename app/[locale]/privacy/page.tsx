@@ -21,4 +21,9 @@ export const generateMetadata = async ({ params }: TProps): Promise<Metadata> =>
 	};
 };
 
-export default PrivacyPage;
+const Page = async ({ params }: TProps) => {
+	const { locale } = await params;
+	return <PrivacyPage locale={locale} />;
+};
+
+export default Page;

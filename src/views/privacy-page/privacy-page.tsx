@@ -16,10 +16,16 @@ import Root, {
 } from './privacy-page.styles';
 import { Container } from '@layout';
 import { fadeInUp, staggerContainer } from '@styles/animations';
+import { PRIVACY_LAST_MODIFIED_AT, formatLastModified } from '@/lib/document-dates';
 
-const PrivacyPage = () => {
-	const { t } = useTranslation('landing');
+type TProps = {
+	locale?: string;
+};
+
+const PrivacyPage = ({ locale }: TProps) => {
+	const { t, i18n } = useTranslation('landing');
 	const { ref, isInView } = useScrollAnimation();
+	const dateLocale = locale ?? i18n.language;
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -30,7 +36,7 @@ const PrivacyPage = () => {
 			<Container>
 				<HeroSection>
 					<Title>{t('privacy_policy.title')}</Title>
-					<Subtitle>{t('privacy_policy.updated')}</Subtitle>
+					<Subtitle>{formatLastModified(PRIVACY_LAST_MODIFIED_AT, dateLocale)}</Subtitle>
 				</HeroSection>
 
 				<Content ref={ref} variants={staggerContainer} initial="hidden" animate={isInView ? 'visible' : 'hidden'}>

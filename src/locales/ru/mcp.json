@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "MCP-сервер",
+    "description": "Как подключить ассистентов к MCP-серверу Uha."
+  },
+  "page": {
+    "title": "MCP-сервер",
+    "subtitle": "Эта страница предназначена для людей и ассистентов. Сам API endpoint не является браузерной страницей.",
+    "endpoint_label": "Endpoint MCP-сервера",
+    "transport_label": "Транспорт",
+    "transport_value": "Streamable HTTP / POST",
+    "config_label": "Пример конфигурации"
+  }
+}

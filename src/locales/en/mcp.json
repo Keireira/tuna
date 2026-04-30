@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "MCP Server",
+    "description": "How to connect assistants to the Uha MCP server."
+  },
+  "page": {
+    "title": "MCP Server",
+    "subtitle": "Use this page for humans and assistants. The API endpoint itself is not a browser page.",
+    "endpoint_label": "MCP server endpoint",
+    "transport_label": "Transport",
+    "transport_value": "Streamable HTTP / POST",
+    "config_label": "Example config"
+  }
+}

@@ -1,4 +1,4 @@
-import { TermsPage } from '@views';
+import { McpPage } from '@views';
 import { getTranslation } from '@lib/i18n/server';
 import { buildAlternates, isValidLocale } from '@lib/i18n';
 
@@ -12,18 +12,13 @@ export const generateMetadata = async ({ params }: TProps): Promise<Metadata> =>
 	const { locale } = await params;
 	if (!isValidLocale(locale)) return {};
 
-	const { t } = await getTranslation(locale, 'terms');
+	const { t } = await getTranslation(locale, 'mcp');
 
 	return {
 		title: t('meta.title'),
 		description: t('meta.description'),
-		alternates: buildAlternates(locale, '/terms')
+		alternates: buildAlternates(locale, '/mcp')
 	};
 };
 
-const Page = async ({ params }: TProps) => {
-	const { locale } = await params;
-	return <TermsPage locale={locale} />;
-};
-
-export default Page;
+export default McpPage;

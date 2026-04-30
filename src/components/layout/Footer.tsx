@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import styled from 'styled-components';
 import Container from './Container';
 
@@ -31,6 +32,8 @@ const FooterLink = styled(Link)`
 
 const Footer = () => {
 	const { t, i18n } = useTranslation('landing');
+	const params = useParams<{ locale?: string }>();
+	const locale = params.locale ?? i18n.language;
 
 	return (
 		<FooterWrapper>
@@ -38,11 +41,13 @@ const Footer = () => {
 				<FooterInner>
 					<span>{t('footer.madeWith')}</span>
 					<span>·</span>
-					<FooterLink href={`/${i18n.language}/terms`}>{t('footer.terms')}</FooterLink>
+					<FooterLink href={`/${locale}/terms`}>{t('footer.terms')}</FooterLink>
 					<span>·</span>
-					<FooterLink href={`/${i18n.language}/privacy`}>{t('footer.privacy')}</FooterLink>
+					<FooterLink href={`/${locale}/privacy`}>{t('footer.privacy')}</FooterLink>
 					<span>·</span>
-					<FooterLink href="/api/mcp">MCP</FooterLink>
+					<FooterLink href={`/${locale}/security`}>{t('footer.security')}</FooterLink>
+					<span>·</span>
+					<FooterLink href={`/${locale}/mcp`}>{t('footer.mcp')}</FooterLink>
 				</FooterInner>
 			</Container>
 		</FooterWrapper>

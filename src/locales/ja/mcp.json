@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "MCPサーバー",
+    "description": "アシスタントをUhaのMCPサーバーに接続する方法。"
+  },
+  "page": {
+    "title": "MCPサーバー",
+    "subtitle": "このページは人間とアシスタント向けです。APIエンドポイント自体はブラウザページではありません。",
+    "endpoint_label": "MCPサーバーエンドポイント",
+    "transport_label": "トランスポート",
+    "transport_value": "Streamable HTTP / POST",
+    "config_label": "設定例"
+  }
+}

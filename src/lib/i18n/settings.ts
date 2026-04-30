@@ -1,6 +1,6 @@
 import { LOCALES, DEFAULT_LOCALE, type TLocale } from '@/lib/i18n';
 
-export const NAMESPACES = ['common', 'landing', 'terms', 'privacy'] as const;
+export const NAMESPACES = ['common', 'landing', 'terms', 'privacy', 'security', 'mcp'] as const;
 export const DEFAULT_NAMESPACE = 'common';
 
 export type TNamespace = (typeof NAMESPACES)[number];

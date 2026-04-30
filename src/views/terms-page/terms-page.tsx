@@ -6,11 +6,17 @@ import { useTranslation } from 'react-i18next';
 
 import { Container } from '@layout';
 import { fadeInUp, staggerContainer } from '@styles/animations';
+import { TERMS_LAST_MODIFIED_AT, formatLastModified } from '@/lib/document-dates';
 import Root, { HeroSection, Title, Subtitle, Content, Section, SectionTitle, Paragraph } from './terms-page.styles';
 
-const TermsPage = () => {
-	const { t } = useTranslation('landing');
+type TProps = {
+	locale?: string;
+};
+
+const TermsPage = ({ locale }: TProps) => {
+	const { t, i18n } = useTranslation('landing');
 	const { ref, isInView } = useScrollAnimation();
+	const dateLocale = locale ?? i18n.language;
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -21,7 +27,7 @@ const TermsPage = () => {
 			<Container>
 				<HeroSection>
 					<Title>{t('terms.title')}</Title>
-					<Subtitle>{t('terms.updated')}</Subtitle>
+					<Subtitle>{formatLastModified(TERMS_LAST_MODIFIED_AT, dateLocale)}</Subtitle>
 				</HeroSection>
 
 				<Content ref={ref} variants={staggerContainer} initial="hidden" animate={isInView ? 'visible' : 'hidden'}>

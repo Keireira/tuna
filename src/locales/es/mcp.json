@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Servidor MCP",
+    "description": "Cómo conectar asistentes al servidor MCP de Uha."
+  },
+  "page": {
+    "title": "Servidor MCP",
+    "subtitle": "Usa esta página para personas y asistentes. El endpoint de la API no es una página de navegador.",
+    "endpoint_label": "Endpoint del servidor MCP",
+    "transport_label": "Transporte",
+    "transport_value": "Streamable HTTP / POST",
+    "config_label": "Configuración de ejemplo"
+  }
+}

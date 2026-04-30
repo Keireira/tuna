@@ -4,7 +4,9 @@ import type { MetadataRoute } from 'next';
 const ROUTES = [
 	{ path: '', lastModified: new Date() },
 	{ path: '/privacy', lastModified: new Date('2026-03-09') },
-	{ path: '/terms', lastModified: new Date('2026-03-09') }
+	{ path: '/terms', lastModified: new Date('2026-03-09') },
+	{ path: '/security', lastModified: new Date('2026-04-30') },
+	{ path: '/mcp', lastModified: new Date('2026-04-30') }
 ] as const;
 
 const BASE_URL = 'https://uha.app';

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "MCP сервері",
+    "description": "Ассистенттерді Uha MCP серверіне қосу жолы."
+  },
+  "page": {
+    "title": "MCP сервері",
+    "subtitle": "Бұл бет адамдар мен ассистенттерге арналған. API endpoint-тің өзі браузер беті емес.",
+    "endpoint_label": "MCP сервер endpoint-і",
+    "transport_label": "Транспорт",
+    "transport_value": "Streamable HTTP / POST",
+    "config_label": "Конфигурация мысалы"
+  }
+}

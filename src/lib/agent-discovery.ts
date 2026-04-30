@@ -15,8 +15,11 @@ Uha is an iOS subscription tracker for recurring payments, renewal reminders, sp
 - MCP endpoint: ${MCP_ENDPOINT}
 - API catalog: ${SITE_URL}/.well-known/api-catalog
 - Agent skills: ${SITE_URL}/.well-known/agent-skills/index.json
+- Security policy: ${SITE_URL}/security
 
 ## Pricing
+
+Uha is currently in public beta via Apple TestFlight. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase.
 
 - Free: track up to 5 subscriptions, use 3 currencies, and view a 2-year future timeline.
 - Unlimited: one-time purchase for unlimited subscriptions, all currencies, iCloud sync, backup restoration, a 10-year timeline, and future premium features.
@@ -44,6 +47,11 @@ Use this skill when an agent needs product, pricing, availability, or integratio
 - TestFlight: ${TESTFLIGHT_URL}
 - MCP server: ${MCP_ENDPOINT}
 - API catalog: ${SITE_URL}/.well-known/api-catalog
+- Security policy: ${SITE_URL}/security
+
+## TestFlight beta
+
+Uha is currently in public beta via Apple TestFlight. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase.
 
 ## Notes
 
@@ -72,40 +80,9 @@ export const WEBMCP_BOOTSTRAP_SCRIPT = String.raw`
 		description: 'Subscription tracker with renewal reminders, spending forecasts, multi-currency totals, and iCloud sync.',
 		pricing: {
 			free: 'Up to 5 subscriptions, 3 currencies, 2-year future timeline',
-			unlimited: 'One-time purchase for unlimited subscriptions, all currencies, iCloud sync, backup restoration, and a 10-year timeline'
+			unlimited: 'One-time purchase after App Store release. TestFlight purchases are for testing only.'
 		}
 	};
-
-	const tools = [
-		{
-			name: 'get_uha_app_info',
-			title: 'Get Uha app information',
-			description: 'Return public product, pricing, privacy, and platform information for Uha.',
-			inputSchema: {
-				type: 'object',
-				properties: {},
-				additionalProperties: false
-			},
-			annotations: { readOnlyHint: true },
-			execute: async () => appInfo
-		},
-		{
-			name: 'get_uha_install_links',
-			title: 'Get Uha install links',
-			description: 'Return official website, App Store, and TestFlight links for Uha.',
-			inputSchema: {
-				type: 'object',
-				properties: {},
-				additionalProperties: false
-			},
-			annotations: { readOnlyHint: true },
-			execute: async () => ({
-				website: appInfo.website,
-				appStore: appInfo.appStore,
-				testFlight: appInfo.testFlight
-			})
-		}
-	];
 
 	const registerWebMcpTools = () => {
 		const modelContext = navigator.modelContext;
@@ -113,15 +90,19 @@ export const WEBMCP_BOOTSTRAP_SCRIPT = String.raw`
 		if (window.__uhaWebMcpRegistered) return true;
 
 		const controller = new AbortController();
-		for (const tool of tools) {
-			try {
-				modelContext.registerTool(tool, { signal: controller.signal });
-			} catch (error) {
-				if (!(error instanceof DOMException) || error.name !== 'InvalidStateError') {
-					throw error;
-				}
-			}
-		}
+		modelContext.registerTool(
+			{
+				name: 'get_uha_app_info',
+				description: 'Return public product, beta, pricing, and install information for Uha.',
+				inputSchema: {
+					type: 'object',
+					properties: {},
+					additionalProperties: false
+				},
+				execute: async () => appInfo
+			},
+			{ signal: controller.signal }
+		);
 
 		window.__uhaWebMcpRegistered = true;
 		window.__uhaWebMcpAbortController = controller;

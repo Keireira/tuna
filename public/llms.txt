@@ -6,6 +6,10 @@
 - [App Store](https://apps.apple.com/app/uha-subscription-tracker/id6740211581)
 - [TestFlight Beta](https://testflight.apple.com/join/uVYrDkbA)
 - [MCP Server](https://uha.app/api/mcp)
+- [Security Policy](https://uha.app/security)
+
+## TestFlight
+Uha is currently in public beta via Apple TestFlight. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase.
 
 ## Pricing
 - Free: up to 5 subscriptions, 3 currencies, 2-year timeline

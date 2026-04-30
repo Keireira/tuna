@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Security",
+    "description": "Security contact and vulnerability reporting policy for Uha."
+  },
+  "page": {
+    "title": "Security",
+    "intro": "Uha is a privacy-first iOS app. We keep the public website and discovery endpoints small, explicit, and easy to inspect.",
+    "reporting_title": "Report a Vulnerability",
+    "reporting_body": "If you believe you found a security issue in Uha, the website, or a public service operated for Uha, contact uha@alena.red. Please include the affected URL or app area, steps to reproduce, and the expected impact.",
+    "scope_title": "Scope",
+    "scope_body": "In scope: uha.app, public discovery endpoints, the Uha iOS app, and public services operated for Uha. Out of scope: social engineering, spam, denial-of-service testing, and attacks against third-party services.",
+    "policy_title": "Disclosure Policy",
+    "policy_body": "Please give us a reasonable amount of time to investigate and fix the issue before public disclosure. We do not offer a paid bug bounty, but we appreciate responsible reports and will credit researchers when appropriate."
+  }
+}

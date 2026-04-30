@@ -8,6 +8,7 @@ import { useTheme } from '@hooks';
 import { Navbar, Footer } from '@layout';
 import GlobalStyles from '@styles/GlobalStyles';
 import { SquircleMask } from '@common/SquircleMask';
+import WebMcpTools from '@/components/agent/WebMcpTools';
 
 import type { ThemeMode } from '@styles/theme';
 import type { AccentColor } from '@styles/accents';
@@ -43,6 +44,7 @@ export const AppShell = ({ children }: PropsWithChildren) => {
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />
 				<SquircleMask />
+				<WebMcpTools />
 				<Navbar themeMode={mode} onToggleTheme={toggleMode} />
 				{children}
 				<Footer />

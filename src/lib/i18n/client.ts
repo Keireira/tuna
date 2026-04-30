@@ -7,41 +7,79 @@ import { LOCALES, DEFAULT_LOCALE } from '@/lib/i18n';
 import enCommon from '@locales/en/common.json';
 import enLanding from '@locales/en/landing.json';
 import enPrivacy from '@locales/en/privacy.json';
+import enSecurity from '@locales/en/security.json';
 import enTerms from '@locales/en/terms.json';
+import enMcp from '@locales/en/mcp.json';
 
 import ruCommon from '@locales/ru/common.json';
 import ruLanding from '@locales/ru/landing.json';
 import ruPrivacy from '@locales/ru/privacy.json';
+import ruSecurity from '@locales/ru/security.json';
 import ruTerms from '@locales/ru/terms.json';
+import ruMcp from '@locales/ru/mcp.json';
 
 import jaCommon from '@locales/ja/common.json';
 import jaLanding from '@locales/ja/landing.json';
 import jaPrivacy from '@locales/ja/privacy.json';
+import jaSecurity from '@locales/ja/security.json';
 import jaTerms from '@locales/ja/terms.json';
+import jaMcp from '@locales/ja/mcp.json';
 
 import esCommon from '@locales/es/common.json';
 import esLanding from '@locales/es/landing.json';
 import esPrivacy from '@locales/es/privacy.json';
+import esSecurity from '@locales/es/security.json';
 import esTerms from '@locales/es/terms.json';
+import esMcp from '@locales/es/mcp.json';
 
 import kkCommon from '@locales/kk/common.json';
 import kkLanding from '@locales/kk/landing.json';
 import kkPrivacy from '@locales/kk/privacy.json';
+import kkSecurity from '@locales/kk/security.json';
 import kkTerms from '@locales/kk/terms.json';
+import kkMcp from '@locales/kk/mcp.json';
 
 if (!i18n.isInitialized) {
 	i18n.use(initReactI18next).init({
 		resources: {
-			en: { common: enCommon, landing: enLanding, privacy: enPrivacy, terms: enTerms },
-			ru: { common: ruCommon, landing: ruLanding, privacy: ruPrivacy, terms: ruTerms },
-			ja: { common: jaCommon, landing: jaLanding, privacy: jaPrivacy, terms: jaTerms },
-			es: { common: esCommon, landing: esLanding, privacy: esPrivacy, terms: esTerms },
-			kk: { common: kkCommon, landing: kkLanding, privacy: kkPrivacy, terms: kkTerms }
+			en: {
+				common: enCommon,
+				landing: enLanding,
+				mcp: enMcp,
+				privacy: enPrivacy,
+				security: enSecurity,
+				terms: enTerms
+			},
+			ru: {
+				common: ruCommon,
+				landing: ruLanding,
+				mcp: ruMcp,
+				privacy: ruPrivacy,
+				security: ruSecurity,
+				terms: ruTerms
+			},
+			ja: {
+				common: jaCommon,
+				landing: jaLanding,
+				mcp: jaMcp,
+				privacy: jaPrivacy,
+				security: jaSecurity,
+				terms: jaTerms
+			},
+			es: {
+				common: esCommon,
+				landing: esLanding,
+				mcp: esMcp,
+				privacy: esPrivacy,
+				security: esSecurity,
+				terms: esTerms
+			},
+			kk: { common: kkCommon, landing: kkLanding, mcp: kkMcp, privacy: kkPrivacy, security: kkSecurity, terms: kkTerms }
 		},
 		lng: DEFAULT_LOCALE,
 		fallbackLng: DEFAULT_LOCALE,
 		supportedLngs: LOCALES,
-		ns: ['common', 'landing', 'privacy', 'terms'],
+		ns: ['common', 'landing', 'mcp', 'privacy', 'security', 'terms'],
 		defaultNS: 'common',
 		fallbackNS: 'common',
 		interpolation: { escapeValue: false }

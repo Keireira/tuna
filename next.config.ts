@@ -1,5 +1,7 @@
 import type { NextConfig } from 'next';
 
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
 const nextConfig: NextConfig = {
 	output: 'standalone',
 	compress: true,
@@ -22,10 +24,22 @@ const nextConfig: NextConfig = {
 						"frame-ancestors 'none'",
 						"img-src 'self' data:",
 						"object-src 'none'",
-						"script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com",
+						[
+							"script-src 'self' 'unsafe-inline'",
+							isDevelopment ? "'unsafe-eval'" : '',
+							'https://static.cloudflareinsights.com'
+						]
+							.filter(Boolean)
+							.join(' '),
 						"style-src 'self' 'unsafe-inline'",
-						"connect-src 'self' https://cloudflareinsights.com https://*.cloudflareinsights.com",
-						'upgrade-insecure-requests'
+						[
+							"connect-src 'self'",
+							'https://cloudflareinsights.com',
+							'https://*.cloudflareinsights.com',
+							isDevelopment ? 'http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:*' : ''
+						]
+							.filter(Boolean)
+							.join(' ')
 					].join('; ')
 				},
 				{
