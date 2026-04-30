@@ -8,6 +8,37 @@ const nextConfig: NextConfig = {
 	compiler: {
 		styledComponents: true
 	},
+	headers: async () => [
+		{
+			source: '/:path*',
+			headers: [
+				{
+					key: 'Content-Security-Policy',
+					value: [
+						"default-src 'self'",
+						"base-uri 'self'",
+						"font-src 'self'",
+						"form-action 'self'",
+						"frame-ancestors 'none'",
+						"img-src 'self' data:",
+						"object-src 'none'",
+						"script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com",
+						"style-src 'self' 'unsafe-inline'",
+						"connect-src 'self' https://cloudflareinsights.com https://*.cloudflareinsights.com",
+						'upgrade-insecure-requests'
+					].join('; ')
+				},
+				{
+					key: 'Referrer-Policy',
+					value: 'strict-origin-when-cross-origin'
+				},
+				{
+					key: 'X-Content-Type-Options',
+					value: 'nosniff'
+				}
+			]
+		}
+	],
 	redirects: async () => [
 		{
 			source: '/:path*',

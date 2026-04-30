@@ -112,6 +112,7 @@ export const LanguageSwitcher = () => {
 				<span aria-hidden="true">{current.flag}</span>
 				<span>{current.code.toUpperCase()}</span>
 			</Trigger>
+
 			<AnimatePresence>
 				{open && (
 					<Dropdown
