@@ -63,6 +63,7 @@ export const proxy = (request: NextRequest) => {
 	url.pathname = `/${locale}${pathname}`;
 
 	const response = NextResponse.redirect(url, 307);
+	response.headers.set('vary', 'Accept-Language, Cookie');
 	response.headers.set('link', AGENT_LINK_HEADER);
 	return response;
 };
