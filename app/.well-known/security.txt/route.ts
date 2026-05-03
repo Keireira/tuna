@@ -1,6 +1,6 @@
 export const GET = () =>
 	new Response(
-		`Contact: mailto:uha@alena.red
+		`Contact: mailto:mail@uha.app
 Policy: https://uha.app/security
 Preferred-Languages: en, ru, ja, es, kk
 Canonical: https://uha.app/.well-known/security.txt

@@ -21,7 +21,7 @@
     "changes_title": "ポリシーの変更",
     "changes_body": "当方の慣行が変更された場合、本プライバシーポリシーを更新する場合があります。更新は改定日とともにこのページに反映されます。Uhaはオープンソースのため、プロジェクトのコミット履歴で変更を確認することもできます。",
     "contact_title": "お問い合わせ",
-    "contact_body": "本ポリシーについてご質問がある場合は、uha@alena.redまでご連絡いただくか、GitHubリポジトリでissueを作成してください。"
+    "contact_body": "本ポリシーについてご質問がある場合は、mail@uha.appまでご連絡いただくか、GitHubリポジトリでissueを作成してください。"
   },
   "terms": {
     "title": "利用規約",
@@ -43,7 +43,7 @@
     "changes_title": "規約の変更",
     "changes_body": "当方は本利用規約を随時更新する場合があります。変更は更新日とともにこのページに反映されます。変更後もUhaを継続して使用することは、改定された規約への同意を意味します。",
     "contact_title": "お問い合わせ",
-    "contact_body": "本規約についてご質問がある場合は、uha@alena.redまでご連絡いただくか、GitHubリポジトリでissueを作成してください。"
+    "contact_body": "本規約についてご質問がある場合は、mail@uha.appまでご連絡いただくか、GitHubリポジトリでissueを作成してください。"
   },
   "nav": {
     "join_beta": "ベータ版に参加"

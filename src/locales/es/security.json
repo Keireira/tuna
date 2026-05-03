@@ -7,7 +7,7 @@
     "title": "Seguridad",
     "intro": "Uha es una app de iOS con prioridad en la privacidad. Mantenemos el sitio público y los endpoints de descubrimiento pequeños, explícitos y fáciles de revisar.",
     "reporting_title": "Reportar una vulnerabilidad",
-    "reporting_body": "Si crees que encontraste un problema de seguridad en Uha, el sitio web o un servicio público operado para Uha, escribe a uha@alena.red. Incluye la URL o área afectada de la app, los pasos para reproducirlo y el impacto esperado.",
+    "reporting_body": "Si crees que encontraste un problema de seguridad en Uha, el sitio web o un servicio público operado para Uha, escribe a mail@uha.app. Incluye la URL o área afectada de la app, los pasos para reproducirlo y el impacto esperado.",
     "scope_title": "Alcance",
     "scope_body": "Dentro del alcance: uha.app, endpoints públicos de descubrimiento, la app de iOS Uha y servicios públicos operados para Uha. Fuera del alcance: ingeniería social, spam, pruebas de denegación de servicio y ataques contra servicios de terceros.",
     "policy_title": "Política de divulgación",

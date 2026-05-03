@@ -27,7 +27,7 @@ const onest = localFont({
 const SITE_URL = 'https://uha.app';
 const APP_STORE_URL = 'https://apps.apple.com/app/uha-subscription-tracker/id6740211581';
 const TESTFLIGHT_URL = 'https://testflight.apple.com/join/uVYrDkbA';
-const SUPPORT_EMAIL = 'uha@alena.red';
+const SUPPORT_EMAIL = 'mail@uha.app';
 
 export const generateStaticParams = () => LOCALES.map((locale) => ({ locale }));
 

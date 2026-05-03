@@ -21,7 +21,7 @@
     "changes_title": "Cambios en esta política",
     "changes_body": "Podemos actualizar esta Política de Privacidad si nuestras prácticas cambian. Las actualizaciones se reflejarán en esta página con una fecha revisada. Como Uha es de código abierto, también puedes revisar los cambios en el historial de commits del proyecto.",
     "contact_title": "Contacto",
-    "contact_body": "Si tienes preguntas sobre esta política, puedes contactarnos en uha@alena.red o abrir un issue en nuestro repositorio de GitHub."
+    "contact_body": "Si tienes preguntas sobre esta política, puedes contactarnos en mail@uha.app o abrir un issue en nuestro repositorio de GitHub."
   },
   "terms": {
     "title": "Términos de Uso",
@@ -43,7 +43,7 @@
     "changes_title": "Cambios en estos términos",
     "changes_body": "Podemos actualizar estos Términos de Uso de vez en cuando. Los cambios se reflejarán en esta página con una fecha actualizada. El uso continuado de Uha después de los cambios constituye la aceptación de los términos revisados.",
     "contact_title": "Contacto",
-    "contact_body": "Si tienes preguntas sobre estos términos, puedes contactarnos en uha@alena.red o abrir un issue en nuestro repositorio de GitHub."
+    "contact_body": "Si tienes preguntas sobre estos términos, puedes contactarnos en mail@uha.app o abrir un issue en nuestro repositorio de GitHub."
   },
   "nav": {
     "join_beta": "Únete a la Beta"
