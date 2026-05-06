@@ -11,7 +11,7 @@ const APP_INFO = {
 	description:
 		'Subscription tracker with renewal reminders, spending forecasts, multi-currency totals, and iCloud sync.',
 	pricing: {
-		free: 'Up to 5 subscriptions, 3 currencies, 2-year future timeline',
+		free: 'Up to 3 subscriptions, 3 currencies, 3-year future timeline',
 		unlimited: 'One-time purchase after App Store release. TestFlight purchases are for testing only.'
 	}
 };

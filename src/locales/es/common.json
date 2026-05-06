@@ -23,8 +23,8 @@
     "og_image_alt": "Uha — Gestor de suscripciones para iOS"
   },
   "jsonld": {
-    "free_tier": "Hasta 5 suscripciones, 3 monedas, línea de tiempo de 2 años",
-    "unlimited_tier": "Suscripciones ilimitadas, todas las monedas, sincronización con iCloud, restauración de copias, línea de tiempo de 10 años, todas las futuras funciones premium",
+    "free_tier": "Hasta 3 suscripciones, 3 monedas, línea de tiempo de 3 años",
+    "unlimited_tier": "Suscripciones ilimitadas, todas las monedas, sincronización con iCloud, restauración de copias, línea de tiempo de 12 años, todas las futuras funciones premium",
     "features": [
       "Seguimiento de suscripciones localmente (en el dispositivo)",
       "Compatibilidad multi-moneda",
