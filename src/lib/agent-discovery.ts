@@ -21,8 +21,8 @@ Uha is an iOS subscription tracker for recurring payments, renewal reminders, sp
 
 Uha is currently in public beta via Apple TestFlight. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase.
 
-- Free: track up to 5 subscriptions, use 3 currencies, and view a 2-year future timeline.
-- Unlimited: one-time purchase for unlimited subscriptions, all currencies, iCloud sync, backup restoration, a 10-year timeline, and future premium features.
+- Free: track up to 3 subscriptions, use 3 currencies, and view a 3-year future timeline.
+- Unlimited: one-time purchase for unlimited subscriptions, all currencies, iCloud sync, backup restoration, a 12-year timeline, and future premium features.
 
 ## Privacy and data
 
@@ -79,7 +79,7 @@ export const WEBMCP_BOOTSTRAP_SCRIPT = String.raw`
 		testFlight: 'https://testflight.apple.com/join/uVYrDkbA',
 		description: 'Subscription tracker with renewal reminders, spending forecasts, multi-currency totals, and iCloud sync.',
 		pricing: {
-			free: 'Up to 5 subscriptions, 3 currencies, 2-year future timeline',
+			free: 'Up to 3 subscriptions, 3 currencies, 3-year future timeline',
 			unlimited: 'One-time purchase after App Store release. TestFlight purchases are for testing only.'
 		}
 	};

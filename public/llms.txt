@@ -12,8 +12,8 @@
 Uha is currently in public beta via Apple TestFlight. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase.
 
 ## Pricing
-- Free: up to 5 subscriptions, 3 currencies, 2-year timeline
-- Unlimited: Unlimited subscriptions, All currencies, iCloud sync, Backup restoration, 10-year timeline, All future premium features
+- Free: up to 3 subscriptions, 3 currencies, 3-year timeline
+- Unlimited: Unlimited subscriptions, All currencies, iCloud sync, Backup restoration, 12-year timeline, All future premium features
 
 ## License
 AGPL-3.0

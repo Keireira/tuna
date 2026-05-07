@@ -39,8 +39,6 @@ const Footer = () => {
 		<FooterWrapper>
 			<Container>
 				<FooterInner>
-					<span>{t('footer.madeWith')}</span>
-					<span>·</span>
 					<FooterLink href={`/${locale}/terms`}>{t('footer.terms')}</FooterLink>
 					<span>·</span>
 					<FooterLink href={`/${locale}/privacy`}>{t('footer.privacy')}</FooterLink>

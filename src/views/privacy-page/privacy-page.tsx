@@ -62,7 +62,8 @@ const PrivacyPage = ({ locale }: TProps) => {
 								<strong>RevenueCat</strong> — {t('privacy_policy.third_party_revenuecat')}
 							</li>
 							<li>
-								<strong>Logo.dev</strong> — {t('privacy_policy.third_party_logodev')}
+								<strong>{t('privacy_policy.third_party_service_catalog_label')}</strong> —{' '}
+								{t('privacy_policy.third_party_logodev')}
 							</li>
 							<li>
 								<strong>Cloudflare</strong> — {t('privacy_policy.third_party_cloudflare')}

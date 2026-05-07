@@ -4,10 +4,10 @@ const UHA_PRICING = {
 	free: {
 		price: 'Free',
 		limits: [
-			'Up to 5 subscriptions',
+			'Up to 3 subscriptions',
 			'3 currencies for conversion (USD, EUR, and your App Store currency)',
 			'No iCloud sync or backup restoration',
-			'Future timeline limited to 2 years',
+			'Future timeline limited to 3 years',
 			'Can be upgraded to Unlimited with a one-time purchase'
 		]
 	},
@@ -19,7 +19,7 @@ const UHA_PRICING = {
 			'All currencies',
 			'iCloud sync',
 			'Backup restoration',
-			'10-year timeline',
+			'12-year timeline',
 			'All future premium features'
 		]
 	}
@@ -189,7 +189,7 @@ const handler = createMcpHandler(
 								'Uha helps you track, analyze, and manage all your recurring subscriptions in one place. Supports multiple currencies with real-time exchange rates, spending forecasts, and iCloud sync.',
 							platforms: ['iOS'],
 							features: [
-								'Track unlimited subscriptions (premium) / up to 5 (free)',
+								'Track unlimited subscriptions (premium) / up to 3 (free)',
 								'Multi-currency support with real-time exchange rates',
 								'Spending analytics and forecasts',
 								'iCloud sync and backup',

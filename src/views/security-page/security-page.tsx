@@ -32,10 +32,6 @@ const SecurityPage = ({ locale }: TProps) => {
 
 				<Content ref={ref} variants={staggerContainer} initial="hidden" animate={isInView ? 'visible' : 'hidden'}>
 					<Section variants={fadeInUp}>
-						<Paragraph>{t('page.intro')}</Paragraph>
-					</Section>
-
-					<Section variants={fadeInUp}>
 						<SectionTitle>{t('page.reporting_title')}</SectionTitle>
 						<Paragraph>{t('page.reporting_body')}</Paragraph>
 					</Section>

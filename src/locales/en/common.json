@@ -23,8 +23,8 @@
     "og_image_alt": "Uha — Subscription Manager for iOS"
   },
   "jsonld": {
-    "free_tier": "Up to 5 subscriptions, 3 currencies, 2-year timeline",
-    "unlimited_tier": "Unlimited subscriptions, all currencies, iCloud sync, backup restoration, 10-year timeline, all future premium features",
+    "free_tier": "Up to 3 subscriptions, 3 currencies, 3-year timeline",
+    "unlimited_tier": "Unlimited subscriptions, all currencies, iCloud sync, backup restoration, 12-year timeline, all future premium features",
     "features": [
       "Track subscriptions locally (on-device)",
       "Multi-currency support",
