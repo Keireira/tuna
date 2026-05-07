@@ -1,8 +1,8 @@
 import type { TLocale } from '@/lib/i18n';
 
-export const PRIVACY_LAST_MODIFIED_AT = new Date('2026-05-06T00:00:00.000Z');
-export const TERMS_LAST_MODIFIED_AT = new Date('2026-05-06T00:00:00.000Z');
-export const SECURITY_LAST_MODIFIED_AT = new Date('2026-05-06T00:00:00.000Z');
+export const PRIVACY_LAST_MODIFIED_AT = new Date('2026-05-08T00:00:00.000Z');
+export const TERMS_LAST_MODIFIED_AT = new Date('2026-05-08T00:00:00.000Z');
+export const SECURITY_LAST_MODIFIED_AT = new Date('2026-05-08T00:00:00.000Z');
 
 const LAST_UPDATED_LABELS: Record<TLocale, string> = {
 	en: 'Last updated',
