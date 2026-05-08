@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Support",
+    "description": "Get help with Uha, report issues, and find the right contact path for support, billing, data, and security questions."
+  },
+  "page": {
+    "title": "Support",
+    "intro": "For Uha support, bug reports, billing questions, or feedback, email me directly. I read support mail myself and try to keep replies practical.",
+    "include_title": "What to Include",
+    "include_intro": "A clear report helps me reproduce the issue faster. When relevant, include:",
+    "include_device": "Your iPhone model, iOS version, and Uha version.",
+    "include_steps": "The steps you took before the problem appeared.",
+    "include_screenshots": "Screenshots or screen recordings if they do not expose private subscription data.",
+    "include_purchase": "For purchase or TestFlight issues, mention whether you installed from TestFlight or the App Store.",
+    "beta_title": "Beta and Purchases",
+    "beta_body": "Uha is currently in public beta through Apple TestFlight. TestFlight purchases are for testing only. Real purchases are handled by Apple In-App Purchase after App Store release, and Apple manages refunds, payment methods, and regional billing rules.",
+    "data_title": "Your Data",
+    "data_body": "Uha stores your subscription library on your device. I cannot see, edit, or recover your local data from the server side. If you use iCloud backup, that data is stored in your personal iCloud account and managed by Apple.",
+    "security_title": "Security and Privacy",
+    "security_body": "For suspected security issues, include the affected URL or app area, reproduction steps, and impact. Please avoid sending private subscription lists, payment details, or credentials in email."
+  }
+}

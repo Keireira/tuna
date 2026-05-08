@@ -6,6 +6,7 @@ const ROUTES = [
 	{ path: '/privacy', lastModified: new Date('2026-03-09') },
 	{ path: '/terms', lastModified: new Date('2026-03-09') },
 	{ path: '/security', lastModified: new Date('2026-04-30') },
+	{ path: '/support', lastModified: new Date('2026-05-08') },
 	{ path: '/mcp', lastModified: new Date('2026-04-30') }
 ] as const;
 

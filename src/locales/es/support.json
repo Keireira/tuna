@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Soporte",
+    "description": "Obtén ayuda con Uha, reporta problemas y encuentra el contacto adecuado para soporte, facturación, datos y seguridad."
+  },
+  "page": {
+    "title": "Soporte",
+    "intro": "Para soporte de Uha, reportes de errores, preguntas de facturación o comentarios, escríbeme directamente. Leo el correo de soporte personalmente e intento responder de forma práctica.",
+    "include_title": "Qué incluir",
+    "include_intro": "Un reporte claro ayuda a reproducir el problema más rápido. Cuando sea relevante, incluye:",
+    "include_device": "Tu modelo de iPhone, versión de iOS y versión de Uha.",
+    "include_steps": "Los pasos que seguiste antes de que apareciera el problema.",
+    "include_screenshots": "Capturas o grabaciones de pantalla si no exponen datos privados de tus suscripciones.",
+    "include_purchase": "Para problemas de compra o TestFlight, menciona si instalaste desde TestFlight o desde App Store.",
+    "beta_title": "Beta y compras",
+    "beta_body": "Uha está actualmente en beta pública mediante Apple TestFlight. Las compras en TestFlight son solo para pruebas. Las compras reales se gestionan con Apple In-App Purchase después del lanzamiento en App Store, y Apple gestiona reembolsos, métodos de pago y reglas regionales de facturación.",
+    "data_title": "Tus datos",
+    "data_body": "Uha guarda tu biblioteca de suscripciones en tu dispositivo. No puedo ver, editar ni recuperar tus datos locales desde el servidor. Si usas respaldo en iCloud, esos datos se guardan en tu cuenta personal de iCloud y son gestionados por Apple.",
+    "security_title": "Seguridad y privacidad",
+    "security_body": "Para posibles problemas de seguridad, incluye la URL o área afectada de la app, pasos para reproducirlo e impacto. Evita enviar por correo listas privadas de suscripciones, datos de pago o credenciales."
+  }
+}

@@ -45,6 +45,8 @@ const Footer = () => {
 					<span>·</span>
 					<FooterLink href={`/${locale}/security`}>{t('footer.security')}</FooterLink>
 					<span>·</span>
+					<FooterLink href={`/${locale}/support`}>{t('footer.support')}</FooterLink>
+					<span>·</span>
 					<FooterLink href={`/${locale}/mcp`}>{t('footer.mcp')}</FooterLink>
 				</FooterInner>
 			</Container>
