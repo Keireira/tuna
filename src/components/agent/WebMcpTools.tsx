@@ -6,13 +6,13 @@ const APP_INFO = {
 	name: 'Uha',
 	platform: 'iOS',
 	website: 'https://uha.app',
-	appStore: 'https://apps.apple.com/app/uha-subscription-tracker/id6740211581',
+	appStore: 'https://apps.apple.com/us/app/uha-subscriptions-tracker/id6748603444',
 	testFlight: 'https://testflight.apple.com/join/uVYrDkbA',
 	description:
 		'Subscription tracker with renewal reminders, spending forecasts, multi-currency totals, and iCloud sync.',
 	pricing: {
 		free: 'Up to 3 subscriptions, 3 currencies, 3-year future timeline',
-		unlimited: 'One-time purchase after App Store release. TestFlight purchases are for testing only.'
+		unlimited: 'One-time purchase through Apple In-App Purchase. TestFlight purchases are for testing only.'
 	}
 };
 

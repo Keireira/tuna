@@ -14,20 +14,30 @@ const Wrapper = styled.div`
 const Trigger = styled.button`
 	display: flex;
 	align-items: center;
-	gap: 6px;
-	padding: 6px 12px;
-	border-radius: 10px;
-	font-size: 0.85rem;
-	font-weight: 500;
-	background: ${({ theme }) => theme.surface};
-	border: 1px solid ${({ theme }) => theme.cardBorder};
-	color: ${({ theme }) => theme.text};
-	backdrop-filter: blur(12px);
+	gap: 0;
+	min-height: 32px;
+	padding: 0;
+	border-radius: 0;
+	font-size: 0.95rem;
+	font-weight: 650;
+	background: transparent;
+	border: 0;
+	color: ${({ theme }) => theme.textSecondary};
 	cursor: pointer;
-	transition: background 0.2s;
+	transition:
+		color 0.2s,
+		text-decoration-color 0.2s;
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	text-underline-offset: 5px;
+
+	span[aria-hidden='true'] {
+		display: none;
+	}
 
 	&:hover {
-		background: ${({ theme }) => theme.cardHover};
+		color: ${({ theme }) => theme.accent};
+		text-decoration-color: currentColor;
 	}
 `;
 
@@ -38,7 +48,7 @@ const Dropdown = styled(motion.div)`
 	min-width: 140px;
 	background: ${({ theme }) => theme.surfaceSolid};
 	border: 1px solid ${({ theme }) => theme.cardBorder};
-	border-radius: 12px;
+	border-radius: 6px;
 	box-shadow: ${({ theme }) => theme.shadow};
 	overflow: hidden;
 	z-index: 100;

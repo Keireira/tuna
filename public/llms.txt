@@ -3,13 +3,13 @@
 > The subscription tracker that isn't a subscription. Pay once. No recurring charges, ever. Track all your subscriptions on iOS with renewal alerts, iCloud backup, and a timeline of past and upcoming charges. All data stays on your device. Like a bank feed for your subscriptions.
 
 ## Links
-- [App Store](https://apps.apple.com/app/uha-subscription-tracker/id6740211581)
+- [App Store](https://apps.apple.com/us/app/uha-subscriptions-tracker/id6748603444)
 - [TestFlight Beta](https://testflight.apple.com/join/uVYrDkbA)
 - [MCP Server](https://uha.app/api/mcp)
 - [Security Policy](https://uha.app/security)
 
-## TestFlight
-Uha is currently in public beta via Apple TestFlight. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase.
+## Availability
+Uha is available on the App Store. TestFlight remains available for beta testing, and TestFlight purchases are for testing only.
 
 ## Pricing
 - Free: up to 3 subscriptions, 3 currencies, 3-year timeline

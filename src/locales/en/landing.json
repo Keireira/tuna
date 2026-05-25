@@ -30,7 +30,7 @@
     "use_title": "Use of the App",
     "use_body": "Uha is provided for personal, non-commercial use. You may use the app to track your subscriptions, manage spending, and organize financial data on your device. You agree not to misuse the app, use it for any unlawful purpose, or use it for commercial purposes. The Uha name, branding, and assets remain the property of the developer.",
     "subscriptions_title": "In-App Purchase",
-    "subscriptions_body": "Uha is currently in public beta via Apple TestFlight. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase. The free tier lets you track up to 3 subscriptions, use the base free currencies, and view up to a 3-year forecast horizon. Uha offers an optional one-time purchase (\"Uha Unlimited\") that permanently unlocks unlimited subscriptions, all available currencies, a 12-year forecast horizon, and backup/export features. After App Store release, the purchase will be processed through Apple's App Store and managed by RevenueCat using the \"Uha Unlimited\" entitlement. Payment will be charged to your Apple ID account at confirmation. As a lifetime purchase, it will not renew or recur. The price is set in USD and may vary by region according to Apple's App Store pricing. I do not process payments directly and have no access to your payment information.",
+    "subscriptions_body": "Uha is available on the App Store. The free tier lets you track up to 3 subscriptions, use the base free currencies, and view up to a 3-year forecast horizon. Uha offers an optional one-time purchase (\"Uha Unlimited\") that permanently unlocks unlimited subscriptions, all available currencies, a 12-year forecast horizon, and backup/export features. Purchases are processed through Apple's App Store and managed by RevenueCat using the \"Uha Unlimited\" entitlement. Payment will be charged to your Apple ID account at confirmation. As a lifetime purchase, it will not renew or recur. The price is set in USD and may vary by region according to Apple's App Store pricing. I do not process payments directly and have no access to your payment information.",
     "content_title": "Your Content",
     "content_body": "All subscription data, categories, payment methods, services, custom logos, notes, and preferences you create in Uha are stored locally on your device. I do not have access to your content. You are responsible for maintaining backups of your data. If you delete the app without backing up, your data cannot be recovered.",
     "icloud_title": "iCloud Backup",
@@ -47,7 +47,7 @@
     "contact_body": "If you have questions about these terms, you can reach me at mail@uha.app."
   },
   "nav": {
-    "join_beta": "Join Beta Now"
+    "download_app": "App Store"
   },
   "hero": {
     "headline_1": "Track your subscriptions\ndown!",
@@ -56,14 +56,15 @@
     "headline_4": "Reel in your subscriptions!",
     "subtitle_1": "A subscription manager that respects your privacy. All data stays on your device. Available on iOS.",
     "subtitle_2": "Take control of your subscriptions.",
-    "join_beta": "Join Beta Now",
-    "beta_disclaimer": "Uha is currently in public beta via Apple TestFlight. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase."
+    "download_app": "Download on the App Store",
+    "beta_disclaimer": "TestFlight remains available for beta testing. TestFlight purchases are for testing only."
   },
   "footer": {
     "terms": "Terms",
     "privacy": "Privacy",
     "security": "Security",
     "support": "Support",
-    "mcp": "MCP"
+    "mcp": "MCP",
+    "join_beta": "Join Beta"
   }
 }

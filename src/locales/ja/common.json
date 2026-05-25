@@ -1,6 +1,6 @@
 {
   "nav": {
-    "join_beta": "ベータ版に参加"
+    "download_app": "App Store"
   },
   "not_found": {
     "message": "このページは逃げてしまいました。",
@@ -16,7 +16,7 @@
     "og_image_alt": "Uha — iOS用サブスク管理アプリ"
   },
   "jsonld": {
-    "free_tier": "最大5件のサブスク、3通貨、2年間のタイムライン",
+    "free_tier": "最大3件のサブスク、3通貨、3年間のタイムライン",
     "unlimited_tier": "無制限のサブスク、全通貨対応、iCloud同期、バックアップ復元、12年間のタイムライン、今後のすべてのプレミアム機能",
     "features": [
       "ローカル(デバイス上)でサブスクを追跡",

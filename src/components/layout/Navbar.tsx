@@ -1,14 +1,28 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import type { ThemeMode } from '@styles/theme';
 import Container from './Container';
 import { ThemeToggle } from '@common/ThemeToggle';
 import { LanguageSwitcher } from '@common/LanguageSwitcher';
+
+const APP_STORE_URL = 'https://apps.apple.com/us/app/uha-subscriptions-tracker/id6748603444';
+const LOGO_SUBTITLE_BY_LOCALE = {
+	en: 'Subscriptions Tracker',
+	ru: 'Трекер подписок',
+	es: 'Control de suscripciones',
+	kk: 'Жазылымдар трекері',
+	ja: 'サブスク管理',
+} as const;
+
+type LogoSubtitleLocale = keyof typeof LOGO_SUBTITLE_BY_LOCALE;
+
+const isLogoSubtitleLocale = (locale: string): locale is LogoSubtitleLocale =>
+	locale in LOGO_SUBTITLE_BY_LOCALE;
 
 const Nav = styled(motion.nav)<{ $scrolled: boolean }>`
 	position: fixed;
@@ -17,8 +31,6 @@ const Nav = styled(motion.nav)<{ $scrolled: boolean }>`
 	right: 0;
 	z-index: 1000;
 	padding: 12px 0;
-	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(20px);
 	background: ${({ theme, $scrolled }) => ($scrolled ? theme.navBg : 'transparent')};
 	border-bottom: 1px solid ${({ theme, $scrolled }) => ($scrolled ? theme.navBorder : 'transparent')};
 	transition:
@@ -35,10 +47,7 @@ const NavInner = styled.div`
 const Logo = styled(Link)`
 	display: flex;
 	align-items: center;
-	gap: 10px;
-	font-size: 1.35rem;
-	font-weight: 700;
-	letter-spacing: -0.02em;
+	gap: 12px;
 	color: ${({ theme }) => theme.text};
 	text-decoration: none;
 `;
@@ -49,25 +58,60 @@ const LogoIcon = styled(motion.img)`
 	clip-path: url(#squircle);
 `;
 
+const LogoText = styled.span`
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	line-height: 1;
+`;
+
+const LogoName = styled.span`
+	font-size: 1.35rem;
+	font-weight: 750;
+	letter-spacing: 0;
+`;
+
+const LogoSubtitle = styled.span`
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0;
+	line-height: 1;
+	color: ${({ theme }) => theme.textSecondary};
+	white-space: nowrap;
+
+	@media (max-width: 520px) {
+		display: none;
+	}
+`;
+
 const NavRight = styled.div`
 	display: flex;
 	align-items: center;
-	gap: 8px;
+	gap: 18px;
 `;
 
 const CtaButton = styled.a`
 	display: inline-flex;
 	align-items: center;
-	padding: 8px 20px;
-	border-radius: 980px;
-	font-size: 0.875rem;
-	font-weight: 600;
-	background: ${({ theme }) => theme.accent};
-	color: #fff;
-	transition: background 0.2s;
+	justify-content: center;
+	min-height: 32px;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	font-size: 0.95rem;
+	font-weight: 650;
+	background: transparent;
+	color: ${({ theme }) => theme.textSecondary};
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	text-underline-offset: 5px;
+	transition:
+		color 0.2s,
+		text-decoration-color 0.2s;
 
 	&:hover {
-		background: ${({ theme }) => theme.accentHover};
+		color: ${({ theme }) => theme.accent};
+		text-decoration-color: currentColor;
 	}
 `;
 
@@ -77,7 +121,11 @@ interface NavbarProps {
 }
 
 const Navbar = ({ themeMode, onToggleTheme }: NavbarProps) => {
-	const { t, i18n } = useTranslation();
+	const params = useParams<{ locale?: string }>();
+	const locale = params.locale ?? 'en';
+	const logoSubtitle = isLogoSubtitleLocale(locale)
+		? LOGO_SUBTITLE_BY_LOCALE[locale]
+		: LOGO_SUBTITLE_BY_LOCALE.en;
 	const [scrolled, setScrolled] = useState(false);
 
 	useEffect(() => {
@@ -91,7 +139,7 @@ const Navbar = ({ themeMode, onToggleTheme }: NavbarProps) => {
 			<Nav $scrolled={scrolled}>
 				<Container>
 					<NavInner>
-						<Logo href={`/${i18n.language}`}>
+						<Logo href={`/${locale}`}>
 							<LogoIcon
 								src="/assets/icons/fish.png"
 								alt="Uha"
@@ -99,15 +147,18 @@ const Navbar = ({ themeMode, onToggleTheme }: NavbarProps) => {
 								animate={{ scale: 1, opacity: 1 }}
 								transition={{ type: 'spring', stiffness: 400, damping: 20 }}
 							/>
-							Uha
+							<LogoText>
+								<LogoName>Uha</LogoName>
+								<LogoSubtitle>{logoSubtitle}</LogoSubtitle>
+							</LogoText>
 						</Logo>
 
 						<NavRight>
 							<LanguageSwitcher />
 							<ThemeToggle mode={themeMode} onToggle={onToggleTheme} />
 
-							<CtaButton href="https://testflight.apple.com/join/uVYrDkbA" target="_blank" rel="noopener">
-								{t('nav.join_beta')}
+							<CtaButton href={APP_STORE_URL} target="_blank" rel="noopener">
+								App Store
 							</CtaButton>
 						</NavRight>
 					</NavInner>

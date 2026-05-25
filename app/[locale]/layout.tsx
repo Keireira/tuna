@@ -25,7 +25,7 @@ const onest = localFont({
 });
 
 const SITE_URL = 'https://uha.app';
-const APP_STORE_URL = 'https://apps.apple.com/app/uha-subscription-tracker/id6740211581';
+const APP_STORE_URL = 'https://apps.apple.com/us/app/uha-subscriptions-tracker/id6748603444';
 const TESTFLIGHT_URL = 'https://testflight.apple.com/join/uVYrDkbA';
 const SUPPORT_EMAIL = 'mail@uha.app';
 
@@ -108,14 +108,14 @@ const LocaleLayout = async ({ children, params }: TProps) => {
 			description: t('jsonld.unlimited_tier'),
 			price: '9.99',
 			priceCurrency: 'USD',
-			availability: 'https://schema.org/PreOrder'
+			availability: 'https://schema.org/InStock'
 		}
 	];
 	const softwareApplication = {
 		'@type': ['SoftwareApplication', 'MobileApplication'],
 		'@id': `${SITE_URL}/#app`,
 		name: 'Uha',
-		alternateName: 'Uha Subscription Tracker',
+		alternateName: 'Uha Subscriptions Tracker',
 		applicationCategory: 'FinanceApplication',
 		applicationSubCategory: 'Subscription management',
 		operatingSystem: 'iOS',
@@ -125,7 +125,7 @@ const LocaleLayout = async ({ children, params }: TProps) => {
 		image: `${SITE_URL}/og-image.png`,
 		thumbnailUrl: `${SITE_URL}/favicon.png`,
 		downloadUrl: APP_STORE_URL,
-		installUrl: TESTFLIGHT_URL,
+		installUrl: APP_STORE_URL,
 		isAccessibleForFree: true,
 		inLanguage: locale,
 		featureList: features,
@@ -191,7 +191,7 @@ const LocaleLayout = async ({ children, params }: TProps) => {
 						name: 'Where can I install Uha?',
 						acceptedAnswer: {
 							'@type': 'Answer',
-							text: `Uha is currently in public beta via Apple TestFlight at ${TESTFLIGHT_URL}. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase. The App Store listing is ${APP_STORE_URL}.`
+							text: `Uha is available on the App Store at ${APP_STORE_URL}. TestFlight remains available for beta testing at ${TESTFLIGHT_URL}.`
 						}
 					}
 				]

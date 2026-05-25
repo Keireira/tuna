@@ -30,7 +30,7 @@
     "use_title": "Uso de la aplicación",
     "use_body": "Uha se proporciona para uso personal y no comercial. Puedes usar la app para rastrear suscripciones, gestionar gastos y organizar datos financieros en tu dispositivo. Aceptas no hacer mal uso de la app, no usarla para fines ilegales ni con fines comerciales. Uha es software de código abierto — el código fuente está disponible públicamente para inspección y transparencia, pero el proyecto, su nombre, marca y recursos siguen siendo propiedad del desarrollador. Los términos completos de la licencia están disponibles en el repositorio del proyecto.",
     "subscriptions_title": "Compra dentro de la app",
-    "subscriptions_body": "Uha está actualmente en beta pública a través de Apple TestFlight. Las compras en TestFlight son solo para pruebas; los pagos reales se gestionarán únicamente después del lanzamiento en App Store mediante Apple In-App Purchase. El nivel gratuito te permite rastrear hasta 3 suscripciones, usar las monedas gratuitas base y ver un horizonte de pronóstico de hasta 3 años. Uha ofrece una compra única opcional (\"Uha Unlimited\") que desbloquea permanentemente suscripciones ilimitadas, todas las monedas disponibles, un horizonte de pronóstico de 12 años y funciones de respaldo/exportación. Después del lanzamiento en App Store, la compra se procesará a través de la App Store de Apple y será gestionada por RevenueCat usando el entitlement \"Uha Unlimited\". El pago se cobrará a tu cuenta de Apple ID al confirmar. Al ser una compra de por vida, no se renovará ni se repetirá. El precio está establecido en USD y puede variar según la región de acuerdo con los precios de la App Store. No procesamos pagos directamente y no tenemos acceso a tu información de pago.",
+    "subscriptions_body": "Uha está disponible en App Store. El nivel gratuito te permite rastrear hasta 3 suscripciones, usar las monedas gratuitas base y ver un horizonte de pronóstico de hasta 3 años. Uha ofrece una compra única opcional (\"Uha Unlimited\") que desbloquea permanentemente suscripciones ilimitadas, todas las monedas disponibles, un horizonte de pronóstico de 12 años y funciones de respaldo/exportación. Las compras se procesan a través de App Store de Apple y son gestionadas por RevenueCat usando el entitlement \"Uha Unlimited\". El pago se cobrará a tu cuenta de Apple ID al confirmar. Al ser una compra de por vida, no se renovará ni se repetirá. El precio está establecido en USD y puede variar según la región de acuerdo con los precios de la App Store. No procesamos pagos directamente y no tenemos acceso a tu información de pago.",
     "content_title": "Tu contenido",
     "content_body": "Todos los datos de suscripciones, categorías, métodos de pago, servicios, logotipos personalizados, notas y preferencias que creas en Uha se almacenan localmente en tu dispositivo. No tenemos acceso a tu contenido. Eres responsable de mantener copias de seguridad de tus datos. Si eliminas la app sin hacer una copia de seguridad, tus datos no podrán recuperarse.",
     "icloud_title": "Respaldo en iCloud",
@@ -47,7 +47,7 @@
     "contact_body": "Si tienes preguntas sobre estos términos, puedes contactarme en mail@uha.app o abrir un issue en mi repositorio de GitHub."
   },
   "nav": {
-    "join_beta": "Únete a la Beta"
+    "download_app": "App Store"
   },
   "hero": {
     "headline_1": "¡Controla tus suscripciones\nal detalle!",
@@ -56,14 +56,15 @@
     "headline_4": "¡Pesca tus suscripciones!",
     "subtitle_1": "Un gestor de suscripciones que respeta tu privacidad. Todos los datos se quedan en tu dispositivo. Disponible en iOS.",
     "subtitle_2": "Toma el control de tus suscripciones.",
-    "join_beta": "Únete a la Beta",
-    "beta_disclaimer": "Uha está actualmente en beta pública a través de Apple TestFlight. Las compras en TestFlight son solo para pruebas; los pagos reales se gestionarán únicamente después del lanzamiento en App Store mediante Apple In-App Purchase."
+    "download_app": "Descargar en App Store",
+    "beta_disclaimer": "TestFlight sigue disponible para pruebas beta. Las compras en TestFlight son solo para pruebas."
   },
   "footer": {
     "terms": "Términos",
     "privacy": "Privacidad",
     "security": "Seguridad",
     "support": "Soporte",
-    "mcp": "MCP"
+    "mcp": "MCP",
+    "join_beta": "Join Beta"
   }
 }

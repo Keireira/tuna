@@ -8,18 +8,17 @@ const ToggleButton = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 36px;
-	height: 36px;
-	border-radius: 10px;
-	background: ${({ theme }) => theme.surface};
-	border: 1px solid ${({ theme }) => theme.cardBorder};
-	color: ${({ theme }) => theme.text};
-	backdrop-filter: blur(12px);
+	width: 32px;
+	height: 32px;
+	border-radius: 0;
+	background: transparent;
+	border: 0;
+	color: ${({ theme }) => theme.textSecondary};
 	cursor: pointer;
-	transition: background 0.2s;
+	transition: color 0.2s;
 
 	&:hover {
-		background: ${({ theme }) => theme.cardHover};
+		color: ${({ theme }) => theme.accent};
 	}
 `;
 

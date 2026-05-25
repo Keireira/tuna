@@ -1,6 +1,6 @@
 export const SITE_URL = 'https://uha.app';
 export const MCP_ENDPOINT = `${SITE_URL}/api/mcp`;
-export const APP_STORE_URL = 'https://apps.apple.com/app/uha-subscription-tracker/id6740211581';
+export const APP_STORE_URL = 'https://apps.apple.com/us/app/uha-subscriptions-tracker/id6748603444';
 export const TESTFLIGHT_URL = 'https://testflight.apple.com/join/uVYrDkbA';
 
 export const UHA_MARKDOWN = `# Uha
@@ -19,7 +19,7 @@ Uha is an iOS subscription tracker for recurring payments, renewal reminders, sp
 
 ## Pricing
 
-Uha is currently in public beta via Apple TestFlight. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase.
+Uha is available on the App Store. Purchases are handled by Apple In-App Purchase. TestFlight remains available for beta testing, and TestFlight purchases are for testing only.
 
 - Free: track up to 3 subscriptions, use 3 currencies, and view a 3-year future timeline.
 - Unlimited: one-time purchase for unlimited subscriptions, all currencies, iCloud sync, backup restoration, a 12-year timeline, and future premium features.
@@ -51,7 +51,7 @@ Use this skill when an agent needs product, pricing, availability, or integratio
 
 ## TestFlight beta
 
-Uha is currently in public beta via Apple TestFlight. TestFlight purchases are for testing; real payments are handled only after App Store release through Apple In-App Purchase.
+Uha is available on the App Store. TestFlight remains available for users who want to join beta testing. TestFlight purchases are for testing only.
 
 ## Notes
 
@@ -75,12 +75,12 @@ export const WEBMCP_BOOTSTRAP_SCRIPT = String.raw`
 		name: 'Uha',
 		platform: 'iOS',
 		website: 'https://uha.app',
-		appStore: 'https://apps.apple.com/app/uha-subscription-tracker/id6740211581',
+		appStore: 'https://apps.apple.com/us/app/uha-subscriptions-tracker/id6748603444',
 		testFlight: 'https://testflight.apple.com/join/uVYrDkbA',
 		description: 'Subscription tracker with renewal reminders, spending forecasts, multi-currency totals, and iCloud sync.',
 		pricing: {
 			free: 'Up to 3 subscriptions, 3 currencies, 3-year future timeline',
-			unlimited: 'One-time purchase after App Store release. TestFlight purchases are for testing only.'
+			unlimited: 'One-time purchase through Apple In-App Purchase. TestFlight purchases are for testing only.'
 		}
 	};
 

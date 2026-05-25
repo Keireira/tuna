@@ -26,7 +26,7 @@ const UHA_PRICING = {
 };
 
 const UHA_CURRENCIES = {
-	total: 123,
+	total: 124,
 	regions: [
 		'africa',
 		'europe',
@@ -70,6 +70,7 @@ const UHA_CURRENCIES = {
 		{ code: 'ALL', symbol: 'L', decimals: 2, locale: 'sq-AL', region: 'europe' },
 		{ code: 'BAM', symbol: 'KM', decimals: 2, locale: 'bs-BA', region: 'europe' },
 		{ code: 'BGN', symbol: 'лв', decimals: 2, locale: 'bg-BG', region: 'europe' },
+		{ code: 'BYN', symbol: 'Br', decimals: 2, locale: 'ru-BY', region: 'europe' },
 		{ code: 'CHF', symbol: 'CHF', decimals: 2, locale: 'de-CH', region: 'europe' },
 		{ code: 'CZK', symbol: 'Kč', decimals: 2, locale: 'cs-CZ', region: 'europe' },
 		{ code: 'DKK', symbol: 'kr', decimals: 2, locale: 'da-DK', region: 'europe' },
@@ -227,7 +228,7 @@ const handler = createMcpHandler(
 			'get_app_links',
 			{
 				title: 'Get Download Links',
-				description: 'Get App Store and Google Play download links for Uha',
+				description: 'Get App Store and TestFlight download links for Uha',
 				inputSchema: {}
 			},
 			async () => ({
@@ -237,7 +238,7 @@ const handler = createMcpHandler(
 						text: JSON.stringify({
 							website: 'https://uha.app',
 							testflight: 'https://testflight.apple.com/join/uVYrDkbA',
-							appStore: 'https://apps.apple.com/app/uha-subscription-tracker/id6740211581'
+							appStore: 'https://apps.apple.com/us/app/uha-subscriptions-tracker/id6748603444'
 						})
 					}
 				]
@@ -265,7 +266,7 @@ const handler = createMcpHandler(
 	},
 	{
 		serverInfo: {
-			name: 'Uha Subscription Tracker (MCP)',
+			name: 'Uha Subscriptions Tracker (MCP)',
 			version: '1.1.0'
 		}
 	},

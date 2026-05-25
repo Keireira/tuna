@@ -6,6 +6,8 @@ import { useParams } from 'next/navigation';
 import styled from 'styled-components';
 import Container from './Container';
 
+const TESTFLIGHT_URL = 'https://testflight.apple.com/join/uVYrDkbA';
+
 const FooterWrapper = styled.footer`
 	padding: 40px 0;
 	background: ${({ theme }) => theme.footerBg};
@@ -16,12 +18,22 @@ const FooterInner = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
 	gap: 8px;
 	font-size: 0.875rem;
 	color: ${({ theme }) => theme.textSecondary};
 `;
 
 const FooterLink = styled(Link)`
+	color: ${({ theme }) => theme.textSecondary};
+	transition: color 0.2s;
+
+	&:hover {
+		color: ${({ theme }) => theme.accent};
+	}
+`;
+
+const FooterExternalLink = styled.a`
 	color: ${({ theme }) => theme.textSecondary};
 	transition: color 0.2s;
 
@@ -48,6 +60,10 @@ const Footer = () => {
 					<FooterLink href={`/${locale}/support`}>{t('footer.support')}</FooterLink>
 					<span>·</span>
 					<FooterLink href={`/${locale}/mcp`}>{t('footer.mcp')}</FooterLink>
+					<span>·</span>
+					<FooterExternalLink href={TESTFLIGHT_URL} target="_blank" rel="noopener">
+						Join Beta
+					</FooterExternalLink>
 				</FooterInner>
 			</Container>
 		</FooterWrapper>
