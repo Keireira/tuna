@@ -80,7 +80,7 @@ test('localized metadata and sitemap identify each real page and all language al
 	const titles = new Set();
 	const expectedUrls = [];
 	for (const locale of LOCALES) {
-		const socialImageUrl = `${SITE_URL}/og-image${locale === 'en' ? '' : `-${locale}`}.png?v=20260911-2`;
+		const socialImageUrl = `${SITE_URL}/og-image${locale === 'en' ? '' : `-${locale}`}.png?v=20260911-3`;
 		for (const page of pages) {
 			const suffix = page ? `/${page}` : '';
 			const url = `${SITE_URL}/${locale}${suffix}`;
