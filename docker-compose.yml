@@ -8,7 +8,8 @@ services:
       org.opencontainers.image.description: "uha.app"
       org.opencontainers.image.authors: "Alena Dzhukich <github@alena.red>"
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/ || exit 1"]
+      test: ["CMD", "wget", "-q", "-T", "5", "-O", "/dev/null", "http://127.0.0.1:3000/api/status"]
+      start_period: 30s
       interval: 15s
       timeout: 10s
       retries: 5
