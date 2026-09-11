@@ -9,30 +9,31 @@
   "meta": {
     "title": "Uha — Gestor de suscripciones para iOS",
     "title_template": "%s | Uha",
-    "description": "El gestor de suscripciones que no es una suscripción. Paga una vez. Sin cargos recurrentes, nunca. Sigue todas tus suscripciones en iOS con alertas de renovación, copias de seguridad en iCloud y una línea de tiempo de cargos pasados y futuros. Todos los datos permanecen en tu dispositivo. Como un extracto bancario, pero para suscripciones.",
-    "short_description": "El gestor de suscripciones que no es una suscripción. Paga una vez. Sin cargos recurrentes, nunca.",
+    "description": "Gestiona tus suscripciones y gastos en iOS con calendario y recordatorios. Hasta 3 suscripciones gratis. Unlimited se compra una sola vez.",
+    "short_description": "Gestiona suscripciones y próximos pagos en iOS. Hasta 3 suscripciones gratis.",
     "keywords": [
       "gestor de suscripciones",
-      "iOS",
-      "privacidad",
       "seguimiento de suscripciones",
-      "alertas de renovación",
+      "iOS",
+      "recordatorios de pago",
       "análisis de gastos"
     ],
-    "og_title": "Uha — Gestor de suscripciones",
+    "og_title": "Uha — Gestor de suscripciones para iOS",
     "og_image_alt": "Uha — Gestor de suscripciones para iOS"
   },
   "jsonld": {
-    "free_tier": "Hasta 3 suscripciones, 3 monedas, línea de tiempo de 3 años",
-    "unlimited_tier": "Suscripciones ilimitadas, todas las monedas, sincronización con iCloud, restauración de copias, línea de tiempo de 12 años, todas las futuras funciones premium",
+    "free_tier": "Hasta 3 suscripciones, monedas básicas para informes, previsiones de hasta 3 años, creación de copias locales y exportación CSV",
+    "unlimited_tier": "Compra única: suscripciones ilimitadas, todas las monedas para informes, previsiones de hasta 12 años, creación y restauración manual de copias en iCloud, restauración de copias locales, importación CSV y todas las futuras funciones prémium",
     "features": [
-      "Seguimiento de suscripciones localmente (en el dispositivo)",
-      "Compatibilidad multi-moneda",
-      "Sincronización y copia de seguridad en iCloud",
-      "Exportación a CSV",
-      "Línea de tiempo de suscripciones",
-      "Experiencia tipo extracto bancario",
-      "Recordatorios de pago"
+      "Registro local de suscripciones sin una cuenta de Uha aparte",
+      "Pagos programados en vistas de lista y calendario",
+      "Recordatorios de pago",
+      "Análisis de gastos y comparación de períodos",
+      "Ambos planes admiten todas las monedas compatibles para el precio original de cada suscripción",
+      "Conversión con tipos de cambio históricos, cuando estén disponibles",
+      "Cambios de suscripción y previsiones de pagos",
+      "Creación de copias locales y exportación CSV gratuitas",
+      "Creación y restauración manual de copias en iCloud con Unlimited"
     ]
   }
 }

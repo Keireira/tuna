@@ -61,7 +61,7 @@ const Footer = () => {
 					<span>·</span>
 					<FooterLink href={`/${locale}/mcp`}>{t('footer.mcp')}</FooterLink>
 					<span>·</span>
-					<FooterExternalLink href={TESTFLIGHT_URL} target="_blank" rel="noopener">
+					<FooterExternalLink href={TESTFLIGHT_URL} target="_blank" rel="noopener noreferrer">
 						Join Beta
 					</FooterExternalLink>
 				</FooterInner>

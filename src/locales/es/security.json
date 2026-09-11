@@ -1,16 +1,16 @@
 {
   "meta": {
     "title": "Seguridad",
-    "description": "Contacto de seguridad y política para reportar vulnerabilidades de Uha."
+    "description": "Cómo contactar con la desarrolladora de Uha para informar de una vulnerabilidad y consultar la política de divulgación."
   },
   "page": {
     "title": "Seguridad",
-    "intro": "Uha es una app de iOS con prioridad en la privacidad. Mantenemos el sitio público y los endpoints de descubrimiento pequeños, explícitos y fáciles de revisar.",
-    "reporting_title": "Reportar una vulnerabilidad",
-    "reporting_body": "Si crees que encontraste un problema de seguridad en Uha, el sitio web o un servicio público operado para Uha, escribe a mail@uha.app. Incluye la URL o área afectada de la app, los pasos para reproducirlo y el impacto esperado.",
+    "intro": "¿Encontraste un problema de seguridad en Uha? Avísame en privado para que pueda investigarlo.",
+    "reporting_title": "Informar de una vulnerabilidad",
+    "reporting_body": "Escribe a mail@uha.app con la URL o el área de la app afectada, los pasos para reproducir el problema y su impacto. Comparte solo lo necesario para demostrarlo, sin credenciales ni datos de otras personas.",
     "scope_title": "Alcance",
-    "scope_body": "Dentro del alcance: uha.app, endpoints públicos de descubrimiento, la app de iOS Uha y servicios públicos operados para Uha. Fuera del alcance: ingeniería social, spam, pruebas de denegación de servicio y ataques contra servicios de terceros.",
+    "scope_body": "Puedes reportar problemas de la app Uha para iOS, uha.app, sus endpoints públicos de descubrimiento y los servicios que opero para Uha. La ingeniería social, el spam, las pruebas de denegación de servicio y los ataques a servicios de terceros quedan fuera del alcance.",
     "policy_title": "Política de divulgación",
-    "policy_body": "Dame un tiempo razonable para investigar y corregir el problema antes de divulgarlo públicamente. No ofrezco un programa pagado de recompensas, pero agradezco los reportes responsables y daré crédito a investigadores cuando corresponda."
+    "policy_body": "Dame tiempo para investigar y corregir el problema antes de publicar los detalles. No hay recompensas económicas por encontrar vulnerabilidades. Agradezco los avisos responsables y daré crédito a quienes las descubran cuando corresponda."
   }
 }

@@ -7,32 +7,27 @@
     "back": "Back to Uha"
   },
   "meta": {
-    "title": "Uha — Subscription Manager for iOS",
+    "title": "Uha — Subscriptions Tracker for iOS",
     "title_template": "%s | Uha",
-    "description": "The subscription tracker that isn't a subscription. Pay once. No recurring charges, ever. Track all your subscriptions on iOS with renewal alerts, iCloud backup, and a timeline of past and upcoming charges. All data stays on your device. Like a bank feed, but for your subscriptions.",
-    "short_description": "The subscription tracker that isn't a subscription. Pay once. No recurring charges, ever.",
-    "keywords": [
-      "subscription manager",
-      "iOS",
-      "privacy",
-      "subscription tracker",
-      "renewal alerts",
-      "spending analytics"
-    ],
-    "og_title": "Uha — Subscription Manager",
-    "og_image_alt": "Uha — Subscription Manager for iOS"
+    "description": "Track subscriptions and spending, view upcoming payments, and set reminders on iOS. Start with 3 subscriptions free; Unlimited is a one-time purchase.",
+    "short_description": "Track subscriptions and upcoming payments on iOS. Up to 3 subscriptions free.",
+    "keywords": ["subscription tracker", "subscription manager", "iOS", "payment reminders", "spending analysis"],
+    "og_title": "Uha — Subscriptions Tracker for iOS",
+    "og_image_alt": "Uha subscriptions tracker for iOS"
   },
   "jsonld": {
-    "free_tier": "Up to 3 subscriptions, 3 currencies, 3-year timeline",
-    "unlimited_tier": "Unlimited subscriptions, all currencies, iCloud sync, backup restoration, 12-year timeline, all future premium features",
+    "free_tier": "Up to 3 subscriptions, basic report currencies, forecasts up to 3 years, local backup creation, and CSV export",
+    "unlimited_tier": "One-time purchase: unlimited subscriptions, all report currencies, forecasts up to 12 years, manual iCloud backup and restore, local backup restoration, CSV import, and all future premium features",
     "features": [
-      "Track subscriptions locally (on-device)",
-      "Multi-currency support",
-      "iCloud sync and backup",
-      "CSV export",
-      "Subscriptions timeline",
-      "Bank-feed-like experience",
-      "Payment reminders"
+      "Local subscription tracking without a separate Uha account",
+      "List and calendar views of scheduled payments",
+      "Payment reminders",
+      "Spending analysis and period comparisons",
+      "All supported billing currencies in both plans",
+      "Currency conversion with historical rates, where available",
+      "Subscription changes and payment forecasts",
+      "Free local backup creation and CSV export",
+      "Manual iCloud backup and restore with Unlimited"
     ]
   }
 }

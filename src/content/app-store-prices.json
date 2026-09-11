@@ -1,0 +1,1085 @@
+{
+  "snapshotAsOf": "2026-09-11",
+  "source": "App Store Connect pricing exports supplied by the app developer",
+  "prices": [
+    {
+      "countryOrRegion": "Afghanistan",
+      "currency": "USD",
+      "price": "19.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Albania",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Algeria",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Angola",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Anguilla",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Antigua and Barbuda",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Argentina",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Armenia",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Australia",
+      "currency": "AUD",
+      "price": "22.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Austria",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Azerbaijan",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Bahamas",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Bahrain",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Barbados",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Belarus",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Belgium",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Belize",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Benin",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Bermuda",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Bhutan",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Bolivia",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Bosnia and Herzegovina",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Botswana",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Brazil",
+      "currency": "BRL",
+      "price": "99.9",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "British Virgin Islands",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Brunei",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Bulgaria",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Burkina Faso",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Cambodia",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Cameroon",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Canada",
+      "currency": "CAD",
+      "price": "19.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Cape Verde",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Cayman Islands",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Chad",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Chile",
+      "currency": "CLP",
+      "price": "17990",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "China mainland",
+      "currency": "CNY",
+      "price": "98.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Colombia",
+      "currency": "COP",
+      "price": "69900.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Congo, Democratic Republic of the",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Congo, Republic of the",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Costa Rica",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Croatia",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Cyprus",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Czech Republic",
+      "currency": "CZK",
+      "price": "399.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Côte d’Ivoire",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Denmark",
+      "currency": "DKK",
+      "price": "129.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Dominica",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Dominican Republic",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Ecuador",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Egypt",
+      "currency": "EGP",
+      "price": "799.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "El Salvador",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Estonia",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Eswatini",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Fiji",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Finland",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "France",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Gabon",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Gambia",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Georgia",
+      "currency": "USD",
+      "price": "12.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Germany",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Ghana",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Greece",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Grenada",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Guatemala",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Guinea-Bissau",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Guyana",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Honduras",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Hong Kong",
+      "currency": "HKD",
+      "price": "118.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Hungary",
+      "currency": "HUF",
+      "price": "6990",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Iceland",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "India",
+      "currency": "INR",
+      "price": "1499.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Indonesia",
+      "currency": "IDR",
+      "price": "249000",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Iraq",
+      "currency": "USD",
+      "price": "19.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Ireland",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Israel",
+      "currency": "ILS",
+      "price": "49.9",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Italy",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Jamaica",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Japan",
+      "currency": "JPY",
+      "price": "2500",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Jordan",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Kazakhstan",
+      "currency": "KZT",
+      "price": "6990.0",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Kenya",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Korea, Republic of",
+      "currency": "KRW",
+      "price": "25000",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Kosovo",
+      "currency": "EUR",
+      "price": "29.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Kuwait",
+      "currency": "USD",
+      "price": "19.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Kyrgyzstan",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Laos",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Latvia",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Lebanon",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Liberia",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Libya",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Lithuania",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Luxembourg",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Macau",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Madagascar",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Malawi",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Malaysia",
+      "currency": "MYR",
+      "price": "69.9",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Maldives",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Mali",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Malta",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Mauritania",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Mauritius",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Mexico",
+      "currency": "MXN",
+      "price": "299.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Micronesia",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Moldova",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Mongolia",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Montenegro",
+      "currency": "EUR",
+      "price": "12.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Montserrat",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Morocco",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Mozambique",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Myanmar",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Namibia",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Nauru",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Nepal",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Netherlands",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "New Zealand",
+      "currency": "NZD",
+      "price": "29.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Nicaragua",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Niger",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Nigeria",
+      "currency": "NGN",
+      "price": "24900.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "North Macedonia",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Norway",
+      "currency": "NOK",
+      "price": "199.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Oman",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Pakistan",
+      "currency": "PKR",
+      "price": "5900.0",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Palau",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Panama",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Papua New Guinea",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Paraguay",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Peru",
+      "currency": "PEN",
+      "price": "69.9",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Philippines",
+      "currency": "PHP",
+      "price": "999.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Poland",
+      "currency": "PLN",
+      "price": "49.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Portugal",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Qatar",
+      "currency": "QAR",
+      "price": "69.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Romania",
+      "currency": "RON",
+      "price": "79.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Russia",
+      "currency": "RUB",
+      "price": "1290.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Rwanda",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Saudi Arabia",
+      "currency": "SAR",
+      "price": "79.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Senegal",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Serbia",
+      "currency": "EUR",
+      "price": "9.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Seychelles",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Sierra Leone",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Singapore",
+      "currency": "SGD",
+      "price": "19.98",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Slovakia",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Slovenia",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Solomon Islands",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "South Africa",
+      "currency": "ZAR",
+      "price": "299.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Spain",
+      "currency": "EUR",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Sri Lanka",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "St. Kitts and Nevis",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "St. Lucia",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "St. Vincent and the Grenadines",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Suriname",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Sweden",
+      "currency": "SEK",
+      "price": "199.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Switzerland",
+      "currency": "CHF",
+      "price": "14.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "São Tomé and Príncipe",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Taiwan",
+      "currency": "TWD",
+      "price": "490",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Tajikistan",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Tanzania",
+      "currency": "TZS",
+      "price": "39900.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Thailand",
+      "currency": "THB",
+      "price": "499.0",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Tonga",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Trinidad and Tobago",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Tunisia",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Turkmenistan",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Turks and Caicos Islands",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Türkiye",
+      "currency": "TRY",
+      "price": "799.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Uganda",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Ukraine",
+      "currency": "USD",
+      "price": "12.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "United Arab Emirates",
+      "currency": "AED",
+      "price": "79.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "United Kingdom",
+      "currency": "GBP",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "United States",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Uruguay",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Uzbekistan",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Vanuatu",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Venezuela",
+      "currency": "USD",
+      "price": "14.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Vietnam",
+      "currency": "VND",
+      "price": "499000",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Yemen",
+      "currency": "USD",
+      "price": "19.99",
+      "mayAdjustAutomatically": false
+    },
+    {
+      "countryOrRegion": "Zambia",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    },
+    {
+      "countryOrRegion": "Zimbabwe",
+      "currency": "USD",
+      "price": "17.99",
+      "mayAdjustAutomatically": true
+    }
+  ],
+  "scheduledChanges": [
+    {
+      "countryOrRegion": "Congo, Republic of the",
+      "currency": "USD",
+      "effectiveDate": "2026-09-14",
+      "currentPrice": "14.99",
+      "newPrice": "17.99"
+    },
+    {
+      "countryOrRegion": "Indonesia",
+      "currency": "IDR",
+      "effectiveDate": "2026-09-14",
+      "currentPrice": "249000",
+      "newPrice": "299000"
+    },
+    {
+      "countryOrRegion": "Morocco",
+      "currency": "USD",
+      "effectiveDate": "2026-09-14",
+      "currentPrice": "14.99",
+      "newPrice": "17.99"
+    }
+  ],
+  "sourceFiles": [
+    "Price Ending on Sep 14, 2026 May Adjust Automatically.csv",
+    "Current Price May Adjust Automatically.csv",
+    "Current Price Manually Adjusted.csv",
+    "Sep 14, 2026 to No End Date Foreign Exchange or Tax Rate Adjustment.csv"
+  ]
+}

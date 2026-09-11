@@ -1,22 +1,28 @@
 {
   "meta": {
     "title": "Soporte",
-    "description": "Obtén ayuda con Uha, reporta problemas y encuentra el contacto adecuado para soporte, facturación, datos y seguridad."
+    "description": "Obtén ayuda con Uha, informa de un problema o resuelve tus dudas sobre compras, datos y seguridad."
   },
   "page": {
     "title": "Soporte",
-    "intro": "Para soporte de Uha, reportes de errores, preguntas de facturación o comentarios, escríbeme directamente. Leo el correo de soporte personalmente e intento responder de forma práctica.",
+    "intro": "Si necesitas ayuda con Uha, has encontrado un error o tienes una idea, escríbeme directamente. Leo personalmente todos los correos de soporte.",
+    "contact_label": "Escribir a soporte",
     "include_title": "Qué incluir",
-    "include_intro": "Un reporte claro ayuda a reproducir el problema más rápido. Cuando sea relevante, incluye:",
-    "include_device": "Tu modelo de iPhone, versión de iOS y versión de Uha.",
-    "include_steps": "Los pasos que seguiste antes de que apareciera el problema.",
-    "include_screenshots": "Capturas o grabaciones de pantalla si no exponen datos privados de tus suscripciones.",
-    "include_purchase": "Para problemas de compra o instalación, menciona si instalaste desde App Store o TestFlight.",
-    "beta_title": "App Store y TestFlight",
-    "beta_body": "Uha está disponible en App Store. TestFlight sigue disponible para pruebas beta; las compras allí son solo para pruebas. Las compras de producción se gestionan con Apple In-App Purchase, y Apple gestiona reembolsos, métodos de pago y reglas regionales de facturación.",
+    "include_intro": "Para que pueda reproducir el problema, incluye:",
+    "include_device": "Tu modelo de iPhone, la versión de iOS y la versión de Uha.",
+    "include_steps": "Qué hiciste, qué ocurrió y qué esperabas que ocurriera.",
+    "include_screenshots": "Capturas o una grabación de pantalla donde hayas ocultado los datos privados de tus suscripciones.",
+    "include_purchase": "Si el problema es de compra o instalación, indica si usas la versión de App Store o TestFlight.",
+    "beta_title": "Compras y TestFlight",
+    "beta_body": "Unlimited se compra una sola vez en el App Store. Apple gestiona los cobros y las solicitudes de reembolso. Las compras de TestFlight son transacciones de prueba gratuitas y no se transfieren a la versión del App Store.",
+    "refund_label": "Pedir un reembolso a Apple",
+    "restore_title": "Restaurar Unlimited",
+    "restore_body": "En Uha, abre Ajustes, entra en Unlimited y selecciona Restaurar compras. Usa la cuenta de Apple con la que hiciste la compra. Esto recupera el acceso a Unlimited, no tus datos de suscripciones. Si sigues sin acceso, escríbeme e incluye el error que aparece.",
+    "export_title": "Exportación y copias de seguridad",
+    "export_body": "Exportar archivos CSV y crear copias de seguridad locales es gratis. Para importar archivos CSV, restaurar copias o crear copias en iCloud necesitas Unlimited. La importación o restauración reemplaza tus datos de suscripciones actuales. Antes de hacerlo, guarda una copia de seguridad.",
     "data_title": "Tus datos",
-    "data_body": "Uha guarda tu biblioteca de suscripciones en tu dispositivo. No puedo ver, editar ni recuperar tus datos locales desde el servidor. Si usas respaldo en iCloud, esos datos se guardan en tu cuenta personal de iCloud y son gestionados por Apple.",
+    "data_body": "Tus datos de suscripciones se guardan en tu dispositivo. Las copias en tu cuenta de iCloud se crean manualmente y cada copia nueva reemplaza la anterior. No sincronizan los dispositivos automáticamente. No puedo recuperar tus datos de suscripciones desde el sitio web público ni desde el servidor MCP.",
     "security_title": "Seguridad y privacidad",
-    "security_body": "Para posibles problemas de seguridad, incluye la URL o área afectada de la app, pasos para reproducirlo e impacto. Evita enviar por correo listas privadas de suscripciones, datos de pago o credenciales."
+    "security_body": "Si sospechas un problema de seguridad, incluye la URL o el área de la app, los pasos para reproducirlo y su impacto. No envíes contraseñas, datos de pago ni listas privadas de suscripciones."
   }
 }

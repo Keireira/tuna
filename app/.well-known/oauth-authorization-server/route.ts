@@ -1,12 +1,6 @@
-import { SITE_URL } from '@agents';
-
+// Public Uha MCP does not implement OAuth or OpenID Connect discovery.
 export const GET = () =>
-	Response.json({
-		issuer: SITE_URL,
-		authorization_endpoint: `${SITE_URL}/oauth/authorize`,
-		token_endpoint: `${SITE_URL}/oauth/token`,
-		jwks_uri: `${SITE_URL}/.well-known/jwks.json`,
-		grant_types_supported: ['authorization_code'],
-		response_types_supported: ['code'],
-		scopes_supported: ['public.read']
-	});
+	Response.json(
+		{ error: 'not_found', message: 'This public MCP server does not require authentication.' },
+		{ status: 404 }
+	);

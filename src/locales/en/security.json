@@ -5,12 +5,12 @@
   },
   "page": {
     "title": "Security",
-    "intro": "Uha is a privacy-first iOS app. I keep the public website and discovery endpoints small, explicit, and easy to inspect.",
+    "intro": "Found a security issue in Uha? Report it privately so I can investigate.",
     "reporting_title": "Report a Vulnerability",
-    "reporting_body": "If you believe you found a security issue in Uha, the website, or a public service operated for Uha, contact mail@uha.app. Please include the affected URL or app area, steps to reproduce, and the expected impact.",
+    "reporting_body": "Email mail@uha.app with the affected URL or app area, steps to reproduce the issue, and its impact. Share only the information needed to demonstrate it; leave out credentials and other people’s data.",
     "scope_title": "Scope",
-    "scope_body": "In scope: uha.app, public discovery endpoints, the Uha iOS app, and public services operated for Uha. Out of scope: social engineering, spam, denial-of-service testing, and attacks against third-party services.",
+    "scope_body": "Reports can cover the Uha iOS app, uha.app, its public discovery endpoints, and services operated for Uha. Social engineering, spam, denial-of-service testing, and attacks on third-party services are out of scope.",
     "policy_title": "Disclosure Policy",
-    "policy_body": "Please give me a reasonable amount of time to investigate and fix the issue before public disclosure. I do not offer a paid bug bounty, but I appreciate responsible reports and will credit researchers when appropriate."
+    "policy_body": "Please allow time to investigate and fix the issue before publishing details. There is no paid bug bounty. I appreciate responsible reports and credit researchers when appropriate."
   }
 }

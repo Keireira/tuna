@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, createContext, useContext, type PropsWithChildren } from 'react';
+import { usePathname } from 'next/navigation';
 import { ThemeProvider } from 'styled-components';
 
 import { useTheme } from '@hooks';
@@ -27,6 +28,8 @@ const AppContext = createContext<TAppContextValue>(null!);
 export const useAppContext = () => useContext(AppContext);
 
 export const AppShell = ({ children }: PropsWithChildren) => {
+	const pathname = usePathname();
+	const hasEditorialLayout = /^\/(en|ru|kk|ja|es)(?:\/(mcp|support|security|terms|privacy))?\/?$/.test(pathname);
 	const { mode, theme, toggleMode, setMode, setAccent } = useTheme();
 	const [selectedIcon, setSelectedIcon] = useState('classic');
 
@@ -45,9 +48,9 @@ export const AppShell = ({ children }: PropsWithChildren) => {
 				<GlobalStyles />
 				<SquircleMask />
 				<WebMcpTools />
-				<Navbar themeMode={mode} onToggleTheme={toggleMode} />
+				{!hasEditorialLayout && <Navbar themeMode={mode} onToggleTheme={toggleMode} />}
 				{children}
-				<Footer />
+				{!hasEditorialLayout && <Footer />}
 			</ThemeProvider>
 		</AppContext.Provider>
 	);

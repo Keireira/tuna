@@ -1,35 +1,18 @@
-import { MCP_ENDPOINT, SITE_URL } from '@agents';
+import { MCP_ENDPOINT, MCP_SERVER_INFO, MCP_TOOLS, SITE_URL, UHA_PRODUCT } from '@/content/product';
 
+// Custom discovery document for this public MCP service, not an A2A agent card.
 export const GET = () =>
 	Response.json({
-		name: 'Uha App Information Agent',
-		version: '1.1.0',
+		name: MCP_SERVER_INFO.name,
+		version: MCP_SERVER_INFO.version,
 		description:
-			'Read-only public agent for discovering Uha product information, pricing, install links, and MCP tools.',
-		supportedInterfaces: [
-			{
-				url: MCP_ENDPOINT,
-				transport: 'mcp-streamable-http',
-				protocol: 'mcp'
-			}
-		],
-		capabilities: [
-			'product-information',
-			'pricing-information',
-			'install-link-discovery',
-			'currency-support-discovery'
-		],
-		skills: [
-			{
-				id: 'uha-product-info',
-				name: 'Uha product information',
-				description: 'Returns app summary, supported platform, privacy posture, license, and official links.'
-			},
-			{
-				id: 'uha-pricing',
-				name: 'Uha pricing',
-				description: 'Returns public Free and Unlimited tier details.'
-			}
-		],
-		documentationUrl: `${SITE_URL}/llms.txt`
+			'Read-only public Uha product information. This service cannot access or change a personal subscription library.',
+		protocol: 'mcp',
+		transport: { type: 'streamable-http', endpoint: MCP_ENDPOINT },
+		authentication: 'none',
+		scope: UHA_PRODUCT.mcpScope,
+		tools: MCP_TOOLS,
+		productInformationUrl: `${SITE_URL}/product.json`,
+		serverCardUrl: `${SITE_URL}/.well-known/mcp/server-card.json`,
+		documentationUrl: `${SITE_URL}/en/mcp`
 	});

@@ -16,13 +16,12 @@ const LOGO_SUBTITLE_BY_LOCALE = {
 	ru: 'Трекер подписок',
 	es: 'Control de suscripciones',
 	kk: 'Жазылымдар трекері',
-	ja: 'サブスク管理',
+	ja: 'サブスク管理'
 } as const;
 
 type LogoSubtitleLocale = keyof typeof LOGO_SUBTITLE_BY_LOCALE;
 
-const isLogoSubtitleLocale = (locale: string): locale is LogoSubtitleLocale =>
-	locale in LOGO_SUBTITLE_BY_LOCALE;
+const isLogoSubtitleLocale = (locale: string): locale is LogoSubtitleLocale => locale in LOGO_SUBTITLE_BY_LOCALE;
 
 const Nav = styled(motion.nav)<{ $scrolled: boolean }>`
 	position: fixed;
@@ -123,9 +122,7 @@ interface NavbarProps {
 const Navbar = ({ themeMode, onToggleTheme }: NavbarProps) => {
 	const params = useParams<{ locale?: string }>();
 	const locale = params.locale ?? 'en';
-	const logoSubtitle = isLogoSubtitleLocale(locale)
-		? LOGO_SUBTITLE_BY_LOCALE[locale]
-		: LOGO_SUBTITLE_BY_LOCALE.en;
+	const logoSubtitle = isLogoSubtitleLocale(locale) ? LOGO_SUBTITLE_BY_LOCALE[locale] : LOGO_SUBTITLE_BY_LOCALE.en;
 	const [scrolled, setScrolled] = useState(false);
 
 	useEffect(() => {
@@ -157,7 +154,7 @@ const Navbar = ({ themeMode, onToggleTheme }: NavbarProps) => {
 							<LanguageSwitcher />
 							<ThemeToggle mode={themeMode} onToggle={onToggleTheme} />
 
-							<CtaButton href={APP_STORE_URL} target="_blank" rel="noopener">
+							<CtaButton href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
 								App Store
 							</CtaButton>
 						</NavRight>

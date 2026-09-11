@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { DEFAULT_LOCALE, isValidLocale, type TLocale } from './src/lib/i18n';
-import { AGENT_LINK_HEADER, UHA_MARKDOWN, markdownTokenCount } from './src/lib/agent-discovery';
+import { AGENT_LINK_HEADER } from './src/lib/agent-discovery';
 
 const getPreferredLocale = (request: NextRequest): TLocale => {
 	const cookie = request.cookies.get('NEXT_LOCALE')?.value;
@@ -11,13 +11,13 @@ const getPreferredLocale = (request: NextRequest): TLocale => {
 		.split(',')
 		.map((part) => {
 			const [lang, ...rest] = part.trim().split(';');
-			const qPart = rest.find((r) => r.startsWith('q='));
+			const qPart = rest.map((parameter) => parameter.trim()).find((r) => r.startsWith('q='));
 			const q = qPart ? Number.parseFloat(qPart.slice(2)) : 1;
-			return { lang: lang.toLowerCase().split('-')[0], q };
+			return { lang: lang.trim().toLowerCase().split('-')[0], q };
 		})
 		.sort((a, b) => b.q - a.q);
 
-	const match = parsed.find(({ lang }) => isValidLocale(lang));
+	const match = parsed.find(({ lang, q }) => isValidLocale(lang) && Number.isFinite(q) && q > 0 && q <= 1);
 
 	return (match?.lang ?? DEFAULT_LOCALE) as TLocale;
 };
@@ -26,17 +26,6 @@ export const proxy = (request: NextRequest) => {
 	const { pathname } = request.nextUrl;
 	const hostname = request.nextUrl.hostname.toLowerCase();
 	const proto = request.headers.get('x-forwarded-proto') ?? request.nextUrl.protocol.replace(':', '');
-	const acceptsMarkdown = request.headers.get('accept')?.includes('text/markdown') ?? false;
-
-	if ((pathname === '/' || isValidLocale(pathname.split('/')[1])) && acceptsMarkdown) {
-		return new NextResponse(UHA_MARKDOWN, {
-			headers: {
-				'content-type': 'text/markdown; charset=utf-8',
-				'x-markdown-tokens': markdownTokenCount(),
-				link: AGENT_LINK_HEADER
-			}
-		});
-	}
 
 	if ((hostname === 'uha.app' || hostname === 'www.uha.app') && (proto !== 'https' || hostname === 'www.uha.app')) {
 		const url = request.nextUrl.clone();
@@ -51,19 +40,21 @@ export const proxy = (request: NextRequest) => {
 
 	// Для валидных локалей — пропускаем, только ставим header
 	if (isValidLocale(pathLocale)) {
-		const response = NextResponse.next();
-		response.headers.set('x-pathname', pathname);
+		const requestHeaders = new Headers(request.headers);
+		requestHeaders.set('x-pathname', pathname);
+		const response = NextResponse.next({ request: { headers: requestHeaders } });
 		response.headers.set('link', AGENT_LINK_HEADER);
 		return response;
 	}
 
-	// Иначе редиректим
-	const locale = getPreferredLocale(request);
+	// Keep the bare domain's language stable for shared links and previews.
+	const isRoot = pathname === '/';
+	const locale = isRoot ? DEFAULT_LOCALE : getPreferredLocale(request);
 	const url = request.nextUrl.clone();
-	url.pathname = `/${locale}${pathname}`;
+	url.pathname = isRoot ? `/${locale}` : `/${locale}${pathname}`;
 
-	const response = NextResponse.redirect(url, 307);
-	response.headers.set('vary', 'Accept-Language, Cookie');
+	const response = NextResponse.redirect(url, isRoot ? 308 : 307);
+	if (!isRoot) response.headers.set('vary', 'Accept-Language, Cookie');
 	response.headers.set('link', AGENT_LINK_HEADER);
 	return response;
 };

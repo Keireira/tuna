@@ -1,71 +1,85 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useScrollAnimation } from '@hooks';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import InfoPage, { type InfoSectionT } from '@/components/info-page/info-page';
+import { MCP_ENDPOINT } from '@/lib/agent-discovery';
 
-import { Container } from '@layout';
-import { fadeInUp, staggerContainer } from '@styles/animations';
-import Root, {
-	HeroSection,
-	Title,
-	Subtitle,
-	Content,
-	Section,
-	SectionTitle,
-	Paragraph,
-	CodeBlock
-} from './mcp-page.styles';
+const tools = [
+	['get_info', 'tool_info'],
+	['get_pricing', 'tool_pricing'],
+	['get_app_links', 'tool_links'],
+	['get_supported_currencies', 'tool_currencies']
+] as const;
 
-const MCP_ENDPOINT = 'https://uha.app/api/mcp';
-const EXAMPLE_CONFIG = JSON.stringify(
-	{
-		mcpServers: {
-			uha: {
-				url: MCP_ENDPOINT,
-				transport: 'streamable-http'
-			}
+export default function McpPage({ locale }: { locale: string }) {
+	const { t } = useTranslation('mcp', { lng: locale });
+	const [copyStatus, setCopyStatus] = useState<'done' | 'failed' | null>(null);
+	const copyEndpoint = async () => {
+		try {
+			await navigator.clipboard.writeText(MCP_ENDPOINT);
+			setCopyStatus('done');
+		} catch {
+			setCopyStatus('failed');
 		}
-	},
-	null,
-	2
-);
-
-const McpPage = () => {
-	const { t } = useTranslation('mcp');
-	const { ref, isInView } = useScrollAnimation();
-
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
-
-	return (
-		<Root>
-			<Container>
-				<HeroSection>
-					<Title>{t('page.title')}</Title>
-					<Subtitle>{t('page.subtitle')}</Subtitle>
-				</HeroSection>
-
-				<Content ref={ref} variants={staggerContainer} initial="hidden" animate={isInView ? 'visible' : 'hidden'}>
-					<Section variants={fadeInUp}>
-						<SectionTitle>{t('page.endpoint_label')}</SectionTitle>
-						<Paragraph>{MCP_ENDPOINT}</Paragraph>
-					</Section>
-
-					<Section variants={fadeInUp}>
-						<SectionTitle>{t('page.transport_label')}</SectionTitle>
-						<Paragraph>{t('page.transport_value')}</Paragraph>
-					</Section>
-
-					<Section variants={fadeInUp}>
-						<SectionTitle>{t('page.config_label')}</SectionTitle>
-						<CodeBlock>{EXAMPLE_CONFIG}</CodeBlock>
-					</Section>
-				</Content>
-			</Container>
-		</Root>
-	);
-};
-
-export default McpPage;
+	};
+	const sections: InfoSectionT[] = [
+		{
+			id: 'endpoint',
+			title: t('page.endpoint_label'),
+			content: (
+				<>
+					<div className="endpoint-block">
+						<code>{MCP_ENDPOINT}</code>
+						<button type="button" className="copy-endpoint" onClick={copyEndpoint}>
+							{t('page.copy_label')}
+						</button>
+						<p className="copy-status" role="status">
+							{copyStatus && t(`page.copy_${copyStatus}`)}
+						</p>
+					</div>
+					<p className="protocol-note">
+						{t('page.transport_label')}: {t('page.transport_value')}
+					</p>
+				</>
+			)
+		},
+		{
+			id: 'connect',
+			title: t('page.config_label'),
+			content: (
+				<>
+					<p>{t('page.config_body')}</p>
+					<p>{t('page.compatibility_note')}</p>
+					<p>
+						<a
+							href="https://modelcontextprotocol.io/specification/2025-11-25/basic/transports"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{t('page.protocol_label')}
+						</a>
+					</p>
+				</>
+			)
+		},
+		{ id: 'scope', title: t('page.scope_title'), content: <p>{t('page.scope_body')}</p> },
+		{
+			id: 'tools',
+			title: t('page.tools_title'),
+			content: (
+				<dl className="tool-list">
+					{tools.map(([name, key]) => (
+						<div key={name}>
+							<dt>
+								<code>{name}</code>
+							</dt>
+							<dd>{t(`page.${key}`)}</dd>
+						</div>
+					))}
+				</dl>
+			)
+		}
+	];
+	return <InfoPage locale={locale} page="mcp" title={t('page.title')} intro={t('page.subtitle')} sections={sections} />;
+}

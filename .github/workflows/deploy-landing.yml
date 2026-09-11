@@ -6,36 +6,72 @@ on:
     branches:
       - master
 
+permissions:
+  contents: read
+
+# Serialize releases because production consumes the shared latest image tag.
+concurrency:
+  group: tuna-production
+  cancel-in-progress: false
+
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Install locked dependencies
+        run: |
+          corepack enable pnpm
+          corepack install
+          pnpm install --frozen-lockfile
+
+      - name: Lint, typecheck, and test
+        run: pnpm check
+
+  build:
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
     environment: registry
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Log in to registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@v4.6.0
         with:
           registry: registry.keireira.com
           username: ${{ secrets.DOCKER_REGISTRY_USERNAME }}
           password: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}
 
       - name: Build
-        run: docker build --tag "registry.keireira.com/tuna:latest" .
+        run: docker build --pull --tag "registry.keireira.com/tuna:latest" .
 
       - name: Publish
         run: docker push "registry.keireira.com/tuna:latest"
 
       - name: Registry cleanup
+        env:
+          HOOK_TOKEN: ${{ secrets.HOOK_TOKEN }}
         run: |
-          curl -sf -H 'X-Webhook-Token: ${{ secrets.HOOK_TOKEN }}' \
+          curl --fail --silent --show-error --connect-timeout 10 --max-time 30 \
+            -H "X-Webhook-Token: $HOOK_TOKEN" \
             https://hooks.keireira.com/registry-cleanup
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment: production
 
     steps:
@@ -53,16 +89,20 @@ jobs:
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.5
+        env:
+          REGISTRY_USERNAME: ${{ secrets.DOCKER_REGISTRY_USERNAME }}
+          REGISTRY_PASSWORD: ${{ secrets.DOCKER_REGISTRY_PASSWORD }}
         with:
           host: ${{ secrets.HOSTNAME }}
           username: ${{ secrets.AUTH_USER }}
           key: ${{ secrets.AUTH_KEY }}
+          envs: REGISTRY_USERNAME,REGISTRY_PASSWORD
           script: |
+            set -eu
             cd /opt/tuna
-            docker login registry.keireira.com \
-              -u "${{ secrets.DOCKER_REGISTRY_USERNAME }}" \
-              -p "${{ secrets.DOCKER_REGISTRY_PASSWORD }}"
+            trap 'docker logout registry.keireira.com >/dev/null 2>&1 || true' EXIT
+            printf '%s' "$REGISTRY_PASSWORD" | docker login registry.keireira.com \
+              --username "$REGISTRY_USERNAME" --password-stdin
             docker compose pull
-            docker compose up -d --remove-orphans
+            docker compose up -d --remove-orphans --wait --wait-timeout 120
             docker image prune -f
-            docker logout registry.keireira.com
