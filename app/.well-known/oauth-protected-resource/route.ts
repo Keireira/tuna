@@ -1,9 +1,6 @@
-import { SITE_URL } from '@agents';
-
+// Public Uha MCP does not implement OAuth protected-resource discovery.
 export const GET = () =>
-	Response.json({
-		resource: SITE_URL,
-		authorization_servers: [SITE_URL],
-		scopes_supported: ['public.read'],
-		resource_name: 'Uha public website and discovery API'
-	});
+	Response.json(
+		{ error: 'not_found', message: 'This public MCP server does not require authentication.' },
+		{ status: 404 }
+	);

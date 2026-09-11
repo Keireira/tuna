@@ -1,44 +1,26 @@
-import { SITE_URL } from '@agents';
+import { SITE_URL } from '@/content/product';
+
+// Search/retrieval agents may index public pages and the assets needed to render them.
+// Keep the existing no-training preference explicit for crawlers that honor robots.txt.
+const searchAgents = [
+	'OAI-SearchBot',
+	'ChatGPT-User',
+	'Claude-SearchBot',
+	'Claude-User',
+	'PerplexityBot',
+	'Perplexity-User'
+];
+const restrictedAgents = ['GPTBot', 'ClaudeBot', 'Google-Extended'];
 
 export const GET = () =>
 	new Response(
-		`User-agent: *
-Allow: /
-Disallow: /api/
-Disallow: /_next/
-Content-Signal: ai-train=no, search=yes, ai-input=yes
-
-User-agent: GPTBot
-Allow: /
-Disallow: /api/
-Content-Signal: ai-train=no, search=yes, ai-input=yes
-
-User-agent: ClaudeBot
-Allow: /
-Disallow: /api/
-Content-Signal: ai-train=no, search=yes, ai-input=yes
-
-User-agent: Claude-Web
-Allow: /
-Disallow: /api/
-Content-Signal: ai-train=no, search=yes, ai-input=yes
-
-User-agent: PerplexityBot
-Allow: /
-Disallow: /api/
-Content-Signal: ai-train=no, search=yes, ai-input=yes
-
-User-agent: Google-Extended
-Allow: /
-Disallow: /api/
-Content-Signal: ai-train=no, search=yes, ai-input=yes
-
-Sitemap: ${SITE_URL}/sitemap.xml
-Host: ${SITE_URL}
-`,
+		[
+			'User-agent: *\nAllow: /\nDisallow: /api/\nContent-Signal: ai-train=no, search=yes, ai-input=yes',
+			...searchAgents.map((agent) => `User-agent: ${agent}\nAllow: /\nDisallow: /api/`),
+			...restrictedAgents.map((agent) => `User-agent: ${agent}\nDisallow: /`),
+			`Sitemap: ${SITE_URL}/sitemap.xml\n`
+		].join('\n\n'),
 		{
-			headers: {
-				'content-type': 'text/plain; charset=utf-8'
-			}
+			headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=3600' }
 		}
 	);

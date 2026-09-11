@@ -2,19 +2,7 @@
 
 import { useEffect } from 'react';
 
-const APP_INFO = {
-	name: 'Uha',
-	platform: 'iOS',
-	website: 'https://uha.app',
-	appStore: 'https://apps.apple.com/us/app/uha-subscriptions-tracker/id6748603444',
-	testFlight: 'https://testflight.apple.com/join/uVYrDkbA',
-	description:
-		'Subscription tracker with renewal reminders, spending forecasts, multi-currency totals, and iCloud sync.',
-	pricing: {
-		free: 'Up to 3 subscriptions, 3 currencies, 3-year future timeline',
-		unlimited: 'One-time purchase through Apple In-App Purchase. TestFlight purchases are for testing only.'
-	}
-};
+import { UHA_PRODUCT as APP_INFO } from '@/content/product';
 
 type TToolDefinition = {
 	name: string;

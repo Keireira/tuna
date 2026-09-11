@@ -1,14 +1,27 @@
 {
   "meta": {
-    "title": "MCPサーバー",
-    "description": "アシスタントをUhaのMCPサーバーに接続する方法。"
+    "title": "MCP サーバー",
+    "description": "アシスタントを Uha の MCP サーバーに接続する方法。"
   },
   "page": {
-    "title": "MCPサーバー",
-    "subtitle": "このページは人間とアシスタント向けです。APIエンドポイント自体はブラウザページではありません。",
-    "endpoint_label": "MCPサーバーエンドポイント",
+    "title": "MCP サーバー",
+    "subtitle": "アシスタントが参照できる Uha の公開情報です。機能、Unlimited の内容、ダウンロード先、対応通貨を確認できます。",
+    "endpoint_label": "MCP サーバーのエンドポイント",
     "transport_label": "トランスポート",
-    "transport_value": "Streamable HTTP / POST",
-    "config_label": "設定例"
+    "transport_value": "Streamable HTTP",
+    "config_label": "接続方法",
+    "config_body": "リモート MCP サーバーに対応したクライアントに、上記のアドレスを追加してください。トランスポートを選ぶ必要がある場合は、Streamable HTTP を選んでください。Uha のアカウントや API キーは不要です。",
+    "compatibility_note": "接続手順や設定形式はクライアントごとに異なります。利用するクライアントのリモート MCP 接続手順を確認してください。ブラウザでアドレスを開くだけでは、アシスタントは接続されません。",
+    "scope_title": "公開情報の参照専用",
+    "scope_body": "このサーバーが返すのは Uha の公開情報だけです。個人のサブスク一覧や iCloud バックアップの読み取り、アプリの操作、支払い、サブスクの解約はできません。",
+    "tools_title": "利用できるツール",
+    "tool_info": "アプリの概要、対応プラットフォーム、機能などの公開情報。",
+    "tool_pricing": "Free と Unlimited の利用制限や購入方式に関する公開情報。",
+    "tool_links": "公式サイト、App Store、TestFlight へのリンク。",
+    "tool_currencies": "通貨コード、通貨記号、表示形式に関する情報。",
+    "copy_label": "アドレスをコピー",
+    "copy_done": "コピーしました",
+    "copy_failed": "コピーできませんでした。アドレスを選択して手動でコピーしてください。",
+    "protocol_label": "MCP トランスポートの仕様"
   }
 }

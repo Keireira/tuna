@@ -6,37 +6,56 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Keireira/tuna)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Keireira/tuna)
 
-[Terms of Use](https://uha.app/terms) | [Privacy Policy](https://uha.app/privacy) | [MCP](https://uha.app/api/mcp)
+Website and public product-information MCP server for [Uha](https://github.com/Keireira/uha).
 
+[Website](https://uha.app/en) | [Terms](https://uha.app/en/terms) | [Privacy](https://uha.app/en/privacy) | [MCP guide](https://uha.app/en/mcp)
 
-Just a landing page for [Uha App](https://github.com/Keireira/uha).
+## Requirements and installation
 
-
-### Installation
+Use Node.js 24 and the exact pnpm version declared in `package.json` under `packageManager`. Corepack selects that version automatically.
 
 ```sh
-pnpm install
+corepack enable pnpm
+pnpm install --frozen-lockfile
 ```
 
-### Run in dev mode
+Keep `pnpm-lock.yaml` committed. Update dependencies and the lockfile deliberately; cleanup does not remove them.
+
+## Development
+
 ```sh
-make dev
+pnpm dev
 ```
 
-### Clean directory
+The site runs at `http://localhost:3000`; localized routes include `/en`, `/ru`, `/ja`, `/es`, and `/kk`.
+
+## Checks
+
 ```sh
-make rm
+pnpm check
 ```
 
-### Lint
+This runs lint, TypeScript checking, and the regression tests. It does not create a production build. Run `pnpm fmt:check` separately for formatting, or `make fix` for automatic lint and formatting fixes.
+
+See [release preparation notes](docs/release-readiness.md) for dependency migration details, verification, and remaining release checks.
+
+## Cleanup
+
 ```sh
-make lint
+make clean
 ```
 
-### Fix fixable linter errors
-```sh
-make fix
-```
+This removes generated build output and TypeScript cache files. It preserves installed dependencies and the lockfile. `make rm` remains an alias for compatibility.
+
+## Production
+
+The Dockerfile builds Next.js standalone output and runs `server.js` as the unprivileged `node` user. `docker-compose.yml` exposes the service on loopback port 7777 and defines its healthcheck. Production requires Docker Compose with `up --wait` support.
+
+The GitHub Actions workflow runs `pnpm check` before building and publishing the image, then waits for the deployed service to become healthy. It runs on pushes to `master` and manual workflow dispatches. Releases are serialized because the deployment consumes the `latest` tag.
+
+## Public MCP endpoint
+
+Connect a compatible Streamable HTTP MCP client to `https://uha.app/api/mcp`. The endpoint is a protocol endpoint, not a documentation page. The [MCP guide](https://uha.app/en/mcp) describes the four public read-only tools. They cannot access a personal subscription library or control the app.
 
 ## License
 

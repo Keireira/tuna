@@ -26,3 +26,5 @@ next-env.d.ts
 *.njsproj
 *.sln
 *.sw?
+# IMPLEMENTATION_NOTES.md
+# ASSET_REQUESTS.md

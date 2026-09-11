@@ -1,6 +1,8 @@
-import { McpPage } from '@views';
-import { getTranslation } from '@lib/i18n/server';
-import { buildAlternates, isValidLocale } from '@lib/i18n';
+import McpPage from '@/views/mcp-page/mcp-page';
+import { getPageMetadata, getPageStructuredData } from '@/lib/seo';
+import StructuredDataScript from '@/components/agent/StructuredDataScript';
+import { notFound } from 'next/navigation';
+import { isValidLocale } from '@lib/i18n';
 
 import type { Metadata } from 'next';
 
@@ -12,13 +14,18 @@ export const generateMetadata = async ({ params }: TProps): Promise<Metadata> =>
 	const { locale } = await params;
 	if (!isValidLocale(locale)) return {};
 
-	const { t } = await getTranslation(locale, 'mcp');
-
-	return {
-		title: t('meta.title'),
-		description: t('meta.description'),
-		alternates: buildAlternates(locale, '/mcp')
-	};
+	return getPageMetadata(locale, 'mcp');
 };
 
-export default McpPage;
+const Page = async ({ params }: TProps) => {
+	const { locale } = await params;
+	if (!isValidLocale(locale)) notFound();
+	return (
+		<>
+			<StructuredDataScript id="uha-mcp-jsonld" json={await getPageStructuredData(locale, 'mcp')} />
+			<McpPage locale={locale} />
+		</>
+	);
+};
+
+export default Page;

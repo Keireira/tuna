@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SITE_URL } from '@/content/product';
 
 export const LOCALES = ['en', 'ru', 'ja', 'es', 'kk'] as const;
 export const DEFAULT_LOCALE: TLocale = 'en';
@@ -29,13 +30,11 @@ export const OG_LOCALE_MAP: Record<TLocale, string> = {
 export const isValidLocale = (value: string): value is TLocale => (LOCALES as readonly string[]).includes(value);
 
 export const buildAlternates = (locale: TLocale, path: string = ''): Metadata['alternates'] => {
-	const base = 'https://uha.app';
-
 	return {
-		canonical: `${base}/${locale}${path}`,
+		canonical: `${SITE_URL}/${locale}${path}`,
 		languages: {
-			...Object.fromEntries(LOCALES.map((l) => [l, `${base}/${l}${path}`])),
-			'x-default': `${base}/${DEFAULT_LOCALE}${path}`
+			...Object.fromEntries(LOCALES.map((l) => [l, `${SITE_URL}/${l}${path}`])),
+			'x-default': `${SITE_URL}/${DEFAULT_LOCALE}${path}`
 		}
 	};
 };

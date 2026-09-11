@@ -1,30 +1,17 @@
-import { LOCALES } from '@lib/i18n';
+import { LOCALES, buildAlternates } from '@/lib/i18n';
+import { SITE_URL } from '@/content/product';
+import { SITE_PAGES, pagePath, type SitePageT } from '@/lib/site-pages';
 import type { MetadataRoute } from 'next';
 
-const ROUTES = [
-	{ path: '', lastModified: new Date() },
-	{ path: '/privacy', lastModified: new Date('2026-03-09') },
-	{ path: '/terms', lastModified: new Date('2026-03-09') },
-	{ path: '/security', lastModified: new Date('2026-04-30') },
-	{ path: '/support', lastModified: new Date('2026-05-08') },
-	{ path: '/mcp', lastModified: new Date('2026-04-30') }
-] as const;
-
-const BASE_URL = 'https://uha.app';
-
-const sitemap = (): MetadataRoute.Sitemap => {
-	return ROUTES.flatMap(({ path, lastModified }) =>
+const sitemap = (): MetadataRoute.Sitemap =>
+	Object.entries(SITE_PAGES).flatMap(([page, lastModified]) =>
 		LOCALES.map((locale) => ({
-			url: `${BASE_URL}/${locale}${path}`,
+			url: `${SITE_URL}/${locale}${pagePath(page as SitePageT)}`,
 			lastModified,
 			alternates: {
-				languages: {
-					...Object.fromEntries(LOCALES.map((l) => [l, `${BASE_URL}/${l}${path}`])),
-					'x-default': `${BASE_URL}/en${path}`
-				}
+				languages: buildAlternates(locale, pagePath(page as SitePageT))?.languages as Record<string, string>
 			}
 		}))
 	);
-};
 
 export default sitemap;

@@ -3,6 +3,22 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url('/assets/fonts/nunito-variable.ttf') format('truetype');
+  }
+
+  :root {
+    --font-rounded: ui-rounded, 'Nunito', 'Hiragino Maru Gothic ProN', system-ui, sans-serif;
+  }
+
+  html:lang(ja) {
+    --font-rounded: 'Hiragino Maru Gothic ProN', ui-rounded, 'Nunito', system-ui, sans-serif;
+  }
+
   *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -16,12 +32,18 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font-rounded);
     background: ${({ theme }) => theme.bg};
     color: ${({ theme }) => theme.text};
     line-height: 1.6;
+    font-variant-ligatures: none;
+    font-feature-settings: 'liga' 0, 'clig' 0;
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
   }
 
   a {

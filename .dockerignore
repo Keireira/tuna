@@ -8,3 +8,13 @@ dist
 .zed
 .DS_Store
 README.md
+.env
+.env.*
+!.env.example
+*.local
+*.log
+*.tsbuildinfo
+.pnpm-store
+coverage
+.vscode
+.idea

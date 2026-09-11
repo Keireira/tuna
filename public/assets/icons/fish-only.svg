@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254" fill="none">
+  <title>Uha fish</title>
+  <desc>Upright fish traced from the latest supplied reference, with transparent eye and spaces between the colored tiles.</desc>
+  <g id="body" stroke-linecap="round" stroke-linejoin="round">
+    <path id="head" fill="#FF9900" stroke="#FFEABD" stroke-width="9.5" fill-rule="evenodd" d="
+      M 627 140
+      C 646 138 680 177 699 210
+      C 710 230 718 253 720 274
+      C 723 292 676 341 628 360
+      C 585 346 543 309 534 280
+      C 530 270 543 235 554 213
+      C 576 173 610 138 627 140 Z
+      M 659.5 238
+      C 659.5 255.397 645.397 269.5 628 269.5
+      C 610.603 269.5 596.5 255.397 596.5 238
+      C 596.5 220.603 610.603 206.5 628 206.5
+      C 645.397 206.5 659.5 220.603 659.5 238 Z" />
+
+    <path id="yellow-upper-left" fill="#FFD200" stroke="#FFF3A0" stroke-width="9" d="
+      M 524 302
+      C 546 333 581 365 613 378
+      C 617 388 616 397 606 407
+      C 584 428 550 456 525 480
+      C 515 432 510 355 524 302 Z" />
+    <path id="yellow-upper-right" fill="#FFD200" stroke="#FFF3A0" stroke-width="9" d="
+      M 726 309
+      C 702 339 668 367 638 381
+      C 634 390 636 398 644 405
+      C 670 429 699 454 723 479
+      C 736 429 737 359 726 309 Z" />
+
+    <path id="yellow-lower-left" fill="#FFD000" stroke="#FFF3A0" stroke-width="9" d="
+      M 616 427
+      C 589 451 552 479 534 502
+      C 518 522 528 550 548 572
+      C 567 593 593 615 616 640
+      C 611 581 611 500 616 427 Z" />
+    <path id="yellow-lower-right" fill="#FFD000" stroke="#FFF3A0" stroke-width="9" d="
+      M 637 429
+      C 664 451 700 480 715 506
+      C 732 534 708 565 687 587
+      C 670 605 653 622 638 639
+      C 631 583 631 500 637 429 Z" />
+
+    <path id="green-lower-left" fill="#76BD00" stroke="#D9F59A" stroke-width="9" d="
+      M 525 587
+      C 545 608 577 630 596 656
+      C 619 686 622 713 615 778
+      C 593 759 569 739 551 715
+      C 529 684 520 641 525 587 Z" />
+    <path id="green-lower-right" fill="#76BD00" stroke="#D9F59A" stroke-width="9" d="
+      M 722 584
+      C 700 605 670 632 652 657
+      C 632 685 634 724 641 776
+      C 666 755 692 729 706 703
+      C 725 671 728 626 722 584 Z" />
+
+    <path id="upper-green-side-fin" fill="#71B800" stroke="#D8F496" stroke-width="9" d="
+      M 495 360
+      C 465 378 443 402 431 431
+      C 421 453 419 476 425 491
+      C 452 482 480 461 491 443
+      C 502 424 493 405 495 360 Z" />
+
+    <path id="cyan-lower-left" fill="#00BDE7" stroke="#9BEDFF" stroke-width="9" d="
+      M 535 730
+      C 555 751 578 774 601 795
+      C 615 807 611 822 602 838
+      C 594 852 582 865 570 874
+      C 548 838 533 784 535 730 Z" />
+    <path id="cyan-lower-right" fill="#00BDE7" stroke="#9BEDFF" stroke-width="9" d="
+      M 717 730
+      C 697 751 675 774 652 795
+      C 637 808 643 824 653 840
+      C 661 853 673 865 682 874
+      C 705 837 721 782 717 730 Z" />
+  </g>
+
+  <g id="fin-left" data-pivot-x="500" data-pivot-y="473" stroke-linecap="round" stroke-linejoin="round">
+    <path id="cyan-side-left" fill="#00BBE4" stroke="#9AEEFF" stroke-width="9" d="
+      M 500 473
+      C 474 495 455 524 448 550
+      C 440 584 452 619 480 644
+      C 497 615 509 580 508 548
+      C 507 520 503 493 500 473 Z" />
+  </g>
+
+  <g id="fin-right" data-pivot-x="753" data-pivot-y="416" stroke-linecap="round" stroke-linejoin="round">
+    <path id="cyan-side-right" fill="#00BEE6" stroke="#9AEEFF" stroke-width="9" d="
+      M 753 416
+      C 776 450 794 487 802 518
+      C 815 565 798 615 769 646
+      C 747 617 735 577 740 539
+      C 744 500 750 454 753 416 Z" />
+  </g>
+
+  <g id="tail-left" data-pivot-x="617" data-pivot-y="850" stroke="#9BEEFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path id="tail-left-cyan" fill="#00BDE6" d="
+      M 617 850
+      C 596 887 558 912 534 936
+      C 488 978 462 1040 484 1109
+      C 520 1080 576 1048 600 1019
+      C 629 983 623 920 617 850 Z" />
+  </g>
+
+  <g id="tail-right" data-pivot-x="638" data-pivot-y="850" stroke="#9BEEFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path id="tail-right-cyan" fill="#00BDE6" d="
+      M 638 850
+      C 659 887 697 912 721 936
+      C 767 978 793 1040 766 1109
+      C 731 1080 675 1048 651 1019
+      C 622 983 632 920 638 850 Z" />
+  </g>
+</svg>

@@ -5,10 +5,23 @@
   },
   "page": {
     "title": "MCP Server",
-    "subtitle": "Use this page for humans and assistants. The API endpoint itself is not a browser page.",
-    "endpoint_label": "MCP server endpoint",
+    "subtitle": "Public information for assistants: what Uha does, how Unlimited works, where to install it, and which currencies it supports.",
+    "endpoint_label": "MCP Server Endpoint",
     "transport_label": "Transport",
-    "transport_value": "Streamable HTTP / POST",
-    "config_label": "Example config"
+    "transport_value": "Streamable HTTP",
+    "config_label": "Connect a Client",
+    "config_body": "Add the endpoint above to a client that supports remote MCP servers. Select Streamable HTTP if the client asks for a transport. No Uha account or API key is required.",
+    "compatibility_note": "Setup steps and configuration formats vary by client. Follow your client’s remote MCP instructions. Opening the endpoint in a browser does not connect an assistant.",
+    "scope_title": "Public and Read-Only",
+    "scope_body": "This server returns public information about Uha. It cannot read your subscription data, access your iCloud backups, control the app, make payments, or cancel subscriptions.",
+    "tools_title": "Available Tools",
+    "tool_info": "App overview, platform, features, and public product information.",
+    "tool_pricing": "Free and Unlimited plan limits and how the one-time purchase works.",
+    "tool_links": "Official website, App Store, and TestFlight links.",
+    "tool_currencies": "Currency codes, symbols, and formatting metadata.",
+    "copy_label": "Copy Endpoint",
+    "copy_done": "Copied",
+    "copy_failed": "Couldn’t copy. Select and copy the endpoint manually.",
+    "protocol_label": "MCP Transport Documentation"
   }
 }

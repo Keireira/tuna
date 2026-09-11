@@ -1,21 +1,14 @@
-import { MCP_ENDPOINT } from '@agents';
+import { MCP_ENDPOINT, MCP_SERVER_INFO, MCP_TOOLS, SITE_URL, PRODUCT_LAST_REVIEWED } from '@/content/product';
 
+// A human/agent discovery inventory; protocol negotiation happens at the MCP endpoint.
 export const GET = () =>
 	Response.json({
-		serverInfo: {
-			name: 'Uha Subscription Tracker',
-			version: '1.1.0'
-		},
-		transport: {
-			type: 'streamable-http',
-			endpoint: MCP_ENDPOINT
-		},
-		capabilities: {
-			tools: {
-				listChanged: false,
-				items: ['get_info', 'get_pricing', 'get_app_links', 'get_supported_currencies']
-			},
-			resources: {},
-			prompts: {}
-		}
+		serverInfo: MCP_SERVER_INFO,
+		lastReviewed: PRODUCT_LAST_REVIEWED,
+		transport: { type: 'streamable-http', endpoint: MCP_ENDPOINT },
+		authentication: 'none',
+		capabilities: { tools: {}, resources: {} },
+		tools: MCP_TOOLS,
+		resources: [{ name: 'uha-product-guide', uri: `${SITE_URL}/llms-full.txt`, mimeType: 'text/markdown' }],
+		documentationUrl: `${SITE_URL}/en/mcp`
 	});

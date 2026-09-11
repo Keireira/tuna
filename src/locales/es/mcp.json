@@ -5,10 +5,23 @@
   },
   "page": {
     "title": "Servidor MCP",
-    "subtitle": "Usa esta página para personas y asistentes. El endpoint de la API no es una página de navegador.",
-    "endpoint_label": "Endpoint del servidor MCP",
+    "subtitle": "Información pública para asistentes: qué hace Uha, cómo funciona Unlimited, dónde instalar la app y qué monedas admite.",
+    "endpoint_label": "Dirección del servidor MCP",
     "transport_label": "Transporte",
-    "transport_value": "Streamable HTTP / POST",
-    "config_label": "Configuración de ejemplo"
+    "transport_value": "Streamable HTTP",
+    "config_label": "Conectar un cliente",
+    "config_body": "Añade la dirección de arriba a un cliente compatible con servidores MCP remotos. Selecciona Streamable HTTP si el cliente pregunta por el transporte. No necesitas una cuenta de Uha ni una clave de API.",
+    "compatibility_note": "Los pasos y el formato de configuración dependen del cliente. Sigue sus instrucciones para conectar servidores MCP remotos. Abrir esta dirección en un navegador no conecta un asistente.",
+    "scope_title": "Información pública de solo lectura",
+    "scope_body": "Este servidor devuelve información pública sobre Uha. No puede leer tus datos de suscripciones, acceder a tus copias de iCloud, controlar la app, hacer pagos ni cancelar suscripciones.",
+    "tools_title": "Herramientas disponibles",
+    "tool_info": "Descripción de la app, plataforma, funciones e información pública del producto.",
+    "tool_pricing": "Límites de los planes gratuito y Unlimited y cómo funciona la compra única.",
+    "tool_links": "Enlaces oficiales al sitio web, App Store y TestFlight.",
+    "tool_currencies": "Códigos y símbolos de moneda y datos de formato.",
+    "copy_label": "Copiar dirección",
+    "copy_done": "Copiado",
+    "copy_failed": "No se pudo copiar. Selecciona la dirección y cópiala manualmente.",
+    "protocol_label": "Documentación del transporte MCP"
   }
 }

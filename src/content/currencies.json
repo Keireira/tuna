@@ -1,0 +1,994 @@
+[
+  {
+    "code": "AOA",
+    "symbol": "Kz",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "pt-AO",
+    "region": "africa"
+  },
+  {
+    "code": "BWP",
+    "symbol": "P",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-BW",
+    "region": "africa"
+  },
+  {
+    "code": "BIF",
+    "symbol": "FBu",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "fr-BI",
+    "region": "africa"
+  },
+  {
+    "code": "CDF",
+    "symbol": "FC",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "fr-CD",
+    "region": "africa"
+  },
+  {
+    "code": "CVE",
+    "symbol": "$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "pt-CV",
+    "region": "africa"
+  },
+  {
+    "code": "ETB",
+    "symbol": "Br",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "am-ET",
+    "region": "africa"
+  },
+  {
+    "code": "GHS",
+    "symbol": "GH₵",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-GH",
+    "region": "africa"
+  },
+  {
+    "code": "KES",
+    "symbol": "KSh",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "sw-KE",
+    "region": "africa"
+  },
+  {
+    "code": "LRD",
+    "symbol": "L$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-LR",
+    "region": "africa"
+  },
+  {
+    "code": "LSL",
+    "symbol": "L",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-LS",
+    "region": "africa"
+  },
+  {
+    "code": "MUR",
+    "symbol": "₨",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-MU",
+    "region": "africa"
+  },
+  {
+    "code": "MWK",
+    "symbol": "MK",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-MW",
+    "region": "africa"
+  },
+  {
+    "code": "MZN",
+    "symbol": "MT",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "pt-MZ",
+    "region": "africa"
+  },
+  {
+    "code": "NAD",
+    "symbol": "N$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-NA",
+    "region": "africa"
+  },
+  {
+    "code": "NGN",
+    "symbol": "₦",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-NG",
+    "region": "africa"
+  },
+  {
+    "code": "RWF",
+    "symbol": "FRw",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "rw-RW",
+    "region": "africa"
+  },
+  {
+    "code": "SCR",
+    "symbol": "₨",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-SC",
+    "region": "africa"
+  },
+  {
+    "code": "SZL",
+    "symbol": "E",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-SZ",
+    "region": "africa"
+  },
+  {
+    "code": "TZS",
+    "symbol": "TSh",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "sw-TZ",
+    "region": "africa"
+  },
+  {
+    "code": "UGX",
+    "symbol": "USh",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "en-UG",
+    "region": "africa"
+  },
+  {
+    "code": "XAF",
+    "symbol": "FCFA",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "fr-CM",
+    "region": "africa"
+  },
+  {
+    "code": "XOF",
+    "symbol": "CFA",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "fr-SN",
+    "region": "africa"
+  },
+  {
+    "code": "ZAR",
+    "symbol": "R",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-ZA",
+    "region": "africa"
+  },
+  {
+    "code": "ZMW",
+    "symbol": "ZK",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-ZM",
+    "region": "africa"
+  },
+  {
+    "code": "ALL",
+    "symbol": "L",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "sq-AL",
+    "region": "europe"
+  },
+  {
+    "code": "BAM",
+    "symbol": "KM",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "bs-BA",
+    "region": "europe"
+  },
+  {
+    "code": "BGN",
+    "symbol": "лв",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "bg-BG",
+    "region": "europe"
+  },
+  {
+    "code": "BYN",
+    "symbol": "Br",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "ru-BY",
+    "region": "europe"
+  },
+  {
+    "code": "CHF",
+    "symbol": "CHF",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "de-CH",
+    "region": "europe"
+  },
+  {
+    "code": "CZK",
+    "symbol": "Kč",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "cs-CZ",
+    "region": "europe"
+  },
+  {
+    "code": "DKK",
+    "symbol": "kr",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "da-DK",
+    "region": "europe"
+  },
+  {
+    "code": "EUR",
+    "symbol": "€",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "de-DE",
+    "region": "europe"
+  },
+  {
+    "code": "GEL",
+    "symbol": "₾",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "ka-GE",
+    "region": "europe"
+  },
+  {
+    "code": "GIP",
+    "symbol": "£",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-GI",
+    "region": "europe"
+  },
+  {
+    "code": "HUF",
+    "symbol": "Ft",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "hu-HU",
+    "region": "europe"
+  },
+  {
+    "code": "ILS",
+    "symbol": "₪",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "he-IL",
+    "region": "europe"
+  },
+  {
+    "code": "ISK",
+    "symbol": "kr",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "is-IS",
+    "region": "europe"
+  },
+  {
+    "code": "MDL",
+    "symbol": "L",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "ro-MD",
+    "region": "europe"
+  },
+  {
+    "code": "MKD",
+    "symbol": "ден",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "mk-MK",
+    "region": "europe"
+  },
+  {
+    "code": "NOK",
+    "symbol": "kr",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "nb-NO",
+    "region": "europe"
+  },
+  {
+    "code": "PLN",
+    "symbol": "zł",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "pl-PL",
+    "region": "europe"
+  },
+  {
+    "code": "RON",
+    "symbol": "lei",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "ro-RO",
+    "region": "europe"
+  },
+  {
+    "code": "RSD",
+    "symbol": "дин.",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "sr-RS",
+    "region": "europe"
+  },
+  {
+    "code": "RUB",
+    "symbol": "₽",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "ru-RU",
+    "region": "europe"
+  },
+  {
+    "code": "SEK",
+    "symbol": "kr",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "sv-SE",
+    "region": "europe"
+  },
+  {
+    "code": "UAH",
+    "symbol": "₴",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "uk-UA",
+    "region": "europe"
+  },
+  {
+    "code": "CAD",
+    "symbol": "C$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-CA",
+    "region": "north_america"
+  },
+  {
+    "code": "MXN",
+    "symbol": "MX$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-MX",
+    "region": "north_america"
+  },
+  {
+    "code": "USD",
+    "symbol": "$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-US",
+    "region": "north_america"
+  },
+  {
+    "code": "BZD",
+    "symbol": "BZ$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-BZ",
+    "region": "central_america"
+  },
+  {
+    "code": "CRC",
+    "symbol": "₡",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-CR",
+    "region": "central_america"
+  },
+  {
+    "code": "GTQ",
+    "symbol": "Q",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-GT",
+    "region": "central_america"
+  },
+  {
+    "code": "HNL",
+    "symbol": "L",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-HN",
+    "region": "central_america"
+  },
+  {
+    "code": "NIO",
+    "symbol": "C$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-NI",
+    "region": "central_america"
+  },
+  {
+    "code": "PAB",
+    "symbol": "B/.",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-PA",
+    "region": "central_america"
+  },
+  {
+    "code": "SVC",
+    "symbol": "$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-SV",
+    "region": "central_america"
+  },
+  {
+    "code": "ARS",
+    "symbol": "$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-AR",
+    "region": "south_america"
+  },
+  {
+    "code": "BOB",
+    "symbol": "Bs.",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-BO",
+    "region": "south_america"
+  },
+  {
+    "code": "BRL",
+    "symbol": "R$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "pt-BR",
+    "region": "south_america"
+  },
+  {
+    "code": "CLP",
+    "symbol": "$",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "es-CL",
+    "region": "south_america"
+  },
+  {
+    "code": "COP",
+    "symbol": "$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-CO",
+    "region": "south_america"
+  },
+  {
+    "code": "GYD",
+    "symbol": "G$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-GY",
+    "region": "south_america"
+  },
+  {
+    "code": "PEN",
+    "symbol": "S/",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-PE",
+    "region": "south_america"
+  },
+  {
+    "code": "PYG",
+    "symbol": "₲",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "es-PY",
+    "region": "south_america"
+  },
+  {
+    "code": "SRD",
+    "symbol": "$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "nl-SR",
+    "region": "south_america"
+  },
+  {
+    "code": "UYU",
+    "symbol": "$U",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-UY",
+    "region": "south_america"
+  },
+  {
+    "code": "AWG",
+    "symbol": "ƒ",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "nl-AW",
+    "region": "caribbean"
+  },
+  {
+    "code": "BBD",
+    "symbol": "Bds$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-BB",
+    "region": "caribbean"
+  },
+  {
+    "code": "BMD",
+    "symbol": "$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-BM",
+    "region": "caribbean"
+  },
+  {
+    "code": "BSD",
+    "symbol": "B$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-BS",
+    "region": "caribbean"
+  },
+  {
+    "code": "CUP",
+    "symbol": "₱",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-CU",
+    "region": "caribbean"
+  },
+  {
+    "code": "DOP",
+    "symbol": "RD$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "es-DO",
+    "region": "caribbean"
+  },
+  {
+    "code": "HTG",
+    "symbol": "G",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "fr-HT",
+    "region": "caribbean"
+  },
+  {
+    "code": "JMD",
+    "symbol": "J$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-JM",
+    "region": "caribbean"
+  },
+  {
+    "code": "KYD",
+    "symbol": "CI$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-KY",
+    "region": "caribbean"
+  },
+  {
+    "code": "TTD",
+    "symbol": "TT$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-TT",
+    "region": "caribbean"
+  },
+  {
+    "code": "XCD",
+    "symbol": "EC$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-AG",
+    "region": "caribbean"
+  },
+  {
+    "code": "AMD",
+    "symbol": "֏",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "hy-AM",
+    "region": "europe"
+  },
+  {
+    "code": "AZN",
+    "symbol": "₼",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "az-AZ",
+    "region": "west_asia"
+  },
+  {
+    "code": "KGS",
+    "symbol": "с",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "ky-KG",
+    "region": "central_asia"
+  },
+  {
+    "code": "KZT",
+    "symbol": "₸",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "kk-KZ",
+    "region": "central_asia"
+  },
+  {
+    "code": "TJS",
+    "symbol": "смн",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "tg-TJ",
+    "region": "central_asia"
+  },
+  {
+    "code": "UZS",
+    "symbol": "сўм",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "uz-UZ",
+    "region": "central_asia"
+  },
+  {
+    "code": "INR",
+    "symbol": "₹",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "hi-IN",
+    "region": "south_asia"
+  },
+  {
+    "code": "GBP",
+    "symbol": "£",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-GB",
+    "region": "europe"
+  },
+  {
+    "code": "LKR",
+    "symbol": "₨",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "si-LK",
+    "region": "south_asia"
+  },
+  {
+    "code": "NPR",
+    "symbol": "₨",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "ne-NP",
+    "region": "south_asia"
+  },
+  {
+    "code": "CNH",
+    "symbol": "¥h",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "zh-HK",
+    "region": "east_asia"
+  },
+  {
+    "code": "CNY",
+    "symbol": "¥",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "zh-CN",
+    "region": "east_asia"
+  },
+  {
+    "code": "HKD",
+    "symbol": "HK$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "zh-HK",
+    "region": "east_asia"
+  },
+  {
+    "code": "JPY",
+    "symbol": "¥",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "ja-JP",
+    "region": "east_asia"
+  },
+  {
+    "code": "KRW",
+    "symbol": "₩",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "ko-KR",
+    "region": "east_asia"
+  },
+  {
+    "code": "MOP",
+    "symbol": "MOP$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "zh-MO",
+    "region": "east_asia"
+  },
+  {
+    "code": "TWD",
+    "symbol": "NT$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "zh-TW",
+    "region": "east_asia"
+  },
+  {
+    "code": "KHR",
+    "symbol": "៛",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "km-KH",
+    "region": "southeast_asia"
+  },
+  {
+    "code": "LAK",
+    "symbol": "₭",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "lo-LA",
+    "region": "southeast_asia"
+  },
+  {
+    "code": "MMK",
+    "symbol": "K",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "my-MM",
+    "region": "southeast_asia"
+  },
+  {
+    "code": "PHP",
+    "symbol": "₱",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "fil-PH",
+    "region": "southeast_asia"
+  },
+  {
+    "code": "SGD",
+    "symbol": "S$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-SG",
+    "region": "southeast_asia"
+  },
+  {
+    "code": "THB",
+    "symbol": "฿",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "th-TH",
+    "region": "southeast_asia"
+  },
+  {
+    "code": "VND",
+    "symbol": "₫",
+    "denominator": 1,
+    "decimals": 0,
+    "locale": "vi-VN",
+    "region": "southeast_asia"
+  },
+  {
+    "code": "AUD",
+    "symbol": "A$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-AU",
+    "region": "oceania"
+  },
+  {
+    "code": "FJD",
+    "symbol": "FJ$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-FJ",
+    "region": "oceania"
+  },
+  {
+    "code": "NZD",
+    "symbol": "NZ$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-NZ",
+    "region": "oceania"
+  },
+  {
+    "code": "PGK",
+    "symbol": "K",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-PG",
+    "region": "oceania"
+  },
+  {
+    "code": "SBD",
+    "symbol": "SI$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "en-SB",
+    "region": "oceania"
+  },
+  {
+    "code": "TOP",
+    "symbol": "T$",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "to-TO",
+    "region": "oceania"
+  },
+  {
+    "code": "BCH",
+    "symbol": "BCH",
+    "denominator": 100000000,
+    "decimals": 8,
+    "locale": "en-US",
+    "region": "cryptocurrency"
+  },
+  {
+    "code": "BTC",
+    "symbol": "₿",
+    "denominator": 100000000,
+    "decimals": 8,
+    "locale": "en-US",
+    "region": "cryptocurrency"
+  },
+  {
+    "code": "BTG",
+    "symbol": "BTG",
+    "denominator": 100000000,
+    "decimals": 8,
+    "locale": "en-US",
+    "region": "cryptocurrency"
+  },
+  {
+    "code": "DASH",
+    "symbol": "DASH",
+    "denominator": 100000000,
+    "decimals": 8,
+    "locale": "en-US",
+    "region": "cryptocurrency"
+  },
+  {
+    "code": "EOS",
+    "symbol": "EOS",
+    "denominator": 10000,
+    "decimals": 4,
+    "locale": "en-US",
+    "region": "cryptocurrency"
+  },
+  {
+    "code": "ETH",
+    "symbol": "Ξ",
+    "denominator": 1000000000000000000,
+    "decimals": 18,
+    "locale": "en-US",
+    "region": "cryptocurrency"
+  },
+  {
+    "code": "LTC",
+    "symbol": "Ł",
+    "denominator": 100000000,
+    "decimals": 8,
+    "locale": "en-US",
+    "region": "cryptocurrency"
+  },
+  {
+    "code": "XLM",
+    "symbol": "XLM",
+    "denominator": 10000000,
+    "decimals": 7,
+    "locale": "en-US",
+    "region": "cryptocurrency"
+  },
+  {
+    "code": "XRP",
+    "symbol": "XRP",
+    "denominator": 1000000,
+    "decimals": 6,
+    "locale": "en-US",
+    "region": "cryptocurrency"
+  },
+  {
+    "code": "AED",
+    "symbol": "AED",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "ar-AE",
+    "region": "other"
+  },
+  {
+    "code": "OMR",
+    "symbol": "ر.ع.",
+    "denominator": 1000,
+    "decimals": 3,
+    "locale": "ar-OM",
+    "region": "other"
+  },
+  {
+    "code": "TRY",
+    "symbol": "₺",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "tr-TR",
+    "region": "west_asia"
+  },
+  {
+    "code": "BDT",
+    "symbol": "৳",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "bn-BD",
+    "region": "other"
+  },
+  {
+    "code": "IDR",
+    "symbol": "Rp",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "id-ID",
+    "region": "other"
+  },
+  {
+    "code": "MYR",
+    "symbol": "RM",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "ms-MY",
+    "region": "other"
+  },
+  {
+    "code": "EGP",
+    "symbol": "E£",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "ar-EG",
+    "region": "other"
+  },
+  {
+    "code": "MVR",
+    "symbol": "Rf",
+    "denominator": 100,
+    "decimals": 2,
+    "locale": "dv-MV",
+    "region": "other"
+  }
+]
