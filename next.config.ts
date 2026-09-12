@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import { NUNITO_FONT_URL } from './src/styles/fonts';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -11,6 +12,10 @@ const nextConfig: NextConfig = {
 		styledComponents: true
 	},
 	headers: async () => [
+		{
+			source: NUNITO_FONT_URL,
+			headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }]
+		},
 		{
 			source: '/:path*',
 			headers: [

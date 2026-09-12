@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import type { LandingCopyT } from '@/content/landing';
+import BrandImage from './brand-image';
 
 type PropsT = { locale: string; copy: LandingCopyT; pagePath?: string };
 
@@ -11,7 +12,7 @@ export default function SiteFooter({ locale, copy, pagePath }: PropsT) {
 		<footer className="landing-footer section-width">
 			<div className="footer-brand">
 				<a className="brand" href={`/${locale}`}>
-					<img src="/assets/icons/fish.png" alt="" width="44" height="44" />
+					<BrandImage />
 					UHA
 				</a>
 			</div>

@@ -25,6 +25,7 @@ import { createWordmarkBackdrop } from './wordmark-backdrop';
 import { createWordmarkMaterial } from './wordmark-material';
 import { createWordmarkFish } from './wordmark-fish';
 import { createAnimationClock } from './animation-clock';
+import { getWordmarkPixelRatio } from './render-budget';
 
 type CallbacksT = { onReady: () => void; onFallback: () => void };
 type DisposableT = { dispose: () => void };
@@ -33,7 +34,14 @@ export const createWordmarkScene = (host: HTMLDivElement, callbacks: CallbacksT,
 	const canvas = document.createElement('canvas');
 	canvas.className = 'wordmark-canvas';
 	canvas.setAttribute('aria-hidden', 'true');
-	const renderer = new WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'low-power' });
+	const renderer = new WebGLRenderer({
+		canvas,
+		antialias: true,
+		alpha: true,
+		powerPreference: 'low-power',
+		// Keep the HTML wordmark when the browser cannot provide a usable GPU context.
+		failIfMajorPerformanceCaveat: true
+	});
 	const resources: DisposableT[] = [];
 	const removeListeners: (() => void)[] = [];
 	let disposed = false,
@@ -76,7 +84,6 @@ export const createWordmarkScene = (host: HTMLDivElement, callbacks: CallbacksT,
 		queueMicrotask(dispose);
 	};
 	try {
-		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 		renderer.outputColorSpace = SRGBColorSpace;
 		renderer.toneMapping = ACESFilmicToneMapping;
 		renderer.toneMappingExposure = 0.85;
@@ -226,14 +233,17 @@ export const createWordmarkScene = (host: HTMLDivElement, callbacks: CallbacksT,
 			requestRender();
 		};
 		let lastWidth = 0,
-			lastHeight = 0;
+			lastHeight = 0,
+			lastPixelRatio = 0;
 		const resize = () => {
 			if (disposed || failed || !host.clientWidth || !host.clientHeight) return;
 			const width = document.documentElement.clientWidth,
 				height = host.clientHeight;
-			if (width === lastWidth && height === lastHeight) return;
+			const pixelRatio = getWordmarkPixelRatio(width, height, window.devicePixelRatio);
+			if (width === lastWidth && height === lastHeight && pixelRatio === lastPixelRatio) return;
 			lastWidth = width;
 			lastHeight = height;
+			lastPixelRatio = pixelRatio;
 			const style = getComputedStyle(host);
 			const fontSize = Number.parseFloat(style.fontSize);
 			const spacing = (Number.parseFloat(style.letterSpacing) || 0) / fontSize;
@@ -265,7 +275,7 @@ export const createWordmarkScene = (host: HTMLDivElement, callbacks: CallbacksT,
 			camera.top = height / 2;
 			camera.bottom = -height / 2;
 			camera.updateProjectionMatrix();
-			renderer.setSize(width, height, false);
+			renderer.setDrawingBufferSize(width, height, pixelRatio);
 			backdrop.resize(width, height, style.getPropertyValue('--page').trim());
 			requestRender();
 		};

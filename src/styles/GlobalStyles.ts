@@ -1,6 +1,7 @@
 'use client';
 
 import { createGlobalStyle } from 'styled-components';
+import { NUNITO_FONT_URL } from './fonts';
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -8,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-weight: 200 1000;
     font-display: swap;
-    src: url('/assets/fonts/nunito-variable.ttf') format('truetype');
+    src: url('${NUNITO_FONT_URL}') format('woff2');
   }
 
   :root {

@@ -6,6 +6,7 @@ import StructuredDataScript from '@/components/agent/StructuredDataScript';
 import { LOCALES, isValidLocale } from '@/lib/i18n';
 import { SITE_URL } from '@/content/product';
 import { getPageMetadata, getSiteStructuredData } from '@/lib/seo';
+import { NUNITO_FONT_URL } from '@/styles/fonts';
 import type { PropsWithChildren } from 'react';
 import type { Metadata, Viewport } from 'next';
 
@@ -52,6 +53,7 @@ const LocaleLayout = async ({ children, params }: TProps) => {
 	return (
 		<html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
 			<head>
+				<link rel="preload" href={NUNITO_FONT_URL} as="font" type="font/woff2" crossOrigin="anonymous" />
 				<StructuredDataScript id={`uha-json-ld-${locale}`} json={getSiteStructuredData(locale)} />
 			</head>
 			<body>

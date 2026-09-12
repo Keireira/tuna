@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { LANGUAGES } from '@/lib/i18n';
 import type { LandingCopyT } from '@/content/landing';
+import BrandImage from '@/components/site-chrome/brand-image';
 
 type PropsT = {
 	copy: LandingCopyT;
@@ -32,28 +33,39 @@ const LandingNav = ({ copy, locale, pagePath = '', simple, onToggleEffects }: Pr
 		if (!nav || !measure) return;
 
 		let frame = 0;
+		const labels = Array.from(measure.children);
+		const unlimited = labels[labels.length - 1];
+		const measuredWidths = new Map<Element, number>();
 		const updateVisibleLinks = () => {
-			const widths = Array.from(measure.children, (item) => item.getBoundingClientRect().width);
+			frame = 0;
+			const navWidth = measuredWidths.get(nav);
+			const rowWidth = measuredWidths.get(measure);
+			if (navWidth === undefined || rowWidth === undefined || labels.some((label) => !measuredWidths.has(label)))
+				return;
+			const widths = labels.map((label) => measuredWidths.get(label) ?? 0);
+			// The max-content row uses the same gap as the visible navigation.
+			const gap = Math.max(0, (rowWidth - widths.reduce((total, width) => total + width, 0)) / (labels.length - 1));
 			const unlimitedWidth = widths.pop() ?? 0;
 			setMinimumNavWidth(Math.ceil(unlimitedWidth) + 1);
-			const gap = Number.parseFloat(getComputedStyle(nav).columnGap) || 0;
 			let usedWidth = unlimitedWidth;
 			let count = 0;
 			for (const width of widths) {
-				if (usedWidth + gap + width > nav.clientWidth - 1) break;
+				if (usedWidth + gap + width > navWidth - 1) break;
 				usedWidth += gap + width;
 				count += 1;
 			}
 			setVisibleLinks(count);
 		};
-		const scheduleMeasure = () => {
-			cancelAnimationFrame(frame);
-			frame = requestAnimationFrame(updateVisibleLinks);
-		};
-		const observer = new ResizeObserver(scheduleMeasure);
-		observer.observe(nav);
-		observer.observe(measure);
-		updateVisibleLinks();
+		const observer = new ResizeObserver((entries) => {
+			for (const entry of entries) {
+				// Older implementations expose only contentRect; Unlimited has 8px padding on each side.
+				const width =
+					entry.borderBoxSize?.[0]?.inlineSize ?? entry.contentRect.width + (entry.target === unlimited ? 16 : 0);
+				measuredWidths.set(entry.target, width);
+			}
+			if (!frame) frame = requestAnimationFrame(updateVisibleLinks);
+		});
+		for (const target of [nav, measure, ...labels]) observer.observe(target, { box: 'border-box' });
 		return () => {
 			observer.disconnect();
 			cancelAnimationFrame(frame);
@@ -77,7 +89,7 @@ const LandingNav = ({ copy, locale, pagePath = '', simple, onToggleEffects }: Pr
 			</a>
 			<div className="brand-lockup">
 				<a className="brand" href={`/${locale}`} aria-label="UHA">
-					<img src="/assets/icons/fish.png" width="44" height="44" alt="" />
+					<BrandImage />
 					<span className="brand-type">
 						<span className="brand-name">UHA</span>
 						<span className="brand-caption">{copy.brand.subtitle}</span>

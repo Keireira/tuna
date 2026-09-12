@@ -1,9 +1,11 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import Image, { getImageProps } from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { productMedia, resolveMediaSource, type ProductMediaIdT } from '@/content/product-media';
 import type { LandingCopyT } from '@/content/landing';
 import { MediaFrame, MediaDialog } from './product-media-slot.styles';
+import { mediaImageSources } from './media-image-sources';
 
 type PropsT = {
 	id: ProductMediaIdT;
@@ -11,18 +13,51 @@ type PropsT = {
 	allowPlaceholders?: boolean;
 	priority?: boolean;
 	crop?: boolean;
+	sizes?: string;
 };
 
-const ProductMediaSlot = ({ id, copy, allowPlaceholders = false, priority = false, crop = false }: PropsT) => {
+const ProductMediaSlot = ({ id, copy, allowPlaceholders = false, priority = false, crop = false, sizes }: PropsT) => {
 	const media = productMedia[id];
 	const title = copy.titles?.[id] ?? media.purpose;
 	const mediaSource = resolveMediaSource(media, allowPlaceholders);
 	const [failedSource, setFailedSource] = useState<string | null>(null);
 	const source = mediaSource === failedSource ? null : mediaSource;
+	const frame = useRef<HTMLDivElement>(null);
 	const dialog = useRef<HTMLDialogElement>(null);
+	const [zoomSource, setZoomSource] = useState<string | null>(null);
+	const [visibleVideoSource, setVisibleVideoSource] = useState<string | null>(null);
 	const isPlaceholder = source !== null && media.status !== 'approved';
+	const imageSizes = sizes ?? (crop ? '(max-width: 720px) calc(100vw - 28px), 660px' : '340px');
+	useEffect(() => {
+		if (media.kind !== 'video' || !source || !media.poster || !frame.current) return;
+		if (!('IntersectionObserver' in window)) {
+			setVisibleVideoSource(source);
+			return;
+		}
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (!entries.some((entry) => entry.isIntersecting)) return;
+				setVisibleVideoSource(source);
+				observer.disconnect();
+			},
+			{ rootMargin: '300px' }
+		);
+		observer.observe(frame.current);
+		return () => observer.disconnect();
+	}, [media.kind, media.poster, source]);
+	// Video phone frames are at most 300px wide; keep a 2x poster without fetching the original.
+	const videoPoster =
+		media.kind === 'video' && media.poster && visibleVideoSource === source
+			? getImageProps({
+					src: mediaImageSources[id] ?? media.poster,
+					alt: '',
+					width: 320,
+					height: Math.round((320 * media.height) / media.width)
+				}).props.src
+			: undefined;
 	return (
 		<MediaFrame
+			ref={frame}
 			$ratio={`${media.width} / ${media.height}`}
 			$crop={crop}
 			$focalPoint={media.focalPoint ?? 'center 34%'}
@@ -35,14 +70,18 @@ const ProductMediaSlot = ({ id, copy, allowPlaceholders = false, priority = fals
 						type="button"
 						className="media-image-button"
 						aria-label={`${copy.view}: ${title}`}
-						onClick={() => dialog.current?.showModal()}
+						onClick={() => {
+							setZoomSource(source);
+							dialog.current?.showModal();
+						}}
 					>
-						<img
-							src={source}
+						<Image
+							src={isPlaceholder ? source : (mediaImageSources[id] ?? source)}
 							onError={() => setFailedSource(mediaSource)}
 							alt={isPlaceholder ? `${copy.reference}: ${copy[id]}` : copy[id]}
 							width={media.width}
 							height={media.height}
+							sizes={priority ? imageSizes : `auto, ${imageSizes}`}
 							loading={priority ? 'eager' : 'lazy'}
 							fetchPriority={priority ? 'high' : 'auto'}
 						/>
@@ -51,6 +90,7 @@ const ProductMediaSlot = ({ id, copy, allowPlaceholders = false, priority = fals
 					<MediaDialog
 						ref={dialog}
 						aria-label={title}
+						onClose={() => setZoomSource(null)}
 						onClick={(event) => {
 							if (event.target === event.currentTarget) dialog.current?.close();
 						}}
@@ -67,14 +107,16 @@ const ProductMediaSlot = ({ id, copy, allowPlaceholders = false, priority = fals
 							</form>
 						</header>
 						<div className="media-dialog-body">
-							<img
-								src={source}
-								onError={() => setFailedSource(mediaSource)}
-								alt={copy[id]}
-								width={media.width}
-								height={media.height}
-								loading="lazy"
-							/>
+							{zoomSource === source && (
+								<img
+									src={source}
+									onError={() => setFailedSource(mediaSource)}
+									alt={copy[id]}
+									width={media.width}
+									height={media.height}
+									decoding="async"
+								/>
+							)}
 							{isPlaceholder && <p>{copy.reference}</p>}
 						</div>
 					</MediaDialog>
@@ -84,7 +126,7 @@ const ProductMediaSlot = ({ id, copy, allowPlaceholders = false, priority = fals
 					controls
 					playsInline
 					preload="none"
-					poster={media.poster}
+					poster={videoPoster}
 					width={media.width}
 					height={media.height}
 					aria-label={title}

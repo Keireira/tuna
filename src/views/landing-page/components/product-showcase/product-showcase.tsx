@@ -44,6 +44,7 @@ const ProductShowcase = ({ copy, allowPlaceholders, simple }: PropsT) => {
 										id={`views-${mode}`}
 										copy={copy.media}
 										allowPlaceholders={allowPlaceholders}
+										sizes="(max-width: 720px) 260px, (max-width: 1050px) 229px, 275px"
 										priority
 									/>
 								</IPhoneFrame>

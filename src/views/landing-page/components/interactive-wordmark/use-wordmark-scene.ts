@@ -17,7 +17,7 @@ export const useWordmarkScene = (simple: boolean, tapes: readonly WordmarkTapeT[
 		let visible = false;
 		let failed = false;
 		const initialize = async () => {
-			if (simple || !visible || scene || pending || disposed || failed) return;
+			if (simple || !visible || document.hidden || scene || pending || disposed || failed) return;
 			pending = true;
 			host.dataset.wordmarkState = 'loading';
 			try {
@@ -26,6 +26,10 @@ export const useWordmarkScene = (simple: boolean, tapes: readonly WordmarkTapeT[
 					document.fonts.load('850 100px Nunito')
 				]);
 				if (disposed) return;
+				if (!visible || document.hidden) {
+					host.dataset.wordmarkState = 'waiting';
+					return;
+				}
 				scene = createWordmarkScene(
 					host,
 					{
@@ -58,10 +62,15 @@ export const useWordmarkScene = (simple: boolean, tapes: readonly WordmarkTapeT[
 			},
 			{ rootMargin: '80px' }
 		);
+		const visibility = () => {
+			if (!document.hidden) void initialize();
+		};
+		document.addEventListener('visibilitychange', visibility);
 		observer.observe(host);
 		return () => {
 			disposed = true;
 			observer.disconnect();
+			document.removeEventListener('visibilitychange', visibility);
 			scene?.dispose();
 		};
 	}, [simple, tapes]);
