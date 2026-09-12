@@ -88,7 +88,7 @@ const LandingNav = ({ copy, locale, pagePath = '', simple, onToggleEffects }: Pr
 				{copy.nav.skip}
 			</a>
 			<div className="brand-lockup">
-				<a className="brand" href={`/${locale}`} aria-label="UHA">
+				<a className="brand" href={`/${locale}`}>
 					<BrandImage />
 					<span className="brand-type">
 						<span className="brand-name">UHA</span>

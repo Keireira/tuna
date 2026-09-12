@@ -34,14 +34,28 @@ export const createWordmarkScene = (host: HTMLDivElement, callbacks: CallbacksT,
 	const canvas = document.createElement('canvas');
 	canvas.className = 'wordmark-canvas';
 	canvas.setAttribute('aria-hidden', 'true');
-	const renderer = new WebGLRenderer({
-		canvas,
+	const contextAttributes = {
 		antialias: true,
 		alpha: true,
+		depth: true,
+		stencil: false,
+		premultipliedAlpha: true,
+		preserveDrawingBuffer: false,
 		powerPreference: 'low-power',
 		// Keep the HTML wordmark when the browser cannot provide a usable GPU context.
 		failIfMajorPerformanceCaveat: true
-	});
+	} satisfies WebGLContextAttributes;
+	// Probe once before Three installs its console-reporting creation-error listener.
+	// The hook catches this normal fallback; do not retry without the performance guard.
+	const context = canvas.getContext('webgl2', contextAttributes);
+	if (!context || !('getExtension' in context)) throw new Error('Wordmark WebGL context is unavailable');
+	let renderer: WebGLRenderer;
+	try {
+		renderer = new WebGLRenderer({ canvas, context, ...contextAttributes });
+	} catch (error) {
+		context.getExtension('WEBGL_lose_context')?.loseContext();
+		throw error;
+	}
 	const resources: DisposableT[] = [];
 	const removeListeners: (() => void)[] = [];
 	let disposed = false,

@@ -32,7 +32,7 @@ export const siteChrome = css`
 	}
 	.brand img {
 		width: 44px;
-		height: 44px;
+		height: auto;
 		flex-shrink: 0;
 	}
 	.brand-type {
@@ -260,7 +260,6 @@ export const siteChrome = css`
 		}
 		.brand img {
 			width: 38px;
-			height: 38px;
 		}
 		.nav-actions {
 			flex-basis: 100%;

@@ -5,7 +5,7 @@ const Root = styled.div`
 	${siteChrome}
 	--page: #fd553a;
 	--ink: #161a15;
-	--muted: #5e3123;
+	--muted: #392015;
 	--accent: #f1eadb;
 	--line: #762e20;
 	color: var(--ink);
@@ -677,7 +677,7 @@ const Root = styled.div`
 	.filters {
 		background: #aaaee4;
 		--ink: #20251d;
-		--muted: #4f526b;
+		--muted: #3e4158;
 		color: var(--ink);
 	}
 	.filter-story {

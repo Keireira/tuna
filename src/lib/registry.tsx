@@ -8,14 +8,9 @@ export function StyledComponentsRegistry({ children }: { children: React.ReactNo
 	const [sheet] = useState(() => new ServerStyleSheet());
 
 	useServerInsertedHTML(() => {
-		const styles = sheet.getStyleTags();
+		const styles = sheet.getStyleElement();
 		sheet.instance.clearTag();
-		return (
-			<>
-				{/* eslint-disable-next-line react/no-danger */}
-				<style dangerouslySetInnerHTML={{ __html: styles.replace(/<\/?style[^>]*>/g, '') }} />
-			</>
-		);
+		return <>{styles}</>;
 	});
 
 	if (typeof window !== 'undefined') return children;
