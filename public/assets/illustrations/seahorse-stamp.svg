@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100" fill="none">
+  <defs>
+    <mask id="seahorse-ink" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="100">
+      <path fill="#fff" d="M0 0H120V100H0Z"/>
+      <g fill="#000">
+        <circle cx="66" cy="12.7" r=".8"/><circle cx="94.5" cy="27.5" r=".9"/>
+        <circle cx="73.7" cy="59" r=".8"/><circle cx="39" cy="87.3" r="1"/>
+        <circle cx="40.6" cy="34" r=".8"/>
+      </g>
+    </mask>
+  </defs>
+  <g mask="url(#seahorse-ink)" stroke="#71375d" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M49 19C55 11 65 10 72 15C75 17 77 20 78 23L95 25L94 34L78 32C73 33 72 39 66 41C65 46 70 49 73 53C81 64 69 73 57 75C46 77 39 71 34 78C28 87 41 95 51 89C60 84 57 76 50 77C44 77 43 84 48 85" stroke-width="5"/>
+    <path d="M44 69C52 66 53 60 48 55C41 48 36 43 39 34C40 29 44 25 48 24" stroke-width="5"/>
+    <path d="M50 18L49 8L59 13" stroke-width="4.5"/>
+    <path d="M39 38C32 37 27 41 25 45L33 48L25 54C30 59 38 59 44 54" stroke-width="4.4"/>
+    <path d="M34 44L38 47M34 52L40 52" stroke-width="2.8"/>
+    <path d="M55 34C54 40 58 43 62 44" stroke-width="3.5"/>
+    <path d="M60 51L69 52M58 59L71 60M55 67L65 68" stroke-width="3.3"/>
+    <path d="M80 29L88 30" stroke-width="2.8"/>
+  </g>
+  <path d="M68.6 23C70 25.9 68.5 28.8 65.6 28.6C62.8 28.5 61.5 25.8 63 23.5C64.2 21.7 67.5 21 68.6 23Z" fill="#71375d"/>
+</svg>

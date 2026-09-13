@@ -1,4 +1,5 @@
 import { APP_STORE_URL, type LandingCopyT, type StorefrontPriceT } from '@/content/landing';
+import FishStamp from '@/components/site-chrome/fish-stamp';
 
 type PropsT = { copy: LandingCopyT; locale: string; storefrontPrice: StorefrontPriceT };
 const ProductPricing = ({ copy, locale, storefrontPrice }: PropsT) => {
@@ -79,7 +80,7 @@ const ProductPricing = ({ copy, locale, storefrontPrice }: PropsT) => {
 					</div>
 					<a className="download-button" href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
 						{copy.hero.download}
-						<span aria-hidden="true">↗</span>
+						<FishStamp variant="urchin" />
 					</a>
 				</div>
 				<aside className="pricing-support" aria-labelledby="pricing-support-title">

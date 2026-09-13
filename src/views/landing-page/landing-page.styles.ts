@@ -236,23 +236,73 @@ const Root = styled.div`
 		max-width: 440px;
 	}
 	.download-button {
+		position: relative;
+		isolation: isolate;
 		display: inline-flex;
-		gap: 22px;
+		max-width: 100%;
+		gap: 32px;
 		align-items: center;
-		padding: 8px 0;
-		border-bottom: 1px solid currentColor;
+		padding: 18px 98px 18px 28px;
+		min-height: 72px;
+		color: #161a15;
 		font-size: 18px;
-		font-weight: 750;
+		font-weight: 850;
 		line-height: 1.4;
 		text-wrap: balance;
 	}
-	.download-button:hover {
-		border-bottom-width: 2px;
-		padding-bottom: 7px;
+	.download-button::before {
+		content: '';
+		position: absolute;
+		inset: 4px -2px 5px;
+		z-index: -1;
+		background: #81ffd0;
+		transform: rotate(-1.25deg) skewX(3deg);
+		clip-path: polygon(12px 0, calc(100% - 4px) 6%, 100% 68%, calc(100% - 18px) 100%, 0 90%, 5px 24%);
 	}
-	.download-button > span {
-		font-size: 24px;
-		line-height: 1;
+	.download-button:hover {
+		text-decoration: underline;
+		text-underline-offset: 0.16em;
+	}
+	.download-button:focus-visible {
+		outline-color: var(--ink);
+	}
+	.download-button .fish-stamp {
+		--fish-angle: -13deg;
+		--fish-duration: 2.8s;
+		--fish-delay: 0s;
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		width: 64px;
+		height: auto;
+		transform: translateY(-50%) rotate(var(--fish-angle));
+		pointer-events: none;
+		user-select: none;
+	}
+	.pricing-bottom .fish-stamp {
+		--fish-angle: 10deg;
+		--fish-duration: 3.2s;
+		--fish-delay: -1.1s;
+	}
+	.closing-links .fish-stamp {
+		--fish-angle: -5deg;
+		--fish-duration: 2.6s;
+		--fish-delay: -1.8s;
+	}
+	@keyframes fish-stamp-swim {
+		0%,
+		100% {
+			transform: translate(0, -50%) rotate(var(--fish-angle));
+		}
+		35% {
+			transform: translate(5px, calc(-50% - 3px)) rotate(calc(var(--fish-angle) + 4deg));
+		}
+		70% {
+			transform: translate(-2px, calc(-50% + 2px)) rotate(calc(var(--fish-angle) - 2deg));
+		}
+	}
+	&[data-simple='false'] .download-button .fish-stamp {
+		animation: fish-stamp-swim var(--fish-duration) ease-in-out var(--fish-delay) infinite;
 	}
 	.purchase-note {
 		font-size: 16px;
@@ -939,6 +989,8 @@ const Root = styled.div`
 		font-size: 21px;
 		display: flex;
 		align-items: center;
+	}
+	.closing-links > .hire-link {
 		gap: 25px;
 		border-bottom: 1px solid var(--ink);
 		padding-bottom: 6px;
@@ -1052,6 +1104,14 @@ const Root = styled.div`
 		}
 		.hero .download-button {
 			font-size: 17px;
+		}
+		.download-button {
+			gap: 20px;
+			padding-inline: 20px 84px;
+		}
+		.download-button .fish-stamp {
+			right: 12px;
+			width: 56px;
 		}
 		.purchase-note {
 			font-size: 16px;

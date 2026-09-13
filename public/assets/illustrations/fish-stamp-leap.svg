@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100" fill="none">
+  <defs>
+    <mask id="stamp-ink" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="100">
+      <path fill="#fff" d="M0 0H120V100H0Z"/>
+      <g fill="#000">
+        <circle cx="32" cy="28.6" r=".9"/><circle cx="52" cy="27.5" r=".8"/>
+        <circle cx="79" cy="41.7" r=".9"/><circle cx="105.7" cy="35" r="1"/>
+        <circle cx="106.5" cy="64.5" r=".8"/><circle cx="56" cy="85" r=".9"/>
+        <circle cx="13" cy="47" r=".8"/>
+      </g>
+    </mask>
+  </defs>
+  <g transform="translate(120 0) scale(-1 1)" mask="url(#stamp-ink)">
+    <g stroke="#71375d" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M25 31C35 24 45 25 50 27C65 25 77 34 82 44L88 42C94 31 104 24 109 26C106 38 102 45 101 49C108 56 113 64 110 73C99 72 91 65 85 61L79 62C68 78 50 82 35 73" stroke-width="5"/>
+      <path d="M27 69C18 66 10 59 11 50C12 43 16 38 19 35" stroke-width="5"/>
+      <path d="M40 26C40 17 50 10 62 12C59 18 61 24 65 30" stroke-width="5"/>
+      <path d="M43 78C43 83 48 89 54 90C62 88 67 82 68 76" stroke-width="5"/>
+      <path d="M90 43C88 48 88 54 87 60" stroke-width="3.6"/>
+      <path d="M14 54C19 60 24 60 28 55" stroke-width="3.6"/>
+      <path d="M39 42C34 51 35 60 42 66" stroke-width="3.8"/>
+      <path d="M50 39C59 41 61 46 54 50M59 55C68 57 69 63 61 67" stroke-width="3.5"/>
+      <path d="M46 59C44 65 47 69 53 70" stroke-width="3.4"/>
+      <path d="M98 39L103 34M97 61L104 66" stroke-width="2.8"/>
+    </g>
+    <path d="M31.3 42.5C32.2 46.2 30 48.9 26.8 48.4C23.7 48 22.7 44.8 24.3 42.5C25.8 40.3 29.9 39.8 31.3 42.5Z" fill="#71375d"/>
+  </g>
+</svg>

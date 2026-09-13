@@ -9,6 +9,7 @@ import ProductDetails from './components/product-details/product-details';
 import ProductPricing from './components/product-pricing/product-pricing';
 import InteractiveWordmark from './components/interactive-wordmark/interactive-wordmark';
 import SiteFooter from '@/components/site-chrome/site-footer';
+import FishStamp from '@/components/site-chrome/fish-stamp';
 import Root from './landing-page.styles';
 
 type PropsT = { copy: LandingCopyT; locale: string; unlimitedPrice: StorefrontPriceT };
@@ -39,7 +40,7 @@ const LandingPage = ({ copy, locale, unlimitedPrice }: PropsT) => {
 						<div className="hero-copy">
 							<a className="download-button" href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
 								{copy.hero.download}
-								<span aria-hidden="true">↗</span>
+								<FishStamp variant="swim" />
 							</a>
 							<p className="purchase-note">
 								{copy.hero.free}
@@ -66,9 +67,9 @@ const LandingPage = ({ copy, locale, unlimitedPrice }: PropsT) => {
 				<section className="closing section-width">
 					<h2>{copy.pricing.end}</h2>
 					<div className="closing-links">
-						<a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+						<a className="download-button" href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
 							{copy.hero.download}
-							<span aria-hidden="true">↗</span>
+							<FishStamp variant="seahorse" />
 						</a>
 						<a className="hire-link" href="https://hirify.me/keireira" target="_blank" rel="noopener noreferrer">
 							{copy.footer.hire}
