@@ -1,19 +1,30 @@
+name: tuna-prod
+
 services:
   app:
-    image: registry.keireira.com/tuna:latest
+    image: ${TUNA_IMAGE:-ghcr.io/keireira/tuna:latest}
     container_name: TUNA
     restart: unless-stopped
+    init: true
+    stop_grace_period: 45s
+    cap_drop: [ALL]
+    security_opt: ['no-new-privileges:true']
+    logging:
+      driver: local
+      options:
+        max-size: '10m'
+        max-file: '3'
     labels:
-      org.opencontainers.image.title: "Tuna — Uha Landing & MCP"
-      org.opencontainers.image.description: "uha.app"
-      org.opencontainers.image.authors: "Alena Dzhukich <github@alena.red>"
+      org.opencontainers.image.title: 'Tuna — Uha Landing & MCP'
+      org.opencontainers.image.description: 'uha.app'
+      org.opencontainers.image.authors: 'Alena Dzhukich <github@alena.red>'
     healthcheck:
-      test: ["CMD", "wget", "-q", "-T", "5", "-O", "/dev/null", "http://127.0.0.1:3000/api/status"]
+      test: [CMD, wget, '-q', '-T', '5', '-O', /dev/null, 'http://127.0.0.1:3000/api/status']
       start_period: 30s
       interval: 15s
       timeout: 10s
       retries: 5
     ports:
-      - 127.0.0.1:7777:3000
+      - '127.0.0.1:7777:3000'
     environment:
-      - NODE_ENV=production
+      NODE_ENV: production

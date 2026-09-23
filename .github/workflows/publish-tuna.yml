@@ -1,0 +1,88 @@
+name: Publish Tuna
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-tuna
+  cancel-in-progress: true
+
+jobs:
+  check:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Install locked dependencies
+        run: |
+          corepack enable pnpm
+          corepack install
+          pnpm install --frozen-lockfile
+
+      - name: Lint, typecheck, and test
+        run: pnpm check
+
+  publish:
+    name: Publish tuna
+    needs: check
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Select GHCR image
+        id: image
+        env:
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          printf 'repository=ghcr.io/%s/tuna\n' "${OWNER,,}" >> "$GITHUB_OUTPUT"
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Build and push tuna
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          pull: true
+          tags: |
+            ${{ steps.image.outputs.repository }}:${{ github.sha }}
+            ${{ steps.image.outputs.repository }}:latest
+          labels: |
+            org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.title=tuna
+          cache-from: type=gha,scope=tuna
+          cache-to: type=gha,mode=max,scope=tuna
