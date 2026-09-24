@@ -7,7 +7,7 @@ import { SITE_PAGES, pagePath, type SitePageT } from './site-pages';
 import { getLocalePrice } from './price-catalog';
 
 const getOgImageUrl = (locale: TLocale) =>
-	`${SITE_URL}/og-image${locale === 'en' ? '' : `-${locale}`}.png?v=20260911-6`;
+	`${SITE_URL}/og-image${locale === 'en' ? '' : `-${locale}`}.png?v=20260911-7`;
 
 export const getPageMetadata = async (locale: TLocale = DEFAULT_LOCALE, page: SitePageT = ''): Promise<Metadata> => {
 	const { t } = await getTranslation(locale, page || 'common');
