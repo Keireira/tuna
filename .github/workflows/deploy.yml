@@ -1,0 +1,97 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: [Publish Sharkie, Publish sharkie, Publish Salmie, Publish Reefie, Publish Mako, Publish Tuna]
+    types: [completed]
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      service:
+        description: Service to update
+        required: true
+        type: choice
+        options: [sharkie, salmie, reefie, mako, tuna]
+      sha:
+        description: Full 40-character commit SHA of an already published image
+        required: true
+        type: string
+
+permissions:
+  actions: read
+
+concurrency:
+  group: deploy-${{ github.event.workflow_run.name || format('Publish {0}', inputs.service) }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master') ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'master' &&
+       github.event.workflow_run.head_repository.full_name == github.repository &&
+       contains(fromJSON('["push","workflow_dispatch"]'), github.event.workflow_run.event))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: production
+    steps:
+      - name: Select the published commit, not the deploy workflow commit
+        id: release
+        shell: bash
+        env:
+          EVENT: ${{ github.event_name }}
+          PUBLISH_NAME: ${{ github.event.workflow_run.name }}
+          PUBLISH_SHA: ${{ github.event.workflow_run.head_sha }}
+          PUBLISH_ID: ${{ github.event.workflow_run.workflow_id }}
+          PUBLISH_NUMBER: ${{ github.event.workflow_run.run_number }}
+          REQUEST_SERVICE: ${{ inputs.service }}
+          REQUEST_SHA: ${{ inputs.sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT" == workflow_run ]]; then
+            service="${PUBLISH_NAME#Publish }"
+            service="${service,,}"
+            sha="$PUBLISH_SHA"
+            newest="$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/$PUBLISH_ID/runs?branch=master&status=success&per_page=1" --jq '.workflow_runs[0].run_number // 0')"
+            if (( newest > PUBLISH_NUMBER )); then
+              printf 'A newer successful publication exists; skipping this old run\n'
+              exit 0
+            fi
+          else
+            service="$REQUEST_SERVICE"
+            sha="$REQUEST_SHA"
+          fi
+          [[ "$service" =~ ^(sharkie|salmie|reefie|mako|tuna)$ ]]
+          [[ "$sha" =~ ^[0-9a-f]{40}$ ]]
+          printf 'service=%s\nsha=%s\nready=true\n' "$service" "$sha" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy the selected image over restricted SSH
+        if: steps.release.outputs.ready == 'true'
+        shell: bash
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT || '22' }}
+          DEPLOY_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+          SERVICE: ${{ steps.release.outputs.service }}
+          SHA: ${{ steps.release.outputs.sha }}
+        run: |
+          set -euo pipefail
+          : "${DEPLOY_HOST:?Set DEPLOY_HOST to the VDS origin address}"
+          : "${DEPLOY_KEY:?Set DEPLOY_SSH_KEY}"
+          : "${KNOWN_HOSTS:?Set DEPLOY_KNOWN_HOSTS to the verified server host key}"
+          [[ "$DEPLOY_PORT" =~ ^[0-9]+$ ]]
+          umask 077
+          directory="$(mktemp -d)"
+          trap 'rm -rf -- "$directory"' EXIT
+          printf '%s\n' "$DEPLOY_KEY" > "$directory/key"
+          printf '%s\n' "$KNOWN_HOSTS" > "$directory/known_hosts"
+          ssh -T -p "$DEPLOY_PORT" -i "$directory/key" \
+            -o BatchMode=yes -o IdentitiesOnly=yes -o IdentityAgent=none \
+            -o StrictHostKeyChecking=yes -o UserKnownHostsFile="$directory/known_hosts" \
+            -o GlobalKnownHostsFile=/dev/null -o ConnectTimeout=10 \
+            -o ServerAliveInterval=15 -o ServerAliveCountMax=4 \
+            "deploy@$DEPLOY_HOST" "deploy $SERVICE $SHA"
