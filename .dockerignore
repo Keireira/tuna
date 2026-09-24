@@ -18,3 +18,7 @@ README.md
 coverage
 .vscode
 .idea
+npm-debug.log*
+pnpm-debug.log*
+*.pem
+*.key
